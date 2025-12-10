@@ -223,6 +223,18 @@ pip install -r requirements_publication.txt
 python reproduce_experiments.py --mode all
 ```
 
+## 📦 Data and Trained Models
+
+This repository contains only source code and documentation.  
+Full datasets, preprocessing results, and trained models are distributed as a GitHub Release.
+
+📥 **Download**: [RNF_data_models.zip (v1.0)](https://github.com/newpotatato/Decentralized-Multimodal-Federated-Learning-with-Heterogeneous-Parametric-Time-Series-Models/releases/latest)
+
+Includes:
+- `archive/oldversion/04_ml_models_pickled/` — trained clustering models (`.pkl`)
+- `01_data_transactions/` — transaction time series
+- `02_data_fontanka/` — processed news articles and embeddings
+
 **Ready?** → Read [START_HERE.md](START_HERE.md)
 
 ---
