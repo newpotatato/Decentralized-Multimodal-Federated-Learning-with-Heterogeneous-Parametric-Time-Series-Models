@@ -89,7 +89,7 @@ RNF/
 
 ---
 
-## 🔬 Experimental Design
+## Experimental Design
 
 ### Data
 - **Primary**: MCC transaction data (merchant category codes)
@@ -114,7 +114,7 @@ RNF/
 
 ---
 
-## 📈 Key Results
+## Key Results
 
 At 40% malicious clients, LVP achieves:
 - **ARMAX**: 69% improvement (19.9 → 6.1 MSE)
@@ -132,11 +132,10 @@ At 40% malicious clients, LVP achieves:
 | [START_HERE.md](START_HERE.md) | **Start here** - Navigation & quick links |
 | [README_REPRODUCTION.md](README_REPRODUCTION.md) | Complete step-by-step reproduction guide |
 | [EXPERIMENT_METHODOLOGY.md](EXPERIMENT_METHODOLOGY.md) | Scientific methodology for paper |
-| [LATEX_INTEGRATION_GUIDE.tex](LATEX_INTEGRATION_GUIDE.tex) | LaTeX paper integration examples |
 
 ---
 
-## 🎯 Use Cases
+## Use Cases
 
 ### For Researchers
 ```powershell
@@ -165,7 +164,7 @@ python reproduce_experiments.py --mode all
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 - **Python**: 3.8 or higher
 - **Libraries**: numpy, pandas, matplotlib, scikit-learn, scipy, statsmodels
@@ -173,7 +172,7 @@ python reproduce_experiments.py --mode all
 
 ---
 
-## 📝 Citation
+## Citation
 
 ```bibtex
 @article{yourpaper2025,
@@ -188,7 +187,7 @@ python reproduce_experiments.py --mode all
 
 ---
 
-## 🌟 Highlights
+## Highlights
 
 ✅ **Fully Reproducible** - Fixed random seeds, documented parameters  
 ✅ **Publication Ready** - PDF figures, LaTeX tables included  
@@ -199,7 +198,7 @@ python reproduce_experiments.py --mode all
 
 ---
 
-## 📧 Contact
+##  Contact
 
 **Research Questions**: [your-email@domain.com]  
 **Technical Issues**: Open a GitHub issue  
@@ -207,7 +206,7 @@ python reproduce_experiments.py --mode all
 
 ---
 
-## 🚀 Getting Started Now
+##  Getting Started Now
 
 ```powershell
 # 1. Clone repository
@@ -228,6 +227,3 @@ python reproduce_experiments.py --mode all
 
 ---
 
-*Last Updated: December 10, 2025*  
-*Version: 1.0*  
-*Status: ✅ Production Ready*
