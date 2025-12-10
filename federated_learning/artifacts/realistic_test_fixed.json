@@ -1,0 +1,7326 @@
+{
+  "results": [
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 38957158516.69758,
+            "client_1": 1325350297081.8228,
+            "client_2": 28956401461749.355
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9431342925552585
+            ],
+            "sigma2": [
+              9088833950130.646
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9428207758241629
+            ],
+            "sigma2": [
+              96781221.40246403
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9428207758241629
+            ],
+            "sigma2": [
+              96781221.40246403
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9428207758241629
+            ],
+            "sigma2": [
+              96781221.40246403
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9428207758241629
+            ],
+            "sigma2": [
+              96781221.40246403
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9428207758241629
+            ],
+            "sigma2": [
+              96781221.40246403
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9428207758241629
+            ],
+            "sigma2": [
+              96781221.40246403
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9428207758241629
+            ],
+            "sigma2": [
+              96781221.40246403
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9428207758241629
+            ],
+            "sigma2": [
+              96781221.40246403
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9428207758241629
+            ],
+            "sigma2": [
+              96781221.40246403
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 38957158516.69758,
+            "client_1": 1325350297081.8228,
+            "client_2": 28956401461749.355
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9214218355879783
+            ],
+            "sigma2": [
+              24788762840.230495
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 38957158516.69758,
+            "client_1": 4697343598619.6,
+            "client_2": 28956401461749.355
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.28616016547369927
+            ],
+            "sigma2": [
+              7940598275328.405
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 4163238307451.549,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858818801793942
+            ],
+            "sigma2": [
+              51431765.83296008
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 4313961359351.691,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.28588068510235787
+            ],
+            "sigma2": [
+              51431765.83295996
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 3381783380219.616,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.28588133160121565
+            ],
+            "sigma2": [
+              51431765.83295938
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 4913337503580.772,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.28588169445452527
+            ],
+            "sigma2": [
+              51431765.83295962
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 3690452680006.8545,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.28588084719443924
+            ],
+            "sigma2": [
+              51431765.83295996
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 5983904660540.68,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858813499907244
+            ],
+            "sigma2": [
+              51431765.83295921
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 6476065766276.821,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858817653514841
+            ],
+            "sigma2": [
+              51431765.8329598
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 6142003149229.5625,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858814261894722
+            ],
+            "sigma2": [
+              51431765.83295974
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 5459696974014.024,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858815540304578
+            ],
+            "sigma2": [
+              51431765.83295942
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 136349509015.82758,
+            "client_1": 1325350297081.8228,
+            "client_2": 28956401461749.355
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.9214212609263855
+            ],
+            "sigma2": [
+              -24788762840.230495
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 155560004167.55423,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.9210052120116456
+            ],
+            "sigma2": [
+              -111383684.4303682
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 182113022246.6707,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.9210045565806935
+            ],
+            "sigma2": [
+              -111383684.43036807
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 120300349742.29016,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.9210066620967591
+            ],
+            "sigma2": [
+              -111383684.43036775
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 148421246044.96573,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.9210052790632343
+            ],
+            "sigma2": [
+              -111383684.43036923
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 155081197889.53052,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.9210054758336929
+            ],
+            "sigma2": [
+              -111383684.43036836
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 190672615794.6637,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.921005586460531
+            ],
+            "sigma2": [
+              -111383684.4303685
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 101072706395.63057,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.9210061738509425
+            ],
+            "sigma2": [
+              -111383684.43036653
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 104672522484.9894,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.921007618831002
+            ],
+            "sigma2": [
+              -111383684.4303682
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 129264565282.10759,
+            "client_1": 1324121385215.9985,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              -0.9210064693490824
+            ],
+            "sigma2": [
+              -111383684.4303673
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.4,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 38957158516.69758,
+            "client_1": 3520545153173.647,
+            "client_2": 28956401461749.355
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2861603632647469
+            ],
+            "sigma2": [
+              7940598275328.405
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 5143020131871.912,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858818460604402
+            ],
+            "sigma2": [
+              51431765.83295893
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 5199793485143.666,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858810230379486
+            ],
+            "sigma2": [
+              51431765.83296011
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 4162467849285.3887,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858811453417126
+            ],
+            "sigma2": [
+              51431765.832959786
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 4589924663486.51,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858816955939489
+            ],
+            "sigma2": [
+              51431765.83295944
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 5347998237919.212,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.285881586532186
+            ],
+            "sigma2": [
+              51431765.832959786
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 5942268548604.542,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.28588145056318615
+            ],
+            "sigma2": [
+              51431765.83295958
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 5490558072678.139,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858817663503791
+            ],
+            "sigma2": [
+              51431765.83295925
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 6479476575811.187,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.28588130250764837
+            ],
+            "sigma2": [
+              51431765.83295964
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 3312377389301.6606,
+            "client_2": 29099156940917.137
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2858809566930583
+            ],
+            "sigma2": [
+              51431765.83295973
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.4,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 38957158516.69758,
+            "client_1": 1325350297081.8228,
+            "client_2": 95227007254948.25
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9214218355879783
+            ],
+            "sigma2": [
+              24788762840.230495
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 113261575174849.36
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 111652636642219.08
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 130448768808965.02
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 109508317404601.7
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 124680254802127.33
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 104455615398317.64
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 83997758410495.69
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 131441624663476.2
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 39168583114.91357,
+            "client_1": 1324121385215.9985,
+            "client_2": 120569797242825.08
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9210060157150495
+            ],
+            "sigma2": [
+              111383684.43036787
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              7042118622787.139
+            ],
+            "sigma2_level": [
+              40874243215.26586
+            ],
+            "sigma2_trend": [
+              1241309701788.4614
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 57798182972.429985,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333333598459404
+            ],
+            "process_noise": [
+              0.03333325485426124
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 48800642185.76524,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.33333323430020095
+            ],
+            "process_noise": [
+              0.033333760303668095
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 39174060183.63528,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333333520738636
+            ],
+            "process_noise": [
+              0.033332760655159305
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 62674837129.79695,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333330795400694
+            ],
+            "process_noise": [
+              0.033333250360993924
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 57612971284.068634,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333334606399495
+            ],
+            "process_noise": [
+              0.033333538289403185
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 39480835524.86428,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333334950950103
+            ],
+            "process_noise": [
+              0.03333317252527684
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 58702862083.96544,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.33333363184449494
+            ],
+            "process_noise": [
+              0.03333336792940218
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 48674899856.469315,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.33333325610093045
+            ],
+            "process_noise": [
+              0.03333379291856581
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 46013096202.99764,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333331987957413
+            ],
+            "process_noise": [
+              0.03333395367253333
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 53316661343.97657,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333333847677511
+            ],
+            "process_noise": [
+              0.033333598769002756
+            ],
+            "sigma2_irregular": [
+              7032979527369.069
+            ],
+            "sigma2_level": [
+              40848429755.180016
+            ],
+            "sigma2_trend": [
+              1236383086469.0774
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 143369989125791.84,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 234616203856810.22,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 201741746366268.62,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 263991332212814.78,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 191272052542235.28,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 260934979327554.88,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 157594534865183.8,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 271204806789154.47,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 192104797939925.28,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 160857601309152.22,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              13708643127.104183
+            ],
+            "sigma2_level": [
+              38720190.12877045
+            ],
+            "sigma2_trend": [
+              7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            1
+          ]
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.4,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 168060803150560.1
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.33333328710375404
+            ],
+            "process_noise": [
+              0.033332832229932635
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 110279650610368.58
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.33333295409610164
+            ],
+            "process_noise": [
+              0.03333347922948729
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 136216933779761.72
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.333332597733967
+            ],
+            "process_noise": [
+              0.03333354663425599
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 134460524145388.47
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333330634794851
+            ],
+            "process_noise": [
+              0.03333316109466316
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 155790838811546.28
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.333333236555744
+            ],
+            "process_noise": [
+              0.03333310178416367
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 123397667117085.05
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333334007330168
+            ],
+            "process_noise": [
+              0.03333322869767913
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 131916427448541.73
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.333333901780365
+            ],
+            "process_noise": [
+              0.03333329223841966
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 93517363930436.31
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333333664187279
+            ],
+            "process_noise": [
+              0.033333304214252416
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 174942032040989.03
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.33333321358843926
+            ],
+            "process_noise": [
+              0.03333270098750338
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 12575139820.574032,
+            "client_1": 54382895784963.52,
+            "client_2": 173330791473831.56
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.3333336268373436
+            ],
+            "process_noise": [
+              0.03333385156288941
+            ],
+            "sigma2_irregular": [
+              -5929213026009.748
+            ],
+            "sigma2_level": [
+              -34321048938.07998
+            ],
+            "sigma2_trend": [
+              76934706559.48218
+            ]
+          },
+          "malicious_ids": [
+            2
+          ]
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.4,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 45237106160.20957,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000006250787306
+            ],
+            "process_noise": [
+              -0.09999844640192249
+            ],
+            "sigma2_irregular": [
+              -13708643127.104183
+            ],
+            "sigma2_level": [
+              -38720190.128770806
+            ],
+            "sigma2_trend": [
+              -7389922979.075994
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 40803995208.2179,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000007018307144
+            ],
+            "process_noise": [
+              -0.1000001399635733
+            ],
+            "sigma2_irregular": [
+              -13708643127.104183
+            ],
+            "sigma2_level": [
+              -38720190.128770806
+            ],
+            "sigma2_trend": [
+              -7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 59412414451.55293,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000002332505087
+            ],
+            "process_noise": [
+              -0.10000029020398622
+            ],
+            "sigma2_irregular": [
+              -13708643127.104183
+            ],
+            "sigma2_level": [
+              -38720190.12877093
+            ],
+            "sigma2_trend": [
+              -7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 46764857815.74236,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -0.9999998527769117
+            ],
+            "process_noise": [
+              -0.09999904921103482
+            ],
+            "sigma2_irregular": [
+              -13708643127.104183
+            ],
+            "sigma2_level": [
+              -38720190.12877001
+            ],
+            "sigma2_trend": [
+              -7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 38322787326.484024,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000010736988498
+            ],
+            "process_noise": [
+              -0.09999753452699661
+            ],
+            "sigma2_irregular": [
+              -13708643127.104183
+            ],
+            "sigma2_level": [
+              -38720190.12876777
+            ],
+            "sigma2_trend": [
+              -7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 41814589061.12142,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000004613629314
+            ],
+            "process_noise": [
+              -0.09999927618532374
+            ],
+            "sigma2_irregular": [
+              -13708643127.104185
+            ],
+            "sigma2_level": [
+              -38720190.1287714
+            ],
+            "sigma2_trend": [
+              -7389922979.075996
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 54428154727.10642,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000003705410807
+            ],
+            "process_noise": [
+              -0.09999865810469531
+            ],
+            "sigma2_irregular": [
+              -13708643127.104183
+            ],
+            "sigma2_level": [
+              -38720190.128770635
+            ],
+            "sigma2_trend": [
+              -7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 58987091221.65638,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000011642325404
+            ],
+            "process_noise": [
+              -0.09999936920806074
+            ],
+            "sigma2_irregular": [
+              -13708643127.104181
+            ],
+            "sigma2_level": [
+              -38720190.1287701
+            ],
+            "sigma2_trend": [
+              -7389922979.0759945
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 62192972055.68681,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -0.9999991316871609
+            ],
+            "process_noise": [
+              -0.09999926392106151
+            ],
+            "sigma2_irregular": [
+              -13708643127.104183
+            ],
+            "sigma2_level": [
+              -38720190.12876989
+            ],
+            "sigma2_trend": [
+              -7389922979.075994
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 38002048205.31495,
+            "client_1": 54382895784963.52,
+            "client_2": 36274607882403.06
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.000000718641445
+            ],
+            "process_noise": [
+              -0.10000211590451041
+            ],
+            "sigma2_irregular": [
+              -13708643127.104181
+            ],
+            "sigma2_level": [
+              -38720190.12876986
+            ],
+            "sigma2_trend": [
+              -7389922979.075994
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        }
+      ],
+      "n_clients": 3
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 3199664855.686915,
+            "client_1": 162848310355.54675,
+            "client_2": 1340286784474.6902,
+            "client_3": 28516960864789.863,
+            "client_4": 31677317524.578545
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8686600794826864
+            ],
+            "sigma2": [
+              5229906824183.395
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173119917157
+            ],
+            "sigma2": [
+              179934954.13443565
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173119917157
+            ],
+            "sigma2": [
+              179934954.13443565
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173119917157
+            ],
+            "sigma2": [
+              179934954.13443565
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173119917157
+            ],
+            "sigma2": [
+              179934954.13443565
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173119917157
+            ],
+            "sigma2": [
+              179934954.13443565
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173119917157
+            ],
+            "sigma2": [
+              179934954.13443565
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173119917157
+            ],
+            "sigma2": [
+              179934954.13443565
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173119917157
+            ],
+            "sigma2": [
+              179934954.13443565
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173119917157
+            ],
+            "sigma2": [
+              179934954.13443565
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 3199664855.686915,
+            "client_1": 162848310355.54675,
+            "client_2": 1340286784474.6902,
+            "client_3": 28516960864789.863,
+            "client_4": 31677317524.578545
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5438609562175569
+            ],
+            "sigma2": [
+              7227806072.6546545
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 10940871723.65383,
+            "client_1": 162848310355.54675,
+            "client_2": 1340286784474.6902,
+            "client_3": 28516960864789.863,
+            "client_4": 31677317524.578545
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6511156649145117
+            ],
+            "sigma2": [
+              5227015701754.333
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 12818677238.679361,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6308596760307336
+            ],
+            "sigma2": [
+              48401199.88346323
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 9780779894.609179,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6308598874480977
+            ],
+            "sigma2": [
+              48401199.88346346
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 10550269952.077871,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6308594808224786
+            ],
+            "sigma2": [
+              48401199.88346298
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 11797085107.312557,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6308595778507002
+            ],
+            "sigma2": [
+              48401199.883463115
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 15843812571.37942,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6308595157284617
+            ],
+            "sigma2": [
+              48401199.88346329
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 11475106617.070116,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6308593709496845
+            ],
+            "sigma2": [
+              48401199.883463815
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 14640280566.494198,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6308594079032037
+            ],
+            "sigma2": [
+              48401199.8834634
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 11003464827.772219,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6308594886049096
+            ],
+            "sigma2": [
+              48401199.88346332
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 14900685701.579632,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.6308594382392289
+            ],
+            "sigma2": [
+              48401199.88346341
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 3199664855.686915,
+            "client_1": 162848310355.54675,
+            "client_2": 1340286784474.6902,
+            "client_3": 28516960864789.863,
+            "client_4": 94806801676.9559
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5438609562175569
+            ],
+            "sigma2": [
+              7227806072.6546545
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 668144296737.9523
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 761988333795.4865
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 461685529357.4802
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 458318624172.58875
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 540183921793.8941
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 746966678122.2213
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 693933389351.0303
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 484410851911.17676
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 557354413232.9419
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            4
+          ]
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.4,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 15459503089.267174,
+            "client_1": 792152647743.5531,
+            "client_2": 1340286784474.6902,
+            "client_3": 28516960864789.863,
+            "client_4": 31677317524.578545
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.27207587332862193
+            ],
+            "sigma2": [
+              5209186829878.039
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 8166981666.872492,
+            "client_1": 845783631579.6339,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2556667041586781
+            ],
+            "sigma2": [
+              -20145248.077009358
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 13689696410.523355,
+            "client_1": 769297507964.1106,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2556670228714897
+            ],
+            "sigma2": [
+              -20145248.077009715
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 8069689192.652902,
+            "client_1": 837263558479.3684,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2556669119099178
+            ],
+            "sigma2": [
+              -20145248.07700909
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 11005765517.03819,
+            "client_1": 827301489011.0454,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.25566703112774386
+            ],
+            "sigma2": [
+              -20145248.07700903
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 12265763367.90097,
+            "client_1": 806571624111.8816,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2556671154043428
+            ],
+            "sigma2": [
+              -20145248.077009983
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 13803486915.853165,
+            "client_1": 613144955108.1732,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.25566722691259286
+            ],
+            "sigma2": [
+              -20145248.0770087
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 13333234341.232372,
+            "client_1": 901684122645.8134,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2556668546691699
+            ],
+            "sigma2": [
+              -20145248.077009536
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 15114264248.746616,
+            "client_1": 873525456622.5076,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2556671691973831
+            ],
+            "sigma2": [
+              -20145248.077008672
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 8792914235.746157,
+            "client_1": 751326603795.5066,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.2556671951525821
+            ],
+            "sigma2": [
+              -20145248.077009417
+            ]
+          },
+          "malicious_ids": [
+            0,
+            1
+          ]
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.4,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 3199664855.686915,
+            "client_1": 162848310355.54675,
+            "client_2": 5287290223088.604,
+            "client_3": 28516960864789.863,
+            "client_4": 100228460931.93712
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5438609562175569
+            ],
+            "sigma2": [
+              7227806072.6546545
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 6066952125446.301,
+            "client_3": 28880357301141.926,
+            "client_4": 563944326649.8971
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 4471680696064.888,
+            "client_3": 28880357301141.926,
+            "client_4": 729041923976.4298
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 6014990586983.663,
+            "client_3": 28880357301141.926,
+            "client_4": 714767096520.8279
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 5590151145871.493,
+            "client_3": 28880357301141.926,
+            "client_4": 455647144948.57336
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 4664333318491.472,
+            "client_3": 28880357301141.926,
+            "client_4": 476391054936.8019
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 6017396022989.507,
+            "client_3": 28880357301141.926,
+            "client_4": 387893248101.7256
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 6008734326937.45,
+            "client_3": 28880357301141.926,
+            "client_4": 448465914593.502
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 4383161813313.225,
+            "client_3": 28880357301141.926,
+            "client_4": 626004099577.2034
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 5620691798606.786,
+            "client_3": 28880357301141.926,
+            "client_4": 581309586779.4371
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.5478944134171021
+            ],
+            "sigma2": [
+              328834385.6274307
+            ]
+          },
+          "malicious_ids": [
+            2,
+            4
+          ]
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.10000000000000002
+            ],
+            "sigma2_irregular": [
+              4069311026685.3813
+            ],
+            "sigma2_level": [
+              24093526726.077488
+            ],
+            "sigma2_trend": [
+              683787638956.5233
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 108832579957165.02,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.6000002589772668
+            ],
+            "process_noise": [
+              0.05999998055385504
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 145475917821015.78,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.6000002089991676
+            ],
+            "process_noise": [
+              0.060000121924963006
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 94416984549212.75,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.5999997533654993
+            ],
+            "process_noise": [
+              0.06000021930505206
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 125078795289955.16,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.6000000552338972
+            ],
+            "process_noise": [
+              0.0600002174148639
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 104497974238661.42,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.5999999541468006
+            ],
+            "process_noise": [
+              0.06000010945780444
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 81274778493967.42,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.6000001543031215
+            ],
+            "process_noise": [
+              0.06000022699991988
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 125048217535967.66,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.5999999114835592
+            ],
+            "process_noise": [
+              0.059999922932605754
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 97268550921630.9,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.6000000240983863
+            ],
+            "process_noise": [
+              0.05999992898262879
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 137640350750220.28,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.6000001341559813
+            ],
+            "process_noise": [
+              0.06000007494952174
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 98487397067682.55,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.5999999488763248
+            ],
+            "process_noise": [
+              0.05999971062746498
+            ],
+            "sigma2_irregular": [
+              -3519601327634.5034
+            ],
+            "sigma2_level": [
+              -21342635084.28896
+            ],
+            "sigma2_trend": [
+              -34120223795.06243
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 84765240023185.36,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 121549815249061.17,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 115760013738514.38,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 127116460289856.92,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 90692821312097.02,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 95601371248112.77,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 144134308802899.88,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 123023929997960.1,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 132969332383941.9,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 56918351483603.0,
+            "client_3": 128005494736824.88,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              1.0
+            ],
+            "process_noise": [
+              0.1
+            ],
+            "sigma2_irregular": [
+              4438534042.7738905
+            ],
+            "sigma2_level": [
+              11476716.455118828
+            ],
+            "sigma2_trend": [
+              516067206.68087554
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "fedavg",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.4,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 183234427576677.0,
+            "client_3": 139011731614587.33,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.20000000397958548
+            ],
+            "process_noise": [
+              0.01999957932526791
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 205442666371493.9,
+            "client_3": 115200034916187.47,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.19999999268040633
+            ],
+            "process_noise": [
+              0.020000293910380988
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 220737790506888.06,
+            "client_3": 100895532511861.03,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.2000002566921232
+            ],
+            "process_noise": [
+              0.019999828127474258
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 233293469096692.84,
+            "client_3": 143180876456716.53,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.20000044012130735
+            ],
+            "process_noise": [
+              0.01999967949171031
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 152539794689053.97,
+            "client_3": 117625687135607.17,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.2000001213396654
+            ],
+            "process_noise": [
+              0.020000296592575642
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 179867966966936.2,
+            "client_3": 124766257993666.06,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.1999995582778912
+            ],
+            "process_noise": [
+              0.020000249154489003
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 231000330666256.12,
+            "client_3": 78803633027501.6,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.1999997691470758
+            ],
+            "process_noise": [
+              0.020000279152224767
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 158361440346240.66,
+            "client_3": 115171630644341.0,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.2000001826030299
+            ],
+            "process_noise": [
+              0.019999915684137854
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 264478926191744.72,
+            "client_3": 135466710401765.17,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.20000015582662511
+            ],
+            "process_noise": [
+              0.02000008100067794
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 4162952293.102487,
+            "client_1": 119757294500.46687,
+            "client_2": 259532025132629.47,
+            "client_3": 85684896226740.78,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              0.1999999277870807
+            ],
+            "process_noise": [
+              0.01999997916300247
+            ],
+            "sigma2_irregular": [
+              -4047407240155.9756
+            ],
+            "sigma2_level": [
+              -23983445972.205704
+            ],
+            "sigma2_trend": [
+              -667193273965.9308
+            ]
+          },
+          "malicious_ids": [
+            2,
+            3
+          ]
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "KalmanFilterModel",
+      "aggregator": "lvp",
+      "rounds": 10,
+      "local_epochs": 3,
+      "malicious_frac": 0.4,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 14930300947.735653,
+            "client_1": 119757294500.46687,
+            "client_2": 177336206258327.16,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000001493514292
+            ],
+            "process_noise": [
+              -0.09999911097996378
+            ],
+            "sigma2_irregular": [
+              -4438534042.773891
+            ],
+            "sigma2_level": [
+              -11476716.455119256
+            ],
+            "sigma2_trend": [
+              -516067206.6808747
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 15045802448.744543,
+            "client_1": 119757294500.46687,
+            "client_2": 178736119668646.25,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -0.9999995503980771
+            ],
+            "process_noise": [
+              -0.1000003617881019
+            ],
+            "sigma2_irregular": [
+              -4438534042.773892
+            ],
+            "sigma2_level": [
+              -11476716.455119608
+            ],
+            "sigma2_trend": [
+              -516067206.6808755
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 19373196644.703594,
+            "client_1": 119757294500.46687,
+            "client_2": 222043507345684.12,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000001303098678
+            ],
+            "process_noise": [
+              -0.1000010544685935
+            ],
+            "sigma2_irregular": [
+              -4438534042.773891
+            ],
+            "sigma2_level": [
+              -11476716.455118125
+            ],
+            "sigma2_trend": [
+              -516067206.6808742
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 18153427337.289734,
+            "client_1": 119757294500.46687,
+            "client_2": 274136167412028.66,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000005989116607
+            ],
+            "process_noise": [
+              -0.10000070045987856
+            ],
+            "sigma2_irregular": [
+              -4438534042.7738905
+            ],
+            "sigma2_level": [
+              -11476716.455118498
+            ],
+            "sigma2_trend": [
+              -516067206.68087506
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 15558179524.620098,
+            "client_1": 119757294500.46687,
+            "client_2": 208966866622545.72,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -0.9999985637082913
+            ],
+            "process_noise": [
+              -0.10000047156447717
+            ],
+            "sigma2_irregular": [
+              -4438534042.773891
+            ],
+            "sigma2_level": [
+              -11476716.455119954
+            ],
+            "sigma2_trend": [
+              -516067206.6808741
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "round": 6,
+          "client_mse": {
+            "client_0": 11739080282.808968,
+            "client_1": 119757294500.46687,
+            "client_2": 253894629216034.28,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.0000003806073041
+            ],
+            "process_noise": [
+              -0.09999784629253744
+            ],
+            "sigma2_irregular": [
+              -4438534042.773891
+            ],
+            "sigma2_level": [
+              -11476716.455118006
+            ],
+            "sigma2_trend": [
+              -516067206.68087775
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "round": 7,
+          "client_mse": {
+            "client_0": 11130690484.915419,
+            "client_1": 119757294500.46687,
+            "client_2": 194004235840733.22,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -0.9999998477239014
+            ],
+            "process_noise": [
+              -0.10000096085473062
+            ],
+            "sigma2_irregular": [
+              -4438534042.773889
+            ],
+            "sigma2_level": [
+              -11476716.455119167
+            ],
+            "sigma2_trend": [
+              -516067206.680875
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "round": 8,
+          "client_mse": {
+            "client_0": 12147746744.237467,
+            "client_1": 119757294500.46687,
+            "client_2": 245912785150188.62,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -0.9999999001497325
+            ],
+            "process_noise": [
+              -0.10000025902606463
+            ],
+            "sigma2_irregular": [
+              -4438534042.77389
+            ],
+            "sigma2_level": [
+              -11476716.455120439
+            ],
+            "sigma2_trend": [
+              -516067206.68087494
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "round": 9,
+          "client_mse": {
+            "client_0": 15173388174.345238,
+            "client_1": 119757294500.46687,
+            "client_2": 214143197958349.03,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -0.9999996418753666
+            ],
+            "process_noise": [
+              -0.09999962259090737
+            ],
+            "sigma2_irregular": [
+              -4438534042.773891
+            ],
+            "sigma2_level": [
+              -11476716.455119874
+            ],
+            "sigma2_trend": [
+              -516067206.6808763
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        },
+        {
+          "round": 10,
+          "client_mse": {
+            "client_0": 15906119995.795507,
+            "client_1": 119757294500.46687,
+            "client_2": 262235882642674.06,
+            "client_3": 30142744432600.094,
+            "client_4": 1008088081544.4996
+          },
+          "used_param_keys": [
+            "observation_noise",
+            "process_noise",
+            "sigma2_irregular",
+            "sigma2_level",
+            "sigma2_trend"
+          ],
+          "aggregated": {
+            "observation_noise": [
+              -1.000001597593952
+            ],
+            "process_noise": [
+              -0.09999770437273994
+            ],
+            "sigma2_irregular": [
+              -4438534042.7738905
+            ],
+            "sigma2_level": [
+              -11476716.455118418
+            ],
+            "sigma2_trend": [
+              -516067206.68087626
+            ]
+          },
+          "malicious_ids": [
+            0,
+            2
+          ]
+        }
+      ],
+      "n_clients": 5
+    }
+  ],
+  "truncated": false,
+  "combos": 24
+}

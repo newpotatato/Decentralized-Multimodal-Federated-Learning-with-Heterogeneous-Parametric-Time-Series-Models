@@ -1,0 +1,276 @@
+{
+  "results": [
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "fedavg",
+      "rounds": 5,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 10287595882.879171,
+            "client_1": 162848310355.54675,
+            "client_2": 1340286784474.6902,
+            "client_3": 28516960864789.863,
+            "client_4": 31677317524.578545
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8686602930281846
+            ],
+            "sigma2": [
+              5229906824183.395
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 14075471851.82196,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500173981339784
+            ],
+            "sigma2": [
+              179934954.13443553
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 15646347179.615772,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500176476476976
+            ],
+            "sigma2": [
+              179934954.13443586
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 10938810029.110224,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500176023227171
+            ],
+            "sigma2": [
+              179934954.13443622
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 13562454997.048996,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 28880357301141.926,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.8500169992005987
+            ],
+            "sigma2": [
+              179934954.1344357
+            ]
+          },
+          "malicious_ids": [
+            0
+          ]
+        }
+      ],
+      "n_clients": 5
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "lvp",
+      "rounds": 5,
+      "local_epochs": 3,
+      "malicious_frac": 0.2,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 3199664855.686915,
+            "client_1": 162848310355.54675,
+            "client_2": 1340286784474.6902,
+            "client_3": 108365911993543.25,
+            "client_4": 31677317524.578545
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.942676219007781
+            ],
+            "sigma2": [
+              44572179690.73536
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 122858066828515.8,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.922187618480115
+            ],
+            "sigma2": [
+              171366119.90118158
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 3,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 80623518104733.2,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9221873936879169
+            ],
+            "sigma2": [
+              171366119.90118158
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 4,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 99606104112237.58,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9221884193422304
+            ],
+            "sigma2": [
+              171366119.90118158
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        },
+        {
+          "round": 5,
+          "client_mse": {
+            "client_0": 3194099515.575879,
+            "client_1": 183177404571.62018,
+            "client_2": 1342323220549.647,
+            "client_3": 93107968486066.1,
+            "client_4": 153745285586.28815
+          },
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9221884545008096
+            ],
+            "sigma2": [
+              171366119.90118158
+            ]
+          },
+          "malicious_ids": [
+            3
+          ]
+        }
+      ],
+      "n_clients": 5
+    }
+  ],
+  "truncated": false,
+  "combos": 2
+}

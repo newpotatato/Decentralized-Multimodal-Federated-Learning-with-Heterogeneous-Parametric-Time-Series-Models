@@ -1,0 +1,118 @@
+{
+  "results": [
+    {
+      "model": "MarkovSwitchingRegressionModel",
+      "aggregator": "fedavg",
+      "rounds": 2,
+      "local_epochs": 1,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 3566807196.27426,
+            "client_1": 755153984914.4653,
+            "client_2": 71372846158076.03,
+            "client_3": 115219285748474.28,
+            "client_4": 665956193615.7552
+          },
+          "used_param_keys": [
+            "const[0]",
+            "const[1]",
+            "k_regimes",
+            "p[0->0]",
+            "p[1->0]",
+            "sigma2[0]",
+            "sigma2[1]",
+            "switching_trend",
+            "switching_variance"
+          ],
+          "aggregated": {
+            "const[0]": [
+              1376806.0957893657
+            ],
+            "const[1]": [
+              4051177.139736027
+            ],
+            "k_regimes": [
+              2.0
+            ],
+            "p[0->0]": [
+              0.6297730067855105
+            ],
+            "p[1->0]": [
+              0.07029836123379335
+            ],
+            "sigma2[0]": [
+              449144100902.4064
+            ],
+            "sigma2[1]": [
+              4791705756326.277
+            ],
+            "switching_trend": [
+              1.0
+            ],
+            "switching_variance": [
+              1.0
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 3566807196.27426,
+            "client_1": 755153984914.4653,
+            "client_2": 71372846158076.03,
+            "client_3": 115219285748474.28,
+            "client_4": 665956193615.7552
+          },
+          "used_param_keys": [
+            "const[0]",
+            "const[1]",
+            "k_regimes",
+            "p[0->0]",
+            "p[1->0]",
+            "sigma2[0]",
+            "sigma2[1]",
+            "switching_trend",
+            "switching_variance"
+          ],
+          "aggregated": {
+            "const[0]": [
+              1376806.0957893657
+            ],
+            "const[1]": [
+              4051177.139736027
+            ],
+            "k_regimes": [
+              2.0
+            ],
+            "p[0->0]": [
+              0.6297730067855105
+            ],
+            "p[1->0]": [
+              0.07029836123379335
+            ],
+            "sigma2[0]": [
+              449144100902.4064
+            ],
+            "sigma2[1]": [
+              4791705756326.277
+            ],
+            "switching_trend": [
+              1.0
+            ],
+            "switching_variance": [
+              1.0
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 5
+    }
+  ],
+  "truncated": false,
+  "combos": 1
+}

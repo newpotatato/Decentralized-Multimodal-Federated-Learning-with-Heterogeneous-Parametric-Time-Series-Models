@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "fedavg",
+      "rounds": 2,
+      "local_epochs": 1,
+      "malicious_frac": 0.0,
+      "history": [
+        {
+          "round": 1,
+          "client_mse": {
+            "client_0": 15.579880394499437,
+            "client_1": 2.4912202188295307,
+            "client_2": 6819.411374091705,
+            "client_3": 12.895726740186557,
+            "client_4": 1117.6597904230835
+          },
+          "server_mse": 1593.6075983736605,
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9998944695831239
+            ],
+            "sigma2": [
+              2547.369746491598
+            ]
+          },
+          "malicious_ids": []
+        },
+        {
+          "round": 2,
+          "client_mse": {
+            "client_0": 15.579880394499437,
+            "client_1": 2.4912202188295307,
+            "client_2": 6819.411374091705,
+            "client_3": 12.895726740186557,
+            "client_4": 1117.6597904230835
+          },
+          "server_mse": 1593.6075983736605,
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9998944695831239
+            ],
+            "sigma2": [
+              2547.369746491598
+            ]
+          },
+          "malicious_ids": []
+        }
+      ],
+      "n_clients": 5
+    }
+  ],
+  "truncated": false,
+  "combos": 1
+}
