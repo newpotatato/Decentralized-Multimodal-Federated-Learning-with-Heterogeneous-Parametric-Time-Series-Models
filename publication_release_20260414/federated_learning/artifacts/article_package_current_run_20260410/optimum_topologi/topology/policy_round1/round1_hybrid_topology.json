@@ -1,0 +1,67 @@
+{
+  "scenario": {
+    "model": "DynamicLinearModel",
+    "n_clients": 20,
+    "column_partition": "contiguous",
+    "local_epochs": 1,
+    "lambda_jaccard": 0.6,
+    "tau_cos_min": 0.15,
+    "tau_selected": 0.79,
+    "auto_balance_tau": false,
+    "target_components": 4,
+    "sync_topic_groups": 4
+  },
+  "graph": {
+    "n_components": 6,
+    "component_sizes": [
+      10,
+      4,
+      3,
+      1,
+      1,
+      1
+    ],
+    "components": [
+      [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        19
+      ],
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        15,
+        17
+      ],
+      [
+        0
+      ],
+      [
+        16
+      ],
+      [
+        18
+      ]
+    ],
+    "degree_min": 0,
+    "degree_max": 5,
+    "degree_mean": 2.2,
+    "degree_std": 1.469693845669907
+  },
+  "artifacts": {
+    "topology_png": "federated_learning\\artifacts\\article_package_current_run_20260410\\optimum_topologi\\topology\\policy_round1\\round1_hybrid_topology.png",
+    "similarity_heatmap_png": "federated_learning\\artifacts\\article_package_current_run_20260410\\optimum_topologi\\topology\\policy_round1\\round1_hybrid_similarity_heatmap.png"
+  }
+}

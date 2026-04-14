@@ -1,0 +1,18 @@
+# Topology Policy Comparison (Single Seed Run)
+
+Model: DynamicLinearModel
+Seed: 62
+
+## Topology map
+- lvp: hybrid
+- decentralized_fedavg: ring
+- defta: star
+- balance: line
+- push_sum: ring
+
+## Final MAE by method
+- lvp: 385312.433647
+- defta: 40384226998347920554411228659712.000000
+- decentralized_fedavg: 121965158564501216293922534635039883264.000000
+- push_sum: 29534933147503878625667587132988304916480.000000
+- balance: 405299568999005732976644727413606192077927694468440527196002640731812850451538247680.000000

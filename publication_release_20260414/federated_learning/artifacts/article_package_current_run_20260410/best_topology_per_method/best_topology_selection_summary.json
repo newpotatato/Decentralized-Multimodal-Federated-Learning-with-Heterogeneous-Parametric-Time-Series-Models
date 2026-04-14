@@ -1,0 +1,285 @@
+{
+  "model": "DynamicLinearModel",
+  "methods": [
+    "lvp",
+    "decentralized_fedavg",
+    "defta",
+    "balance",
+    "push_sum"
+  ],
+  "modes": [
+    "jaccard",
+    "jaccard_cosine_hybrid"
+  ],
+  "tau_grid": [
+    0.35,
+    0.57,
+    0.79
+  ],
+  "selection_seed": 42,
+  "selection_rounds": 6,
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "scenario": {
+    "column_partition": "contiguous",
+    "malicious_frac": 0.25,
+    "attack_strategy": "noise_colluded",
+    "attack_scale": 5.0,
+    "rounds": 20,
+    "local_epochs": 1,
+    "network_eval_mode": "proxy"
+  },
+  "best_topology_by_method": {
+    "lvp": {
+      "method": "lvp",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 375247.9784925504
+    },
+    "decentralized_fedavg": {
+      "method": "decentralized_fedavg",
+      "mode": "jaccard",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 377887.0096841454
+    },
+    "defta": {
+      "method": "defta",
+      "mode": "jaccard",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383814.91718922486
+    },
+    "balance": {
+      "method": "balance",
+      "mode": "jaccard",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 381422.68799118965
+    },
+    "push_sum": {
+      "method": "push_sum",
+      "mode": "jaccard",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 382834.1498846975
+    }
+  },
+  "selection_rows": [
+    {
+      "method": "lvp",
+      "mode": "jaccard",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 1.1165320620566257e+28
+    },
+    {
+      "method": "lvp",
+      "mode": "jaccard",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 382403.72882837045
+    },
+    {
+      "method": "lvp",
+      "mode": "jaccard",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383819.37278366036
+    },
+    {
+      "method": "lvp",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 504184.46349082387
+    },
+    {
+      "method": "lvp",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 402592.757863042
+    },
+    {
+      "method": "lvp",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 375247.9784925504
+    },
+    {
+      "method": "decentralized_fedavg",
+      "mode": "jaccard",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 8092192043927.099
+    },
+    {
+      "method": "decentralized_fedavg",
+      "mode": "jaccard",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 377887.0096841454
+    },
+    {
+      "method": "decentralized_fedavg",
+      "mode": "jaccard",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383853.6258971908
+    },
+    {
+      "method": "decentralized_fedavg",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 8092192043927.099
+    },
+    {
+      "method": "decentralized_fedavg",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 377887.0096841454
+    },
+    {
+      "method": "decentralized_fedavg",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383853.6258971908
+    },
+    {
+      "method": "defta",
+      "mode": "jaccard",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 416292.94278370927
+    },
+    {
+      "method": "defta",
+      "mode": "jaccard",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 416786.6910379926
+    },
+    {
+      "method": "defta",
+      "mode": "jaccard",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383814.91718922486
+    },
+    {
+      "method": "defta",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 416292.94278370927
+    },
+    {
+      "method": "defta",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 416786.6910379926
+    },
+    {
+      "method": "defta",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383814.91718922486
+    },
+    {
+      "method": "balance",
+      "mode": "jaccard",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 9806061.556933278
+    },
+    {
+      "method": "balance",
+      "mode": "jaccard",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 381422.68799118965
+    },
+    {
+      "method": "balance",
+      "mode": "jaccard",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383829.3098400039
+    },
+    {
+      "method": "balance",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 9806061.556933278
+    },
+    {
+      "method": "balance",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 381422.68799118965
+    },
+    {
+      "method": "balance",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383829.3098400039
+    },
+    {
+      "method": "push_sum",
+      "mode": "jaccard",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 404586.187152307
+    },
+    {
+      "method": "push_sum",
+      "mode": "jaccard",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 382834.1498846975
+    },
+    {
+      "method": "push_sum",
+      "mode": "jaccard",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383853.62740769365
+    },
+    {
+      "method": "push_sum",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.35,
+      "seed": 42,
+      "final_network_mae": 404586.187152307
+    },
+    {
+      "method": "push_sum",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.57,
+      "seed": 42,
+      "final_network_mae": 382834.1498846975
+    },
+    {
+      "method": "push_sum",
+      "mode": "jaccard_cosine_hybrid",
+      "tau": 0.79,
+      "seed": 42,
+      "final_network_mae": 383853.62740769365
+    }
+  ],
+  "boxplot": "federated_learning\\artifacts\\article_package_current_run_20260410\\best_topology_per_method\\plots\\boxplots\\fig3_boxplot_single_multiseed.png"
+}

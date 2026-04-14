@@ -1,0 +1,6 @@
+# Full Component-vs-Tau Graph
+
+Input summary: federated_learning\artifacts\article_package_current_run_20260410\experiment_with_more_rounds\plots\coherence\components\component_count_vs_tau_summary.json
+tau_current: 0.35
+first_split_tau: 0.6
+figure: federated_learning\artifacts\article_package_current_run_20260410\experiment_with_more_rounds\plots\coherence\components\component_count_vs_tau_full.png

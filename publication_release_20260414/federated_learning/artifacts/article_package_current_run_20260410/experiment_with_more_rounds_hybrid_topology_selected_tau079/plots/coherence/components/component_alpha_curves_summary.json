@@ -1,0 +1,32 @@
+{
+  "pkg": "federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds_hybrid_topology_selected_tau079",
+  "seed": 42,
+  "alpha_grid": [
+    0.15,
+    0.25,
+    0.35,
+    0.45,
+    0.53,
+    0.6
+  ],
+  "rounds_used": 10,
+  "component_sizes": [
+    1,
+    8,
+    10,
+    1
+  ],
+  "n_components": 4,
+  "output_dirs": {
+    "with_size_in_title": "federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds_hybrid_topology_selected_tau079\\plots\\coherence\\components\\with_size_in_title",
+    "without_size_in_title": "federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds_hybrid_topology_selected_tau079\\plots\\coherence\\components\\without_size_in_title"
+  },
+  "final_mae_by_alpha": {
+    "0.15": 377651.8349749391,
+    "0.25": 402498.55690243054,
+    "0.35": 376214.3789211958,
+    "0.45": 1.1804566253087807e+32,
+    "0.53": 385089.59005984466,
+    "0.6": 513768.2163734178
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "pkg": "federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds",
+  "seed": 42,
+  "alpha_grid": [
+    0.15,
+    0.25,
+    0.35,
+    0.45,
+    0.53,
+    0.6
+  ],
+  "component_sizes": [
+    20
+  ],
+  "n_components": 1,
+  "output_dirs": {
+    "with_size_in_title": "federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds\\plots\\coherence\\components\\with_size_in_title",
+    "without_size_in_title": "federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds\\plots\\coherence\\components\\without_size_in_title"
+  },
+  "final_mae_by_alpha": {
+    "0.15": 383857.38926176523,
+    "0.25": 384077.76619637356,
+    "0.35": 388335.4566831871,
+    "0.45": 394980.76675990777,
+    "0.53": 383891.4137099037,
+    "0.6": 383903.5149984892
+  }
+}

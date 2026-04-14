@@ -1,0 +1,57 @@
+{
+  "scenario": {
+    "seed": 42,
+    "rounds": 10,
+    "local_epochs": 1,
+    "malicious_frac": 0.25,
+    "attack_strategy": "noise_colluded",
+    "attack_scale": 5.0,
+    "network_eval_mode": "proxy",
+    "similarity_tau": 0.35,
+    "similarity_mode": "jaccard",
+    "lambda_jaccard": 0.5,
+    "tau_cos_min": -1.0,
+    "lvp_self_weight": 0.0
+  },
+  "alpha_grid": [
+    0.15,
+    0.25,
+    0.35,
+    0.45,
+    0.53,
+    0.6
+  ],
+  "rows": [
+    {
+      "alpha": 0.15,
+      "final_network_mae": 386349.32899841043,
+      "rounds": 10
+    },
+    {
+      "alpha": 0.25,
+      "final_network_mae": 391897.3784026015,
+      "rounds": 10
+    },
+    {
+      "alpha": 0.35,
+      "final_network_mae": 409534.2704611152,
+      "rounds": 10
+    },
+    {
+      "alpha": 0.45,
+      "final_network_mae": 382788.9944080099,
+      "rounds": 10
+    },
+    {
+      "alpha": 0.53,
+      "final_network_mae": 385394.54425925046,
+      "rounds": 10
+    },
+    {
+      "alpha": 0.6,
+      "final_network_mae": 383871.7661416155,
+      "rounds": 10
+    }
+  ],
+  "figure": "C:\\tarasova\\RNF\\federated_learning\\artifacts\\article_package_current_run_20260410\\plots\\coherence\\lvp_coherence_by_alpha_current_scenario.png"
+}
