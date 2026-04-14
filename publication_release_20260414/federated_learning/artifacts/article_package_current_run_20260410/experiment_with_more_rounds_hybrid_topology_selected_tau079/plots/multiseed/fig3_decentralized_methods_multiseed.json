@@ -1,0 +1,69 @@
+{
+  "n_seeds": 3,
+  "seed_values": [
+    42,
+    52,
+    62
+  ],
+  "best_model": "DynamicLinearModel",
+  "scenario": {
+    "column_partition": "contiguous",
+    "malicious_frac": 0.25,
+    "attack_strategy": "noise_colluded",
+    "attack_scale": 5.0,
+    "rounds": 20,
+    "local_epochs": 1,
+    "seed": 42,
+    "network_eval_mode": "proxy"
+  },
+  "final_network_mae_mean_std": {
+    "lvp": {
+      "mean": 383871.5780523334,
+      "std": 3.6047250899412937
+    },
+    "decentralized_fedavg": {
+      "mean": 383866.38605895353,
+      "std": 0.0043768552014583064
+    },
+    "defta": {
+      "mean": 383865.6364509018,
+      "std": 0.03264028039280528
+    },
+    "balance": {
+      "mean": 384413.439256639,
+      "std": 774.4024909799923
+    },
+    "push_sum": {
+      "mean": 383866.38723214035,
+      "std": 0.0
+    }
+  },
+  "final_network_mae_ranked_by_mean": [
+    {
+      "aggregator": "defta",
+      "mean": 383865.6364509018,
+      "std": 0.03264028039280528
+    },
+    {
+      "aggregator": "decentralized_fedavg",
+      "mean": 383866.38605895353,
+      "std": 0.0043768552014583064
+    },
+    {
+      "aggregator": "push_sum",
+      "mean": 383866.38723214035,
+      "std": 0.0
+    },
+    {
+      "aggregator": "lvp",
+      "mean": 383871.5780523334,
+      "std": 3.6047250899412937
+    },
+    {
+      "aggregator": "balance",
+      "mean": 384413.439256639,
+      "std": 774.4024909799923
+    }
+  ],
+  "figure": "c:\\tarasova\\RNF\\federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds_hybrid_topology_selected_tau079\\plots\\multiseed\\fig3_decentralized_methods_multiseed_network_mae.png"
+}

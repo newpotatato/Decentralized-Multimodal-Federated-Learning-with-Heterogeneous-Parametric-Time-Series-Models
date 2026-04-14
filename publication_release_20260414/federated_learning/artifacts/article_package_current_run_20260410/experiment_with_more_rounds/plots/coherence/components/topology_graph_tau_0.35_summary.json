@@ -1,0 +1,10 @@
+{
+  "tau": 0.35,
+  "n_nodes": 20,
+  "n_edges": 180,
+  "n_components": 1,
+  "component_sizes": [
+    20
+  ],
+  "figure": "federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds\\plots\\coherence\\components\\topology_graph_tau_0.35.png"
+}

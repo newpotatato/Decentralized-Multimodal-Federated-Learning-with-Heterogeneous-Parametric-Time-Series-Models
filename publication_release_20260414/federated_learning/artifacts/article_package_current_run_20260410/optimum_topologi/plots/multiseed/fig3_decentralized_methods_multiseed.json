@@ -1,0 +1,70 @@
+{
+  "n_seeds": 3,
+  "seed_values": [
+    42,
+    52,
+    62
+  ],
+  "best_model": "DynamicLinearModel",
+  "scenario": {
+    "column_partition": "contiguous",
+    "malicious_frac": 0.25,
+    "attack_strategy": "noise_colluded",
+    "attack_scale": 5.0,
+    "rounds": 20,
+    "local_epochs": 1,
+    "network_eval_mode": "proxy",
+    "lvp_tau": 0.79,
+    "seed": 42
+  },
+  "final_network_mae_mean_std": {
+    "lvp": {
+      "mean": 385718.36707014526,
+      "std": 668.7755144399354
+    },
+    "decentralized_fedavg": {
+      "mean": 1.1992163390360992e+38,
+      "std": 9.709209186778878e+37
+    },
+    "defta": {
+      "mean": 5.108862304986407e+47,
+      "std": 7.225022359541816e+47
+    },
+    "balance": {
+      "mean": 4.2674622643396505e+90,
+      "std": 3.782587517463451e+90
+    },
+    "push_sum": {
+      "mean": 2.953493314750388e+40,
+      "std": 0.0
+    }
+  },
+  "final_network_mae_ranked_by_mean": [
+    {
+      "aggregator": "lvp",
+      "mean": 385718.36707014526,
+      "std": 668.7755144399354
+    },
+    {
+      "aggregator": "decentralized_fedavg",
+      "mean": 1.1992163390360992e+38,
+      "std": 9.709209186778878e+37
+    },
+    {
+      "aggregator": "push_sum",
+      "mean": 2.953493314750388e+40,
+      "std": 0.0
+    },
+    {
+      "aggregator": "defta",
+      "mean": 5.108862304986407e+47,
+      "std": 7.225022359541816e+47
+    },
+    {
+      "aggregator": "balance",
+      "mean": 4.2674622643396505e+90,
+      "std": 3.782587517463451e+90
+    }
+  ],
+  "figure": "federated_learning\\artifacts\\article_package_current_run_20260410\\optimum_topologi\\plots\\multiseed\\fig3_decentralized_methods_multiseed_network_mae.png"
+}

@@ -1,0 +1,17 @@
+{
+  "experiment": "method-specific topology policy comparison",
+  "source_summary": "../topology_policy_comparison_summary.json",
+  "topology_map": {
+    "lvp": "hybrid",
+    "decentralized_fedavg": "ring",
+    "defta": "star",
+    "balance": "line",
+    "push_sum": "ring"
+  },
+  "notes": {
+    "lvp_tau": 0.79,
+    "lvp_reference_topology_json": "lvp_reference_round1_hybrid_topology_tau079.json",
+    "lvp_reference_topology_png": "lvp_reference_round1_hybrid_topology_tau079.png",
+    "lvp_reference_similarity_heatmap_png": "lvp_reference_round1_hybrid_similarity_heatmap_tau079.png"
+  }
+}

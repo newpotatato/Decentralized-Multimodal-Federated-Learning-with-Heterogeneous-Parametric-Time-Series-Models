@@ -1,0 +1,25 @@
+# Within-Component Consensus Metrics Multi-seed Report
+
+Seeds: 42, 52, 62
+
+## Final round metrics (mean +- std)
+### Shift (round-to-round)
+- lvp: last=86936.058123 +- 69215.416777, mean=4376397.241700
+- push_sum: last=3989713.095167 +- 0.000000, mean=32744267.588570
+- decentralized_fedavg: last=4025309.036672 +- 6417.480158, mean=32744184.830690
+- defta: last=7862785.300011 +- 34.694884, mean=20112886.439946
+- balance: last=10168243.509200 +- 322348.629661, mean=40222463.243749
+
+### Centroid distance (consensus)
+- lvp: last=18709.693484 +- 19193.305086, mean=7074468.851284
+- push_sum: last=38337779.995446 +- 0.000000, mean=209913484.412460
+- decentralized_fedavg: last=38358505.482878 +- 18623.805400, mean=209914063.141239
+- balance: last=134910614.786347 +- 198459.876766, mean=350905205.721407
+- defta: last=141485944.187933 +- 5.347311, mean=405174353.627980
+
+### Pairwise distance (consensus)
+- lvp: last=25699.067851 +- 25341.773709, mean=9653388.004091
+- push_sum: last=45153685.410166 +- 0.000000, mean=238740016.240310
+- decentralized_fedavg: last=45183319.932359 +- 24603.242217, mean=238741671.770161
+- defta: last=156327095.285160 +- 55.749320, mean=447655511.356896
+- balance: last=157048750.667480 +- 371978.057851, mean=405281983.278751

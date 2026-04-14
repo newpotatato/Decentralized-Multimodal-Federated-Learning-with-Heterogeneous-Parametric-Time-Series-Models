@@ -1,0 +1,64 @@
+{
+  "scenario": {
+    "model": "DynamicLinearModel",
+    "n_clients": 20,
+    "column_partition": "contiguous",
+    "local_epochs": 1,
+    "lambda_jaccard": 0.5,
+    "tau_cos_min": -1.0,
+    "tau_selected": 0.79,
+    "auto_balance_tau": true,
+    "target_components": 4,
+    "sync_topic_groups": 4
+  },
+  "graph": {
+    "n_components": 5,
+    "component_sizes": [
+      10,
+      4,
+      4,
+      1,
+      1
+    ],
+    "components": [
+      [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        19
+      ],
+      [
+        1,
+        15,
+        16,
+        17
+      ],
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0
+      ],
+      [
+        18
+      ]
+    ],
+    "degree_min": 0,
+    "degree_max": 5,
+    "degree_mean": 3.0,
+    "degree_std": 1.61245154965971
+  },
+  "artifacts": {
+    "topology_png": "federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds_hybrid\\topology_search\\round1_hybrid_topology.png",
+    "similarity_heatmap_png": "federated_learning\\artifacts\\article_package_current_run_20260410\\experiment_with_more_rounds_hybrid\\topology_search\\round1_hybrid_similarity_heatmap.png"
+  }
+}

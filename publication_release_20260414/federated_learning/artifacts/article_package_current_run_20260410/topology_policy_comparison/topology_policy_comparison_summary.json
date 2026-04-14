@@ -1,0 +1,86 @@
+{
+  "model": "DynamicLinearModel",
+  "methods": [
+    "lvp",
+    "decentralized_fedavg",
+    "defta",
+    "balance",
+    "push_sum"
+  ],
+  "seeds": [
+    42
+  ],
+  "scenario": {
+    "column_partition": "contiguous",
+    "malicious_frac": 0.25,
+    "attack_strategy": "noise_colluded",
+    "attack_scale": 5.0,
+    "rounds": 3,
+    "local_epochs": 1,
+    "network_eval_mode": "proxy",
+    "lvp_tau": 0.79
+  },
+  "topology_map": {
+    "lvp": "hybrid",
+    "decentralized_fedavg": "ring",
+    "defta": "star",
+    "balance": "line",
+    "push_sum": "ring"
+  },
+  "lvp_tau": 0.79,
+  "final_metrics": {
+    "lvp": {
+      "final_mae_mean": 374451.6270884639,
+      "final_mae_std": 0.0
+    },
+    "decentralized_fedavg": {
+      "final_mae_mean": 428294.0940915678,
+      "final_mae_std": 0.0
+    },
+    "defta": {
+      "final_mae_mean": 386319.02838498796,
+      "final_mae_std": 0.0
+    },
+    "balance": {
+      "final_mae_mean": 379243.47448549076,
+      "final_mae_std": 0.0
+    },
+    "push_sum": {
+      "final_mae_mean": 428293.38460322534,
+      "final_mae_std": 0.0
+    }
+  },
+  "raw_seed_rows": [
+    {
+      "seed": 42,
+      "method": "lvp",
+      "topology": "hybrid",
+      "final_network_mae": 374451.6270884639
+    },
+    {
+      "seed": 42,
+      "method": "decentralized_fedavg",
+      "topology": "ring",
+      "final_network_mae": 428294.0940915678
+    },
+    {
+      "seed": 42,
+      "method": "defta",
+      "topology": "star",
+      "final_network_mae": 386319.02838498796
+    },
+    {
+      "seed": 42,
+      "method": "balance",
+      "topology": "line",
+      "final_network_mae": 379243.47448549076
+    },
+    {
+      "seed": 42,
+      "method": "push_sum",
+      "topology": "ring",
+      "final_network_mae": 428293.38460322534
+    }
+  ],
+  "boxplot": "federated_learning\\artifacts\\article_package_current_run_20260410\\topology_policy_comparison\\plots\\boxplots\\fig3_boxplot_single_multiseed.png"
+}
