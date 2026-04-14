@@ -1,15 +1,19 @@
-*.pkl
-*.csv
-*.parquet
-*.npz
-*.h5
-*.pt
-*.pth
-/archive/
-/01_data_transactions/
-/02_data_fontanka/
-.venv/
+# General
 __pycache__/
-.env
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# OS/editor
 .DS_Store
+Thumbs.db
 .vscode/
+
+# Logs and temp
+*.log
+*.tmp
