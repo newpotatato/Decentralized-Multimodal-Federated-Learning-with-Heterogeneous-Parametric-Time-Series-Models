@@ -33,10 +33,15 @@ def build_neighbor_graph(
     theta_prev: Optional[List[Dict[str, np.ndarray]]] = None,
     lambda_jaccard: float = 0.5,
     tau_cos_min: float = -1.0,
+    theta_sent: Optional[List[Dict[str, np.ndarray]]] = None,
+    theta_sent_prev: Optional[List[Dict[str, np.ndarray]]] = None,
 ) -> Tuple[List[List[int]], np.ndarray]:
     """
     (i,j) in G iff κ_ij >= τ, i != j.
     Returns adjacency lists and full κ matrix.
+
+    In the hybrid mode row i is the receiver: it compares its own increment with the
+    increment of the vectors actually transmitted by j (theta_sent), when those are given.
     """
     n = len(profiles)
     mode = (similarity_mode or "jaccard").strip().lower()
@@ -53,13 +58,20 @@ def build_neighbor_graph(
         cos = None
     elif mode in ("jaccard_cosine_hybrid", "hybrid"):
         lam = float(np.clip(lambda_jaccard, 0.0, 1.0))
-        cos = _cosine_similarity_from_deltas(theta_local, theta_prev)
+        cos = _cosine_similarity_from_deltas(theta_local, theta_prev, theta_sent, theta_sent_prev)
         # Map cosine [-1, 1] to [0, 1] for convex mixing with Jaccard.
         cos01 = 0.5 * (cos + 1.0)
         sim = lam * jacc + (1.0 - lam) * cos01
+    elif mode in ("jaccard_paramcos_hybrid", "hybrid_param"):
+        # Receiver-side consistency: cosine between the vector received from j and the
+        # receiver's own locally trained parameters (both observable by client i).
+        lam = float(np.clip(lambda_jaccard, 0.0, 1.0))
+        cos = _cosine_received_vs_own(theta_local, theta_sent if theta_sent is not None else theta_local)
+        sim = lam * jacc + (1.0 - lam) * 0.5 * (cos + 1.0)
     else:
         raise ValueError(
-            f"Unknown similarity_mode={similarity_mode!r}; use 'jaccard' or 'jaccard_cosine_hybrid'"
+            f"Unknown similarity_mode={similarity_mode!r}; use 'jaccard', 'jaccard_cosine_hybrid' "
+            "or 'jaccard_paramcos_hybrid'"
         )
 
     neighbors: List[List[int]] = []
@@ -75,6 +87,30 @@ def build_neighbor_graph(
             n_i.append(j)
         neighbors.append(n_i)
     return neighbors, sim
+
+
+def _cosine_received_vs_own(
+    theta_own: Optional[List[Dict[str, np.ndarray]]],
+    theta_received: Optional[List[Dict[str, np.ndarray]]],
+) -> np.ndarray:
+    """cos[i, j] = cosine(own parameters of i, vector received from j); 1 when undefined."""
+    n = len(theta_own or theta_received or [])
+    cos = np.ones((n, n), dtype=float)
+    np.fill_diagonal(cos, 0.0)
+    if not theta_own or not theta_received:
+        return cos
+    own = [_flatten_numeric_param_dict(p) for p in theta_own]
+    rec = [_flatten_numeric_param_dict(p) for p in theta_received]
+    for i in range(n):
+        for j in range(n):
+            if i == j or own[i].size == 0 or rec[j].size == 0:
+                continue
+            m = min(own[i].size, rec[j].size)
+            a, b = own[i][:m], rec[j][:m]
+            na, nb = float(np.linalg.norm(a)), float(np.linalg.norm(b))
+            if na > 1e-12 and nb > 1e-12:
+                cos[i, j] = float(np.dot(a, b) / (na * nb))
+    return np.clip(cos, -1.0, 1.0)
 
 
 def _flatten_numeric_param_dict(params: Optional[Dict[str, np.ndarray]]) -> np.ndarray:
@@ -93,9 +129,27 @@ def _flatten_numeric_param_dict(params: Optional[Dict[str, np.ndarray]]) -> np.n
     return np.concatenate(parts)
 
 
+def _param_deltas(
+    theta_now: List[Dict[str, np.ndarray]],
+    theta_before: List[Dict[str, np.ndarray]],
+) -> List[np.ndarray]:
+    deltas: List[np.ndarray] = []
+    for now, before in zip(theta_now, theta_before):
+        a = _flatten_numeric_param_dict(now)
+        b = _flatten_numeric_param_dict(before)
+        if a.size == 0 or b.size == 0:
+            deltas.append(np.array([], dtype=float))
+            continue
+        m = min(a.size, b.size)
+        deltas.append(a[:m] - b[:m])
+    return deltas
+
+
 def _cosine_similarity_from_deltas(
     theta_local: Optional[List[Dict[str, np.ndarray]]],
     theta_prev: Optional[List[Dict[str, np.ndarray]]],
+    theta_sent: Optional[List[Dict[str, np.ndarray]]] = None,
+    theta_sent_prev: Optional[List[Dict[str, np.ndarray]]] = None,
 ) -> np.ndarray:
     """
     Build cosine similarity matrix between client parameter deltas.
@@ -109,15 +163,12 @@ def _cosine_similarity_from_deltas(
         return out
 
     n = len(theta_local)
-    deltas: List[np.ndarray] = []
-    for i in range(n):
-        a = _flatten_numeric_param_dict(theta_local[i])
-        b = _flatten_numeric_param_dict(theta_prev[i])
-        if a.size == 0 or b.size == 0:
-            deltas.append(np.array([], dtype=float))
-            continue
-        m = min(a.size, b.size)
-        deltas.append(a[:m] - b[:m])
+    deltas = _param_deltas(theta_local, theta_prev)
+    # Increments of the neighbors as seen by a receiver: from transmitted vectors if available.
+    if theta_sent is not None and theta_sent_prev is not None and len(theta_sent) == n == len(theta_sent_prev):
+        sent_deltas = _param_deltas(theta_sent, theta_sent_prev)
+    else:
+        sent_deltas = deltas
 
     cos = np.ones((n, n), dtype=float)
     np.fill_diagonal(cos, 0.0)
@@ -126,7 +177,7 @@ def _cosine_similarity_from_deltas(
             if i == j:
                 continue
             di = deltas[i]
-            dj = deltas[j]
+            dj = sent_deltas[j]
             if di.size == 0 or dj.size == 0:
                 cos[i, j] = 1.0
                 continue

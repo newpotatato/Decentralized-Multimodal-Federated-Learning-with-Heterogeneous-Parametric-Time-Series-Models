@@ -153,6 +153,7 @@ def main() -> None:
     p.add_argument("--eval-fit-maxiter", type=int, default=0)
     p.add_argument("--no-reuters", action="store_true")
     p.add_argument("--random-init", action="store_true", help="Initialize all models with random parameters before training")
+    p.add_argument("--column-partition", type=str, default="random", choices=["contiguous", "strided", "random", "random_strided"])
     args = p.parse_args()
 
     missing = [m for m in MAIN_MODELS if m not in MODEL_REGISTRY]
@@ -172,7 +173,9 @@ def main() -> None:
     base = Path(args.base_path).resolve()
     mcc_df = load_mcc_series(base)
     exog = _build_exogenous(base, mcc_df, use_reuters=not args.no_reuters)
-    clients = build_clients_from_mcc(mcc_df, exog, n_clients=args.n_clients)
+    clients = build_clients_from_mcc(mcc_df, exog, n_clients=args.n_clients,
+                                     column_partition=args.column_partition,
+                                     partition_seed=args.seed)
     if len(clients) < 2:
         raise RuntimeError("Need at least 2 clients.")
     profiles = _topic_profiles(clients)

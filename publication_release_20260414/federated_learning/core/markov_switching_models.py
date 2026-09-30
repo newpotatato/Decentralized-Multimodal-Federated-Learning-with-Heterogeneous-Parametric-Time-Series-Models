@@ -9,7 +9,7 @@ from statsmodels.tsa.regime_switching.markov_autoregression import MarkovAutoreg
 from typing import Optional, Dict, Any, List
 import warnings
 
-from base_model import BaseTimeSeriesModel
+from base_model import BaseTimeSeriesModel, vector_from_param_names
 
 warnings.filterwarnings('ignore')
 
@@ -201,10 +201,11 @@ class MarkovSwitchingRegressionModel(BaseTimeSeriesModel):
             exog_cols: Optional[list] = None,
             use_transform: bool = True,
             switching_variance: bool = True,
-            switching_trend: bool = True) -> 'MarkovSwitchingRegressionModel':
+            switching_trend: bool = True,
+            max_iterations: Optional[int] = None) -> 'MarkovSwitchingRegressionModel':
         """
         Обучение Markov-switching регрессионной модели.
-        
+
         Args:
             train_data: DataFrame с данными
             target_col: Название целевой колонки
@@ -212,19 +213,20 @@ class MarkovSwitchingRegressionModel(BaseTimeSeriesModel):
             use_transform: Использовать ли трансформацию данных
             switching_variance: Переключается ли дисперсия между режимами
             switching_trend: Переключается ли тренд между режимами
-            
+            max_iterations: Максимум итераций EM (0 = evaluate at start_params only)
+
         Returns:
             self
         """
         self.train_data = train_data.copy()
         data = train_data[target_col].copy()
         self.exog_cols = exog_cols
-        
+
         # Подготовка экзогенных переменных
         exog_data = None
         if exog_cols is not None and len(exog_cols) > 0:
             exog_data = train_data[exog_cols].values
-        
+
         if use_transform:
             norm_data, norm_params = self.normalize(data)
             self.transformation_params['normalize'] = norm_params
@@ -232,7 +234,7 @@ class MarkovSwitchingRegressionModel(BaseTimeSeriesModel):
             self.transformation_params['boxcox_lambda'] = lmbda
         else:
             transformed_data = data
-            
+
         # Построение MS-Regression модели
         model = MarkovRegression(
             transformed_data,
@@ -241,42 +243,52 @@ class MarkovSwitchingRegressionModel(BaseTimeSeriesModel):
             switching_variance=switching_variance,
             trend='c' if switching_trend else 'n'
         )
-        
+
+        fit_kwargs: Dict[str, Any] = {}
+        if max_iterations is not None:
+            fit_kwargs['maxiter'] = max(int(max_iterations), 1)
+        if self.initial_params:
+            try:
+                start_params = self._build_start_params(self.initial_params)
+                if start_params is None:
+                    start_params = vector_from_param_names(
+                        list(model.param_names), self.initial_params
+                    )
+                if start_params is not None:
+                    fit_kwargs['start_params'] = start_params
+            except Exception:
+                pass
+
         try:
-            # Use a timeout wrapper to avoid hanging on large datasets
             import signal
             import os
-            
-            if os.name != 'nt':  # Unix-like systems only
+
+            if os.name != 'nt':
                 def timeout_handler(signum, frame):
                     raise TimeoutError("Model fit timeout")
-                
+
                 signal.signal(signal.SIGALRM, timeout_handler)
-                signal.alarm(30)  # 30 second timeout
+                signal.alarm(30)
                 try:
-                    self.fitted_model = model.fit()
+                    self.fitted_model = model.fit(**fit_kwargs)
                 finally:
                     signal.alarm(0)
             else:
-                # Windows: just fit without timeout
-                self.fitted_model = model.fit()
+                self.fitted_model = model.fit(**fit_kwargs)
         except (TimeoutError, KeyboardInterrupt):
-            # If optimization times out, use unfitted model
             self.fitted_model = model
             try:
                 self.params = dict(model.params)
-            except:
+            except Exception:
                 self.params = {}
             return self
-        
-        # Сохранение параметров
-        self.params = {
-            'k_regimes': self.k_regimes,
-            'switching_variance': switching_variance,
-            'switching_trend': switching_trend,
-            **dict(self.fitted_model.params)
-        }
-        
+
+        # Сохранение параметров — только реальные параметры statsmodels
+        try:
+            self.params = dict(self.fitted_model.params)
+        except Exception:
+            self.params = {}
+
         return self
     
     def predict(self, steps: int, exog_future: Optional[np.ndarray] = None,

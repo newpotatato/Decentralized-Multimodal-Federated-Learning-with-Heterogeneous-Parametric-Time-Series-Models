@@ -255,7 +255,10 @@ def push_sum_synchronize(
         w_state = np.asarray(w_state, dtype=float).copy()
 
     # Inject the new local models into the current mass before the push step.
-    prepared_x = [_scale_param_dict(theta_local[i], float(w_state[i])) for i in range(n)]
+    # A client keeps its own local model; neighbors receive the transmitted one
+    # (which is the attacked payload for Byzantine senders).
+    prepared_own = [_scale_param_dict(theta_local[i], float(w_state[i])) for i in range(n)]
+    prepared_sent = [_scale_param_dict(theta_sent[i], float(w_state[i])) for i in range(n)]
     send_maps = _build_send_maps(neighbors, kappa, mode="uniform", temperature=temperature)
 
     new_x: List[Dict[str, np.ndarray]] = [{} for _ in range(n)]
@@ -265,11 +268,12 @@ def push_sum_synchronize(
         for receiver_idx, weight in mapping.items():
             if weight <= 0:
                 continue
+            payload = prepared_own[sender_idx] if receiver_idx == sender_idx else prepared_sent[sender_idx]
             if not new_x[receiver_idx]:
-                new_x[receiver_idx] = _scale_param_dict(prepared_x[sender_idx], float(weight))
+                new_x[receiver_idx] = _scale_param_dict(payload, float(weight))
             else:
                 new_x[receiver_idx] = _add_scaled_param_dict(
-                    new_x[receiver_idx], prepared_x[sender_idx], float(weight)
+                    new_x[receiver_idx], payload, float(weight)
                 )
             new_w[receiver_idx] += float(weight) * float(w_state[sender_idx])
 

@@ -47,6 +47,21 @@ def _iter_reuters_files(root: Path) -> Iterable[Path]:
                 yield fp
 
 
+# Daily sentiment of 2017-2021 Reuters headlines (experiments_datafusion2023/data_prep).
+# Preferred over the 1987 Reuters-21578 corpus, whose dates do not overlap the MCC period.
+REUTERS_DAILY_CSV = Path("reuters_2018_2021") / "reuters_daily_sentiment.csv"
+
+
+def load_reuters_daily_csv(base_path: Path) -> Optional[pd.Series]:
+    """Daily Reuters sentiment indexed by date, or None if the CSV is absent."""
+    path = Path(base_path) / REUTERS_DAILY_CSV
+    if not path.exists():
+        return None
+    df = pd.read_csv(path, parse_dates=["date"])
+    series = df.set_index("date")["reuters_sentiment"].astype(float).sort_index()
+    return series[~series.index.duplicated()]
+
+
 _MONTH_RE = (
     r"(?:JAN(?:UARY)?|FEB(?:RUARY)?|MAR(?:CH)?|APR(?:IL)?|MAY|JUN(?:E)?|"
     r"JUL(?:Y)?|AUG(?:UST)?|SEP(?:T(?:EMBER)?)?|OCT(?:OBER)?|NOV(?:EMBER)?|DEC(?:EMBER)?)"

@@ -128,7 +128,7 @@ def main() -> None:
     parser.add_argument("--no-reuters", action="store_true")
     parser.add_argument("--local-fit-maxiter", type=int, default=10)
     parser.add_argument("--eval-fit-maxiter", type=int, default=0)
-    parser.add_argument("--column-partition", type=str, default="contiguous", choices=["contiguous", "strided"])
+    parser.add_argument("--column-partition", type=str, default="random", choices=["contiguous", "strided", "random", "random_strided"])
     parser.add_argument("--use-log-scale", action="store_true", help="Use log scale for network MAE y-axis")
     parser.add_argument("--clip-outliers-sigma", type=float, default=0.0, help="Clip outliers beyond mean+N*sigma (0=disabled)")
     args = parser.parse_args()
@@ -150,6 +150,7 @@ def main() -> None:
         exog,
         n_clients=args.n_clients,
         column_partition=args.column_partition,
+        partition_seed=args.seed,
     )
     if len(clients) < 2:
         raise RuntimeError("Need at least 2 clients.")

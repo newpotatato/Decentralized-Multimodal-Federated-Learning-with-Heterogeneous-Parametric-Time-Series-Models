@@ -66,7 +66,13 @@ from state_space_models import (
     KalmanFilterModel,
     StructuralTimeSeriesModel,
 )
-from reuters_loader import build_reuters_daily
+from reuters_loader import REUTERS_DAILY_CSV, build_reuters_daily, load_reuters_daily_csv
+
+# Models whose fit() accepts exogenous regressors (SARIMAX-backed).
+_EXOG_MODELS = ("ARMAXModel", "DynamicLinearModel")
+# News enter with a lag equal to the forecast horizon, so every exogenous value used
+# for a forecast was already observed at the forecast origin.
+EXOG_LAG_DAYS = 10
 
 MODEL_REGISTRY = {
     "ARMAXModel": ARMAXModel,
@@ -576,7 +582,7 @@ def train_local_model(
     exog_cols = [c for c in train_df.columns if c.startswith("exog")]
 
     model_name = ModelClass.__name__
-    if exog_cols and model_name == "ARMAXModel":
+    if exog_cols and model_name in _EXOG_MODELS:
         fit_kwargs["exog_cols"] = exog_cols
 
     fit_kwargs = _attach_fit_budget(ModelClass, fit_kwargs, local_fit_maxiter)
@@ -691,6 +697,8 @@ def run_one_model(
     use_dynamic_graph = (similarity_mode or "jaccard").strip().lower() in (
         "jaccard_cosine_hybrid",
         "hybrid",
+        "jaccard_paramcos_hybrid",
+        "hybrid_param",
     )
     prev_round_states: Optional[List[Dict[str, np.ndarray]]] = None
 
@@ -795,6 +803,7 @@ def run_one_model(
                 _clip_param_dict_l2(d, transmitted_param_norm_clip) if isinstance(d, dict) else d
                 for d in transmitted
             ]
+        prev_transmitted = last_transmitted
         last_transmitted = [deepcopy(d) if isinstance(d, dict) else {} for d in transmitted]
 
         used_keys: List[str] = []
@@ -819,6 +828,8 @@ def run_one_model(
                     theta_prev=prev_round_states,
                     lambda_jaccard=lambda_jaccard,
                     tau_cos_min=tau_cos_min,
+                    theta_sent=transmitted,
+                    theta_sent_prev=prev_transmitted,
                 )
             else:
                 neighbors, kappa = build_neighbor_graph(
@@ -842,6 +853,11 @@ def run_one_model(
             used_keys = sorted(
                 set().union(*(set(d.keys()) for d in local_states if d))
             )
+
+        elif agg_mode == "local":
+            # Reference: purely local training, no parameter exchange.
+            local_states = [deepcopy(d) if isinstance(d, dict) else {} for d in raw_params]
+            used_keys = sorted(set().union(*(set(d.keys()) for d in local_states if d)))
 
         elif agg_mode == "decentralized_fedavg":
             local_states = decentralized_fedavg_synchronize(
@@ -989,7 +1005,7 @@ def run_one_model(
                         "use_transform": _model_uses_transform(ModelClass),
                     }
                     exog_cols = [c for c in train_df.columns if c.startswith("exog")]
-                    if exog_cols and ModelClass.__name__ == "ARMAXModel":
+                    if exog_cols and ModelClass.__name__ in _EXOG_MODELS:
                         fit_kwargs["exog_cols"] = exog_cols
                     fit_kwargs = _attach_fit_budget(
                         ModelClass, fit_kwargs, eval_fit_maxiter
@@ -1083,37 +1099,58 @@ def _build_exogenous(
     use_reuters: bool,
     strict_errors: bool = False,
 ) -> Optional[pd.DataFrame]:
-    """Fontanka + optional Reuters daily sentiment (Reuters-21578 under real_data_integration)."""
+    """
+    Fontanka + optional Reuters daily sentiment, aligned to the MCC dates.
+
+    Each value at date t is the latest daily value observed at t - EXOG_LAG_DAYS.
+    Columns are standardized with the statistics of the training part (first 80%).
+    """
     exog_cols = {}
     target_dates = pd.to_datetime(mcc_df["date"], errors="coerce").dt.normalize()
+    lagged_dates = pd.DatetimeIndex(target_dates - pd.Timedelta(days=EXOG_LAG_DAYS))
+
+    def _align(series: pd.Series) -> np.ndarray:
+        s = pd.Series(series.values, index=pd.to_datetime(series.index, errors="coerce"))
+        s = s[s.index.notna()].dropna()
+        s.index = s.index.normalize()
+        s = s.groupby(level=0).mean().sort_index()
+        return s.reindex(lagged_dates, method="ffill").bfill().fillna(0.0).values
+
     try:
         news = load_news_exogenous(repo_root)
         if news is not None:
-            news_series = pd.Series(news.values, index=pd.to_datetime(news.index, errors="coerce")).dropna()
-            news_series.index = news_series.index.normalize()
-            aligned_news = (
-                news_series.reindex(target_dates)
-                .ffill()
-                .bfill()
-                .fillna(0.0)
-            )
-            exog_cols["exog_news"] = aligned_news.values
-    except Exception:
+            exog_cols["exog_news"] = _align(news)
+    except Exception as exc:
         if strict_errors:
             raise
+        print(f"[exog] WARNING: Fontanka news not used: {exc}", file=sys.stderr)
 
     if use_reuters:
-        for base in _reuters_integration_dirs(repo_root):
-            try:
-                corpus_root = base / "reuters" / "reuters"
-                if corpus_root.exists():
-                    reuters_df = build_reuters_daily(base, target_dates)
-                    exog_cols["exog_reuters"] = reuters_df["reuters_sentiment"].values
-                    break
-            except Exception:
-                if strict_errors:
-                    raise
-                continue
+        dirs = _reuters_integration_dirs(repo_root)
+        daily_csv_dirs = [d for d in dirs if (d / REUTERS_DAILY_CSV).exists()]
+        try:
+            if daily_csv_dirs:
+                exog_cols["exog_reuters"] = _align(load_reuters_daily_csv(daily_csv_dirs[0]))
+            else:
+                for base in dirs:
+                    if (base / "reuters" / "reuters").exists():
+                        reuters_df = build_reuters_daily(base, lagged_dates)
+                        exog_cols["exog_reuters"] = reuters_df["reuters_sentiment"].values
+                        break
+        except Exception as exc:
+            if strict_errors:
+                raise
+            print(f"[exog] WARNING: Reuters sentiment not used: {exc}", file=sys.stderr)
+
+    n_train = max(int(len(mcc_df) * 0.8), 2)
+    for key in list(exog_cols):
+        vals = np.asarray(exog_cols[key], dtype=float)
+        mu, sd = float(np.mean(vals[:n_train])), float(np.std(vals[:n_train]))
+        if not np.isfinite(sd) or sd < 1e-12:
+            print(f"[exog] WARNING: {key} is constant on the MCC dates; dropped.", file=sys.stderr)
+            del exog_cols[key]
+            continue
+        exog_cols[key] = (vals - mu) / sd
 
     if not exog_cols:
         return None
