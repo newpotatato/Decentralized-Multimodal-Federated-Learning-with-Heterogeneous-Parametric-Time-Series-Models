@@ -1,0 +1,114 @@
+{
+  "config": {
+    "rounds": 10,
+    "local_epochs": 1,
+    "seeds": [
+      42,
+      52,
+      62,
+      72,
+      82
+    ],
+    "column_partition": "random",
+    "attack_strategy": "label_flip",
+    "attack_scale": 2.5,
+    "malicious_frac": 0.4,
+    "network_eval_mode": "refit",
+    "similarity_mode": "jaccard_cosine_hybrid",
+    "lambda_jaccard": 0.2,
+    "tau_cos_min": -1.0,
+    "fixed_alpha_for_tau": 0.4,
+    "fixed_tau_for_alpha": 0.3,
+    "sync_topic_groups": 0,
+    "partition_per_seed": true,
+    "local_fit_maxiter": 5,
+    "num_workers": 1,
+    "grid_workers": 2
+  },
+  "tau_rows": [
+    {
+      "tau": 0.2,
+      "mean": 1.8916556280241785,
+      "std": 0.3423269204488008,
+      "n": 5
+    },
+    {
+      "tau": 0.3,
+      "mean": 1.4561883195159173,
+      "std": 0.4162611075484043,
+      "n": 5
+    },
+    {
+      "tau": 0.4,
+      "mean": 1.9986087547264055,
+      "std": 0.7332484847800659,
+      "n": 5
+    },
+    {
+      "tau": 0.5,
+      "mean": 1.9854081556474572,
+      "std": 0.5847179263547193,
+      "n": 5
+    },
+    {
+      "tau": 0.6,
+      "mean": 1.7910313065042751,
+      "std": 0.22167741203394659,
+      "n": 5
+    },
+    {
+      "tau": 0.7,
+      "mean": 1.679366627522694,
+      "std": 0.7789041946186537,
+      "n": 5
+    }
+  ],
+  "alpha_rows": [
+    {
+      "alpha": 0.2,
+      "mean": 1.0213468877058742,
+      "std": 0.3791913995669115,
+      "n": 5
+    },
+    {
+      "alpha": 0.3,
+      "mean": 1.5079810713195456,
+      "std": 0.623252960982268,
+      "n": 5
+    },
+    {
+      "alpha": 0.4,
+      "mean": 1.4561883195159173,
+      "std": 0.4162611075484043,
+      "n": 5
+    },
+    {
+      "alpha": 0.53,
+      "mean": 45.83335225260988,
+      "std": 88.177382688589,
+      "n": 5
+    },
+    {
+      "alpha": 0.6,
+      "mean": 74.02750780436979,
+      "std": 143.27503720941777,
+      "n": 5
+    }
+  ],
+  "best_tau": {
+    "tau": 0.3,
+    "mean": 1.4561883195159173,
+    "std": 0.4162611075484043,
+    "n": 5
+  },
+  "best_alpha": {
+    "alpha": 0.2,
+    "mean": 1.0213468877058742,
+    "std": 0.3791913995669115,
+    "n": 5
+  },
+  "figures": {
+    "tau": "C:\\tarasova\\RNF\\experiments_datafusion2023\\artifacts_pipeline_v2\\ablation_hybrid\\tau_ablation_rounds10_article.png",
+    "alpha": "C:\\tarasova\\RNF\\experiments_datafusion2023\\artifacts_pipeline_v2\\ablation_hybrid\\alpha_ablation_rounds10_article.png"
+  }
+}

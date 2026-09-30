@@ -1,0 +1,246 @@
+{
+  "model": "DynamicLinearModel",
+  "methods": [
+    "lvp",
+    "decentralized_fedavg",
+    "defta",
+    "balance",
+    "push_sum",
+    "local"
+  ],
+  "seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "scenario": {
+    "column_partition": "random",
+    "malicious_frac": 0.4,
+    "attack_strategy": "noise_colluded",
+    "attack_scale": 5.0,
+    "rounds": 10,
+    "local_epochs": 1,
+    "network_eval_mode": "refit",
+    "lvp_tau": 0.3
+  },
+  "topology_map": {
+    "lvp": "hybrid",
+    "decentralized_fedavg": "hybrid",
+    "defta": "hybrid",
+    "balance": "hybrid",
+    "push_sum": "hybrid",
+    "local": "hybrid"
+  },
+  "lvp_tau": 0.3,
+  "final_metrics": {
+    "lvp": {
+      "final_mae_mean": 1.2789082619634393,
+      "final_mae_std": 0.6451699086051119
+    },
+    "decentralized_fedavg": {
+      "final_mae_mean": 0.8919384543776253,
+      "final_mae_std": 0.26900185072025035
+    },
+    "defta": {
+      "final_mae_mean": 1.0877078907011704,
+      "final_mae_std": 0.40581346260798323
+    },
+    "balance": {
+      "final_mae_mean": 1.4636115822203934,
+      "final_mae_std": 0.5237307755059077
+    },
+    "push_sum": {
+      "final_mae_mean": 0.8716360976469677,
+      "final_mae_std": 0.2662511278597113
+    },
+    "local": {
+      "final_mae_mean": 0.8420317009918706,
+      "final_mae_std": 0.3433073927033887
+    }
+  },
+  "raw_seed_rows": [
+    {
+      "seed": 42,
+      "method": "lvp",
+      "topology": "hybrid",
+      "final_network_mae": 0.7570829267303874
+    },
+    {
+      "seed": 42,
+      "method": "decentralized_fedavg",
+      "topology": "hybrid",
+      "final_network_mae": 0.9695968619441435
+    },
+    {
+      "seed": 42,
+      "method": "defta",
+      "topology": "hybrid",
+      "final_network_mae": 1.3811422742319481
+    },
+    {
+      "seed": 42,
+      "method": "balance",
+      "topology": "hybrid",
+      "final_network_mae": 1.78102149295296
+    },
+    {
+      "seed": 42,
+      "method": "push_sum",
+      "topology": "hybrid",
+      "final_network_mae": 0.7517034676379034
+    },
+    {
+      "seed": 42,
+      "method": "local",
+      "topology": "hybrid",
+      "final_network_mae": 0.7613767636578346
+    },
+    {
+      "seed": 52,
+      "method": "lvp",
+      "topology": "hybrid",
+      "final_network_mae": 1.5214423326242827
+    },
+    {
+      "seed": 52,
+      "method": "decentralized_fedavg",
+      "topology": "hybrid",
+      "final_network_mae": 1.3843046036779543
+    },
+    {
+      "seed": 52,
+      "method": "defta",
+      "topology": "hybrid",
+      "final_network_mae": 1.7148532220189245
+    },
+    {
+      "seed": 52,
+      "method": "balance",
+      "topology": "hybrid",
+      "final_network_mae": 1.7388002710781734
+    },
+    {
+      "seed": 52,
+      "method": "push_sum",
+      "topology": "hybrid",
+      "final_network_mae": 1.3837562450154812
+    },
+    {
+      "seed": 52,
+      "method": "local",
+      "topology": "hybrid",
+      "final_network_mae": 1.208171254556504
+    },
+    {
+      "seed": 62,
+      "method": "lvp",
+      "topology": "hybrid",
+      "final_network_mae": 2.376707419552083
+    },
+    {
+      "seed": 62,
+      "method": "decentralized_fedavg",
+      "topology": "hybrid",
+      "final_network_mae": 0.7546769523644901
+    },
+    {
+      "seed": 62,
+      "method": "defta",
+      "topology": "hybrid",
+      "final_network_mae": 0.983201530959741
+    },
+    {
+      "seed": 62,
+      "method": "balance",
+      "topology": "hybrid",
+      "final_network_mae": 2.031993654542569
+    },
+    {
+      "seed": 62,
+      "method": "push_sum",
+      "topology": "hybrid",
+      "final_network_mae": 0.8716649952206152
+    },
+    {
+      "seed": 62,
+      "method": "local",
+      "topology": "hybrid",
+      "final_network_mae": 1.2756427432893296
+    },
+    {
+      "seed": 72,
+      "method": "lvp",
+      "topology": "hybrid",
+      "final_network_mae": 1.193657419651617
+    },
+    {
+      "seed": 72,
+      "method": "decentralized_fedavg",
+      "topology": "hybrid",
+      "final_network_mae": 0.654675422527746
+    },
+    {
+      "seed": 72,
+      "method": "defta",
+      "topology": "hybrid",
+      "final_network_mae": 0.6726573535334276
+    },
+    {
+      "seed": 72,
+      "method": "balance",
+      "topology": "hybrid",
+      "final_network_mae": 0.5684821516341882
+    },
+    {
+      "seed": 72,
+      "method": "push_sum",
+      "topology": "hybrid",
+      "final_network_mae": 0.654544856026049
+    },
+    {
+      "seed": 72,
+      "method": "local",
+      "topology": "hybrid",
+      "final_network_mae": 0.44955501839304624
+    },
+    {
+      "seed": 82,
+      "method": "lvp",
+      "topology": "hybrid",
+      "final_network_mae": 0.5456512112588274
+    },
+    {
+      "seed": 82,
+      "method": "decentralized_fedavg",
+      "topology": "hybrid",
+      "final_network_mae": 0.6964384313737922
+    },
+    {
+      "seed": 82,
+      "method": "defta",
+      "topology": "hybrid",
+      "final_network_mae": 0.6866850727618107
+    },
+    {
+      "seed": 82,
+      "method": "balance",
+      "topology": "hybrid",
+      "final_network_mae": 1.1977603408940771
+    },
+    {
+      "seed": 82,
+      "method": "push_sum",
+      "topology": "hybrid",
+      "final_network_mae": 0.6965109243347889
+    },
+    {
+      "seed": 82,
+      "method": "local",
+      "topology": "hybrid",
+      "final_network_mae": 0.5154127250626385
+    }
+  ],
+  "boxplot": "C:\\tarasova\\RNF\\experiments_datafusion2023\\artifacts_pipeline_v2\\scenario_A\\plots\\boxplots\\fig3_boxplot_single_multiseed.png"
+}

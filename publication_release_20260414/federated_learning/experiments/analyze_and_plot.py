@@ -250,7 +250,7 @@ def main():
     summary = generate_summary_table(df, output_dir)
     print(summary.to_string())
     
-    print(f"\n✅ All plots saved to {output_dir}")
+    print(f"\nAll plots saved to {output_dir}")
 
 
 if __name__ == "__main__":
