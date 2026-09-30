@@ -180,23 +180,28 @@ def corrupt_params(
     noisy: Dict[str, np.ndarray] = {}
     local_rng = rng if rng is not None else np.random.default_rng()
     
+    def _magnitude(arr: np.ndarray) -> float:
+        # Reference magnitude of one parameter block. Scalar parameters (the usual case for
+        # statsmodels-backed models) have zero std, so their absolute value is used instead.
+        sd = float(np.std(arr)) if arr.size > 1 else 0.0
+        return sd if sd > 0 else float(np.mean(np.abs(arr)))
+
     if strategy == "label_flip":
-        # Classic label flipping: invert numeric parameters only
+        # Sign inversion scaled by `scale`: the transmitted vector is -scale * theta.
         for key, val in params.items():
             try:
                 arr = np.array(val, dtype=float)
-                noise = local_rng.normal(0, np.std(arr) * scale + 1e-6, size=arr.shape)
-                noisy[key] = -(arr + noise)
+                noisy[key] = -float(scale) * arr
             except (ValueError, TypeError):
                 # Skip non-numeric values (strings, objects, etc.)
                 noisy[key] = val
-    
+
     elif strategy == "noise":
         # Gaussian noise only (no inversion) for numeric params
         for key, val in params.items():
             try:
                 arr = np.array(val, dtype=float)
-                noise = local_rng.normal(0, np.std(arr) * scale + 1e-6, size=arr.shape)
+                noise = local_rng.normal(0, _magnitude(arr) * scale + 1e-6, size=arr.shape)
                 noisy[key] = arr + noise
             except (ValueError, TypeError):
                 noisy[key] = val
@@ -208,7 +213,7 @@ def corrupt_params(
         for key, val in params.items():
             try:
                 arr = np.array(val, dtype=float)
-                s = float(np.std(arr) * scale + 1e-6)
+                s = float(_magnitude(arr) * scale + 1e-6)
                 noise = local_rng.normal(0, s, size=arr.shape)
                 h = hashlib.sha256(str(key).encode("utf-8")).digest()
                 seed = int.from_bytes(h[:4], "little") & 0x7FFFFFFF

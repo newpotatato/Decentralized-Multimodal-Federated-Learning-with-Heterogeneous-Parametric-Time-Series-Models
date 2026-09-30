@@ -82,32 +82,29 @@ class KalmanFilterModel(BaseTimeSeriesModel):
             except Exception:
                 pass
         self.fitted_model = model.fit(**fit_kwargs)
-        
-        # Сохранение параметров
-        self.params = {
-            'sigma2_irregular': self.fitted_model.params.get('sigma2.irregular', 0),
-            'sigma2_level': self.fitted_model.params.get('sigma2.level', 0),
-            'sigma2_trend': self.fitted_model.params.get('sigma2.trend', 0),
-            'process_noise': process_noise,
-            'observation_noise': observation_noise
-        }
-        
+
+        # Сохранение параметров — только реальные параметры statsmodels
+        try:
+            self.params = dict(self.fitted_model.params)
+        except Exception:
+            self.params = {}
+
         return self
-    
+
     def predict(self, steps: int, use_transform: bool = True) -> np.ndarray:
         """
         Прогноз на N шагов вперед.
-        
+
         Args:
             steps: Количество шагов прогноза
             use_transform: Использовались ли трансформации при обучении
-            
+
         Returns:
             Массив прогнозных значений
         """
         if self.fitted_model is None:
             raise ValueError("Модель не обучена. Вызовите fit() перед predict().")
-        
+
         # Robust forecast: try forecast(), then predict(start,end), then repeat-last
         forecast_array = None
         try:
@@ -242,17 +239,13 @@ class StructuralTimeSeriesModel(BaseTimeSeriesModel):
             except Exception:
                 pass
         self.fitted_model = model.fit(**fit_kwargs)
-        
-        # Сохранение параметров
-        self.params = {
-            'level': level,
-            'seasonal_period': self.seasonal_period,
-            'stochastic_level': stochastic_level,
-            'stochastic_trend': stochastic_trend,
-            'stochastic_seasonal': stochastic_seasonal,
-            **dict(self.fitted_model.params)
-        }
-        
+
+        # Сохранение параметров — только реальные параметры statsmodels
+        try:
+            self.params = dict(self.fitted_model.params)
+        except Exception:
+            self.params = {}
+
         return self
     
     def predict(self, steps: int, use_transform: bool = True) -> np.ndarray:

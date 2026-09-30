@@ -1,0 +1,6026 @@
+{
+  "model": "DynamicLinearModel",
+  "scenario": {
+    "column_partition": "random",
+    "malicious_frac": 0.0,
+    "attack_strategy": "label_flip",
+    "attack_scale": 2.5,
+    "rounds": 10,
+    "local_epochs": 1,
+    "network_eval_mode": "refit",
+    "lvp_tau": 0.3,
+    "seed": 42
+  },
+  "topology_map": {
+    "lvp": "hybrid",
+    "decentralized_fedavg": "hybrid",
+    "defta": "hybrid",
+    "balance": "hybrid",
+    "push_sum": "hybrid",
+    "local": "hybrid"
+  },
+  "results": [
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "lvp",
+      "history": [
+        {
+          "round": 1,
+          "client_mae": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "client_smape": {
+            "client_0": 105.52323486558129,
+            "client_1": 49.27380510829137,
+            "client_2": 114.37831209189989,
+            "client_3": 101.54346454134928,
+            "client_4": 130.49058350463986,
+            "client_5": 77.66584006294674,
+            "client_6": 111.93875920740663,
+            "client_7": 47.996228460774304,
+            "client_8": 130.35916937786217,
+            "client_9": 183.8495882230589
+          },
+          "network_mae": 0.7797479587113832,
+          "network_smape": 105.16304932940447,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.21481755554745038,
+          "sync_component_pairwise_l2_mean": 0.3041398877379159,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.03911486561375896
+            ],
+            "x2": [
+              -0.043924868300415074
+            ],
+            "ar.L1": [
+              0.9613268028455727
+            ],
+            "sigma2": [
+              0.6068958198034018
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "server_mse": 0.7797479587113832,
+          "server_smape": 105.16304932940447
+        },
+        {
+          "round": 2,
+          "client_mae": {
+            "client_0": 0.4844402668649809,
+            "client_1": 0.17281075589546363,
+            "client_2": 0.2766328710444539,
+            "client_3": 0.9038694856048881,
+            "client_4": 2.257559027648418,
+            "client_5": 0.4292811590266813,
+            "client_6": 0.4927771838516349,
+            "client_7": 0.2619375929714247,
+            "client_8": 1.5900087313996552,
+            "client_9": 0.7442409662034396
+          },
+          "client_smape": {
+            "client_0": 105.46205068996942,
+            "client_1": 49.26567122770765,
+            "client_2": 114.37661763345348,
+            "client_3": 101.54513116035831,
+            "client_4": 130.48907137174595,
+            "client_5": 77.67374936625822,
+            "client_6": 111.9410426806321,
+            "client_7": 48.00288998741597,
+            "client_8": 130.36326748771603,
+            "client_9": 183.8371763547828
+          },
+          "network_mae": 0.7835582855420377,
+          "network_smape": 105.97500354422618,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.01999932511245316,
+          "sync_component_l2_max": 0.055461920417139945,
+          "sync_component_centroid_l2_mean": 0.2236977814827367,
+          "sync_component_pairwise_l2_mean": 0.3160010876589155,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.01999932511245316
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              6,
+              5,
+              4,
+              3,
+              8,
+              7,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.03857980366800226
+            ],
+            "x2": [
+              -0.04645100530840084
+            ],
+            "ar.L1": [
+              0.9597548599356588
+            ],
+            "sigma2": [
+              0.6622752921047539
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4844402668649809,
+            "client_1": 0.17281075589546363,
+            "client_2": 0.2766328710444539,
+            "client_3": 0.9038694856048881,
+            "client_4": 2.257559027648418,
+            "client_5": 0.4292811590266813,
+            "client_6": 0.4927771838516349,
+            "client_7": 0.2619375929714247,
+            "client_8": 1.5900087313996552,
+            "client_9": 0.7442409662034396
+          },
+          "server_mse": 0.7835582855420377,
+          "server_smape": 105.97500354422618
+        },
+        {
+          "round": 3,
+          "client_mae": {
+            "client_0": 0.48472209452022347,
+            "client_1": 0.17281270710900137,
+            "client_2": 0.2766003486811975,
+            "client_3": 0.9038619329632736,
+            "client_4": 2.257528312157608,
+            "client_5": 0.4292694901371905,
+            "client_6": 0.49277165760535474,
+            "client_7": 0.261937088687291,
+            "client_8": 1.589915855892333,
+            "client_9": 0.7442391097019672
+          },
+          "client_smape": {
+            "client_0": 105.54793933356545,
+            "client_1": 49.26625138996737,
+            "client_2": 114.37109744105342,
+            "client_3": 101.5443577653509,
+            "client_4": 130.48848698406107,
+            "client_5": 77.67150740030615,
+            "client_6": 111.93978771880573,
+            "client_7": 48.00263540191968,
+            "client_8": 130.36127892554538,
+            "client_9": 183.83814720821775
+          },
+          "network_mae": 0.7816639706721308,
+          "network_smape": 105.80769587520652,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.023259516052312794,
+          "sync_component_l2_max": 0.07191726135617257,
+          "sync_component_centroid_l2_mean": 0.21806956114984838,
+          "sync_component_pairwise_l2_mean": 0.3201563176638376,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.023259516052312794
+          ],
+          "sync_components": [
+            [
+              0,
+              7,
+              9,
+              6,
+              5,
+              3,
+              1,
+              4,
+              2,
+              8
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.03874374484891166
+            ],
+            "x2": [
+              -0.04486694785326699
+            ],
+            "ar.L1": [
+              0.9600425219936937
+            ],
+            "sigma2": [
+              0.6449557521633726
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472209452022347,
+            "client_1": 0.17281270710900137,
+            "client_2": 0.2766003486811975,
+            "client_3": 0.9038619329632736,
+            "client_4": 2.257528312157608,
+            "client_5": 0.4292694901371905,
+            "client_6": 0.49277165760535474,
+            "client_7": 0.261937088687291,
+            "client_8": 1.589915855892333,
+            "client_9": 0.7442391097019672
+          },
+          "server_mse": 0.7816639706721308,
+          "server_smape": 105.80769587520652
+        },
+        {
+          "round": 4,
+          "client_mae": {
+            "client_0": 0.48472216670616053,
+            "client_1": 0.17281323169898952,
+            "client_2": 0.27672108341345036,
+            "client_3": 0.9038542288575945,
+            "client_4": 2.257435795192532,
+            "client_5": 0.429271314435783,
+            "client_6": 0.49277113349076795,
+            "client_7": 0.2619371090785972,
+            "client_8": 1.589847910128192,
+            "client_9": 0.7442425309056488
+          },
+          "client_smape": {
+            "client_0": 105.5478688435691,
+            "client_1": 49.26648150971258,
+            "client_2": 114.39380600901745,
+            "client_3": 101.54448582542821,
+            "client_4": 130.4868901901188,
+            "client_5": 77.67189565523422,
+            "client_6": 111.93941460827035,
+            "client_7": 48.002738543217276,
+            "client_8": 130.36025278342473,
+            "client_9": 183.8378619033938
+          },
+          "network_mae": 0.7756293993970272,
+          "network_smape": 104.8213495847873,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.03649743976668894,
+          "sync_component_l2_max": 0.06330478244104115,
+          "sync_component_centroid_l2_mean": 0.2069479109172731,
+          "sync_component_pairwise_l2_mean": 0.29709695797110436,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.03649743976668894
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.03949229704281059
+            ],
+            "x2": [
+              -0.042646323415270915
+            ],
+            "ar.L1": [
+              0.9619768305339423
+            ],
+            "sigma2": [
+              0.5817239371720484
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472216670616053,
+            "client_1": 0.17281323169898952,
+            "client_2": 0.27672108341345036,
+            "client_3": 0.9038542288575945,
+            "client_4": 2.257435795192532,
+            "client_5": 0.429271314435783,
+            "client_6": 0.49277113349076795,
+            "client_7": 0.2619371090785972,
+            "client_8": 1.589847910128192,
+            "client_9": 0.7442425309056488
+          },
+          "server_mse": 0.7756293993970272,
+          "server_smape": 104.8213495847873
+        },
+        {
+          "round": 5,
+          "client_mae": {
+            "client_0": 0.4844366643074295,
+            "client_1": 0.1728098104513601,
+            "client_2": 0.27663421347872597,
+            "client_3": 0.9039725796474585,
+            "client_4": 2.2574794573362804,
+            "client_5": 0.4292841861413786,
+            "client_6": 0.49277640715437815,
+            "client_7": 0.2619163658317497,
+            "client_8": 1.5900990875532464,
+            "client_9": 0.7442396885909701
+          },
+          "client_smape": {
+            "client_0": 105.46439687934748,
+            "client_1": 49.26534978244021,
+            "client_2": 114.37808800033828,
+            "client_3": 101.54615982509394,
+            "client_4": 130.4876049879264,
+            "client_5": 77.67528676803197,
+            "client_6": 111.94087979410858,
+            "client_7": 47.99990261718118,
+            "client_8": 130.3655375384008,
+            "client_9": 183.838113064777
+          },
+          "network_mae": 0.773416787513041,
+          "network_smape": 106.19035685203781,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.046879883270581055,
+          "sync_component_l2_max": 0.07593224845183524,
+          "sync_component_centroid_l2_mean": 0.24100239587029235,
+          "sync_component_pairwise_l2_mean": 0.3436603094259442,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.046879883270581055
+          ],
+          "sync_components": [
+            [
+              0,
+              7,
+              9,
+              6,
+              5,
+              2,
+              1,
+              4,
+              3,
+              8
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.03867933012667488
+            ],
+            "x2": [
+              -0.04453250930556226
+            ],
+            "ar.L1": [
+              0.9595773024674685
+            ],
+            "sigma2": [
+              0.6575904647556275
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4844366643074295,
+            "client_1": 0.1728098104513601,
+            "client_2": 0.27663421347872597,
+            "client_3": 0.9039725796474585,
+            "client_4": 2.2574794573362804,
+            "client_5": 0.4292841861413786,
+            "client_6": 0.49277640715437815,
+            "client_7": 0.2619163658317497,
+            "client_8": 1.5900990875532464,
+            "client_9": 0.7442396885909701
+          },
+          "server_mse": 0.773416787513041,
+          "server_smape": 106.19035685203781
+        },
+        {
+          "round": 6,
+          "client_mae": {
+            "client_0": 0.48472251618409545,
+            "client_1": 0.17281004846025833,
+            "client_2": 0.27663487768543804,
+            "client_3": 0.9039438353539261,
+            "client_4": 2.2574308883287673,
+            "client_5": 0.4292785046893764,
+            "client_6": 0.4927718848828862,
+            "client_7": 0.2619192073369982,
+            "client_8": 1.5898567333548066,
+            "client_9": 0.7442355519503449
+          },
+          "client_smape": {
+            "client_0": 105.54869230329219,
+            "client_1": 49.26577564647846,
+            "client_2": 114.37715977520664,
+            "client_3": 101.5450349995342,
+            "client_4": 130.48676312841727,
+            "client_5": 77.67351191626577,
+            "client_6": 111.93972777068903,
+            "client_7": 48.00060359085086,
+            "client_8": 130.36032558088007,
+            "client_9": 183.83812440388206
+          },
+          "network_mae": 0.7743940802653411,
+          "network_smape": 106.08721805719838,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.01450530653932253,
+          "sync_component_l2_max": 0.05257449564524732,
+          "sync_component_centroid_l2_mean": 0.23079832917211046,
+          "sync_component_pairwise_l2_mean": 0.3352471719090126,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.01450530653932253
+          ],
+          "sync_components": [
+            [
+              0,
+              7,
+              4,
+              6,
+              9,
+              5,
+              2,
+              1,
+              3,
+              8
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.039214500490535646
+            ],
+            "x2": [
+              -0.045556744015144326
+            ],
+            "ar.L1": [
+              0.9595698912981063
+            ],
+            "sigma2": [
+              0.6572738932710931
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472251618409545,
+            "client_1": 0.17281004846025833,
+            "client_2": 0.27663487768543804,
+            "client_3": 0.9039438353539261,
+            "client_4": 2.2574308883287673,
+            "client_5": 0.4292785046893764,
+            "client_6": 0.4927718848828862,
+            "client_7": 0.2619192073369982,
+            "client_8": 1.5898567333548066,
+            "client_9": 0.7442355519503449
+          },
+          "server_mse": 0.7743940802653411,
+          "server_smape": 106.08721805719838
+        },
+        {
+          "round": 7,
+          "client_mae": {
+            "client_0": 0.4847224950556819,
+            "client_1": 0.17281421008404013,
+            "client_2": 0.27663309250504653,
+            "client_3": 0.9039772607841836,
+            "client_4": 2.2574112510995024,
+            "client_5": 0.429266067382384,
+            "client_6": 0.4927690777067125,
+            "client_7": 0.2619310497058662,
+            "client_8": 1.5897964690829147,
+            "client_9": 0.7442412902664379
+          },
+          "client_smape": {
+            "client_0": 105.54816711650892,
+            "client_1": 49.266613974135396,
+            "client_2": 114.37684410168347,
+            "client_3": 101.54643944687867,
+            "client_4": 130.4864271315664,
+            "client_5": 77.67096102353953,
+            "client_6": 111.93905152228116,
+            "client_7": 47.996817083773294,
+            "client_8": 130.35901014449882,
+            "client_9": 183.83575609020212
+          },
+          "network_mae": 0.7752549572919103,
+          "network_smape": 105.10720374049427,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.03241756301069296,
+          "sync_component_l2_max": 0.06587536375746317,
+          "sync_component_centroid_l2_mean": 0.2180683779914688,
+          "sync_component_pairwise_l2_mean": 0.30958219934300146,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.03241756301069296
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.03909690863445795
+            ],
+            "x2": [
+              -0.04379726800411268
+            ],
+            "ar.L1": [
+              0.961382444268749
+            ],
+            "sigma2": [
+              0.6055550294657429
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4847224950556819,
+            "client_1": 0.17281421008404013,
+            "client_2": 0.27663309250504653,
+            "client_3": 0.9039772607841836,
+            "client_4": 2.2574112510995024,
+            "client_5": 0.429266067382384,
+            "client_6": 0.4927690777067125,
+            "client_7": 0.2619310497058662,
+            "client_8": 1.5897964690829147,
+            "client_9": 0.7442412902664379
+          },
+          "server_mse": 0.7752549572919103,
+          "server_smape": 105.10720374049427
+        },
+        {
+          "round": 8,
+          "client_mae": {
+            "client_0": 0.4844374077633695,
+            "client_1": 0.17281010066522023,
+            "client_2": 0.276619342911025,
+            "client_3": 0.9039690474820586,
+            "client_4": 2.2575063950478276,
+            "client_5": 0.42926974031357856,
+            "client_6": 0.49277708727400976,
+            "client_7": 0.2619131407821015,
+            "client_8": 1.5899690270753895,
+            "client_9": 0.744244450744036
+          },
+          "client_smape": {
+            "client_0": 105.46139359614732,
+            "client_1": 49.26546076458528,
+            "client_2": 114.37536035250986,
+            "client_3": 101.54582335404045,
+            "client_4": 130.48811693221418,
+            "client_5": 77.67174541990492,
+            "client_6": 111.94099648389385,
+            "client_7": 47.99951333680859,
+            "client_8": 130.36276925858786,
+            "client_9": 183.8379463179139
+          },
+          "network_mae": 0.776708375500077,
+          "network_smape": 106.21110549880851,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.02905312231575528,
+          "sync_component_l2_max": 0.06163663041208128,
+          "sync_component_centroid_l2_mean": 0.23545407436499657,
+          "sync_component_pairwise_l2_mean": 0.3339392143315139,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.02905312231575528
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              6,
+              5,
+              2,
+              1,
+              8,
+              7,
+              4,
+              3
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.038716188633904
+            ],
+            "x2": [
+              -0.04467314429796538
+            ],
+            "ar.L1": [
+              0.9597743487478726
+            ],
+            "sigma2": [
+              0.6518565269619033
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4844374077633695,
+            "client_1": 0.17281010066522023,
+            "client_2": 0.276619342911025,
+            "client_3": 0.9039690474820586,
+            "client_4": 2.2575063950478276,
+            "client_5": 0.42926974031357856,
+            "client_6": 0.49277708727400976,
+            "client_7": 0.2619131407821015,
+            "client_8": 1.5899690270753895,
+            "client_9": 0.744244450744036
+          },
+          "server_mse": 0.776708375500077,
+          "server_smape": 106.21110549880851
+        },
+        {
+          "round": 9,
+          "client_mae": {
+            "client_0": 0.4847222022493546,
+            "client_1": 0.1728107679802441,
+            "client_2": 0.27663491433231696,
+            "client_3": 0.9040159792564687,
+            "client_4": 2.257440203734819,
+            "client_5": 0.429277589120697,
+            "client_6": 0.49277081547774015,
+            "client_7": 0.26190604686156793,
+            "client_8": 1.589847005131087,
+            "client_9": 0.7442383346906345
+          },
+          "client_smape": {
+            "client_0": 105.54784341611922,
+            "client_1": 49.26614210850321,
+            "client_2": 114.37716617532294,
+            "client_3": 101.54846501723871,
+            "client_4": 130.48694461697363,
+            "client_5": 77.67309023117409,
+            "client_6": 111.93940164562291,
+            "client_7": 47.99811728901623,
+            "client_8": 130.36002574758885,
+            "client_9": 183.83736874366684
+          },
+          "network_mae": 0.7749023136799202,
+          "network_smape": 105.82513357216635,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.01765458538504728,
+          "sync_component_l2_max": 0.0730413591086456,
+          "sync_component_centroid_l2_mean": 0.23760723601416042,
+          "sync_component_pairwise_l2_mean": 0.33538250044631873,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.01765458538504728
+          ],
+          "sync_components": [
+            [
+              0,
+              5,
+              9,
+              7,
+              6,
+              2,
+              1,
+              4,
+              3,
+              8
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.03783422745215314
+            ],
+            "x2": [
+              -0.04458528815437848
+            ],
+            "ar.L1": [
+              0.9605105931129846
+            ],
+            "sigma2": [
+              0.6515311089733994
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4847222022493546,
+            "client_1": 0.1728107679802441,
+            "client_2": 0.27663491433231696,
+            "client_3": 0.9040159792564687,
+            "client_4": 2.257440203734819,
+            "client_5": 0.429277589120697,
+            "client_6": 0.49277081547774015,
+            "client_7": 0.26190604686156793,
+            "client_8": 1.589847005131087,
+            "client_9": 0.7442383346906345
+          },
+          "server_mse": 0.7749023136799202,
+          "server_smape": 105.82513357216635
+        },
+        {
+          "round": 10,
+          "client_mae": {
+            "client_0": 0.4847213598375387,
+            "client_1": 0.1728082949900064,
+            "client_2": 0.27663532349416364,
+            "client_3": 0.9039598236487564,
+            "client_4": 2.257471426929662,
+            "client_5": 0.42926613413968767,
+            "client_6": 0.4927753409857806,
+            "client_7": 0.26193584650323287,
+            "client_8": 1.5899924878888525,
+            "client_9": 0.744240662380288
+          },
+          "client_smape": {
+            "client_0": 105.54776642493057,
+            "client_1": 49.26529996474467,
+            "client_2": 114.37724614901855,
+            "client_3": 101.54533392705002,
+            "client_4": 130.48752965662547,
+            "client_5": 77.66790709998365,
+            "client_6": 111.94030603868615,
+            "client_7": 48.0022696114571,
+            "client_8": 130.3626083470388,
+            "client_9": 183.83679891291789
+          },
+          "network_mae": 0.7756294671551671,
+          "network_smape": 105.10145735820852,
+          "lvp_alpha": 0.2,
+          "lvp_self_weight": 0.0,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": 0.2,
+          "tau_cos_min": -1.0,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.030705242623013405,
+          "sync_component_l2_max": 0.060497994908281894,
+          "sync_component_centroid_l2_mean": 0.21917339222113336,
+          "sync_component_pairwise_l2_mean": 0.3095479202988758,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.030705242623013405
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              1,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.039465931955057085
+            ],
+            "x2": [
+              -0.043476886841255356
+            ],
+            "ar.L1": [
+              0.9611372911610762
+            ],
+            "sigma2": [
+              0.6060544161611374
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4847213598375387,
+            "client_1": 0.1728082949900064,
+            "client_2": 0.27663532349416364,
+            "client_3": 0.9039598236487564,
+            "client_4": 2.257471426929662,
+            "client_5": 0.42926613413968767,
+            "client_6": 0.4927753409857806,
+            "client_7": 0.26193584650323287,
+            "client_8": 1.5899924878888525,
+            "client_9": 0.744240662380288
+          },
+          "server_mse": 0.7756294671551671,
+          "server_smape": 105.10145735820852
+        }
+      ],
+      "attack_strategy": "label_flip",
+      "attack_scale": 2.5,
+      "malicious_frac": 0.0
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "decentralized_fedavg",
+      "history": [
+        {
+          "round": 1,
+          "client_mae": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "client_smape": {
+            "client_0": 105.52323486558129,
+            "client_1": 49.27380510829137,
+            "client_2": 114.37831209189989,
+            "client_3": 101.54346454134928,
+            "client_4": 130.49058350463986,
+            "client_5": 77.66584006294674,
+            "client_6": 111.93875920740663,
+            "client_7": 47.996228460774304,
+            "client_8": 130.35916937786217,
+            "client_9": 183.8495882230589
+          },
+          "network_mae": 0.8907067771762034,
+          "network_smape": 116.46927243870236,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 1.1103585416259206e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9673619188779042
+            ],
+            "sigma2": [
+              0.44568595095663
+            ],
+            "x1": [
+              -0.013322077298803107
+            ],
+            "x2": [
+              -0.012832757408548473
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "server_mse": 0.8907067771762034,
+          "server_smape": 116.46927243870236
+        },
+        {
+          "round": 2,
+          "client_mae": {
+            "client_0": 0.48399614594690743,
+            "client_1": 0.17281845829496353,
+            "client_2": 0.27647100931930435,
+            "client_3": 0.9035902927501247,
+            "client_4": 2.2570921747686556,
+            "client_5": 0.4294360602916713,
+            "client_6": 0.5008813282329424,
+            "client_7": 0.26190819624306727,
+            "client_8": 1.576352344750664,
+            "client_9": 0.7444621510847357
+          },
+          "client_smape": {
+            "client_0": 105.34849041885282,
+            "client_1": 49.26751773419407,
+            "client_2": 114.3472440730223,
+            "client_3": 101.54446574131069,
+            "client_4": 130.4806141924014,
+            "client_5": 77.7226814162021,
+            "client_6": 115.4111078985053,
+            "client_7": 47.99981749957413,
+            "client_8": 130.04448249045177,
+            "client_9": 183.8054372814256
+          },
+          "network_mae": 0.8896073340024697,
+          "network_smape": 116.18543855156626,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.002058678263829835,
+          "sync_component_l2_max": 0.002058678263829835,
+          "sync_component_centroid_l2_mean": 2.2888491377299405e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.002058678263829835
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9680278821931405
+            ],
+            "sigma2": [
+              0.447616866271264
+            ],
+            "x1": [
+              -0.013231835265274028
+            ],
+            "x2": [
+              -0.012591777160766041
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48399614594690743,
+            "client_1": 0.17281845829496353,
+            "client_2": 0.27647100931930435,
+            "client_3": 0.9035902927501247,
+            "client_4": 2.2570921747686556,
+            "client_5": 0.4294360602916713,
+            "client_6": 0.5008813282329424,
+            "client_7": 0.26190819624306727,
+            "client_8": 1.576352344750664,
+            "client_9": 0.7444621510847357
+          },
+          "server_mse": 0.8896073340024697,
+          "server_smape": 116.18543855156626
+        },
+        {
+          "round": 3,
+          "client_mae": {
+            "client_0": 0.4840203811340425,
+            "client_1": 0.1728212151600896,
+            "client_2": 0.276649957531862,
+            "client_3": 0.903662921329329,
+            "client_4": 2.2579785548942715,
+            "client_5": 0.429423287856585,
+            "client_6": 0.4968462867887581,
+            "client_7": 0.2619081720305747,
+            "client_8": 1.5742331841721013,
+            "client_9": 0.7443985891634702
+          },
+          "client_smape": {
+            "client_0": 105.35601431453725,
+            "client_1": 49.26818897708334,
+            "client_2": 114.39171666769865,
+            "client_3": 101.54635001408168,
+            "client_4": 130.49664887869804,
+            "client_5": 77.72020240774047,
+            "client_6": 113.80913634084959,
+            "client_7": 47.999862301610925,
+            "client_8": 129.99263173911882,
+            "client_9": 183.8297820363005
+          },
+          "network_mae": 0.8905778844336952,
+          "network_smape": 116.47414404436283,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0006051197781587819,
+          "sync_component_l2_max": 0.000605119778158782,
+          "sync_component_centroid_l2_mean": 1.734723475976807e-18,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0006051197781587819
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.967445416122434
+            ],
+            "sigma2": [
+              0.4477795297960522
+            ],
+            "x1": [
+              -0.013252181598269335
+            ],
+            "x2": [
+              -0.012597238555435318
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4840203811340425,
+            "client_1": 0.1728212151600896,
+            "client_2": 0.276649957531862,
+            "client_3": 0.903662921329329,
+            "client_4": 2.2579785548942715,
+            "client_5": 0.429423287856585,
+            "client_6": 0.4968462867887581,
+            "client_7": 0.2619081720305747,
+            "client_8": 1.5742331841721013,
+            "client_9": 0.7443985891634702
+          },
+          "server_mse": 0.8905778844336952,
+          "server_smape": 116.47414404436283
+        },
+        {
+          "round": 4,
+          "client_mae": {
+            "client_0": 0.48399612468814385,
+            "client_1": 0.17281978947731463,
+            "client_2": 0.2788993648221437,
+            "client_3": 0.9036122536337949,
+            "client_4": 2.2571549822845283,
+            "client_5": 0.4294356779455438,
+            "client_6": 0.5029565199868408,
+            "client_7": 0.2619069241385236,
+            "client_8": 1.5736627073603375,
+            "client_9": 0.7444850636670741
+          },
+          "client_smape": {
+            "client_0": 105.34862811387713,
+            "client_1": 49.267835785665575,
+            "client_2": 114.81341653928314,
+            "client_3": 101.54503177620253,
+            "client_4": 130.48172434366333,
+            "client_5": 77.72346431453315,
+            "client_6": 116.22571650512357,
+            "client_7": 47.99950822463971,
+            "client_8": 129.9790726401996,
+            "client_9": 183.8001180118185
+          },
+          "network_mae": 0.8893731193527584,
+          "network_smape": 116.13313331922113,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007147350310236441,
+          "sync_component_l2_max": 0.0007147350310236441,
+          "sync_component_centroid_l2_mean": 2.453269466693399e-18,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007147350310236441
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9681395849236628
+            ],
+            "sigma2": [
+              0.447948050210328
+            ],
+            "x1": [
+              -0.01323244781128118
+            ],
+            "x2": [
+              -0.012583553249583148
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48399612468814385,
+            "client_1": 0.17281978947731463,
+            "client_2": 0.2788993648221437,
+            "client_3": 0.9036122536337949,
+            "client_4": 2.2571549822845283,
+            "client_5": 0.4294356779455438,
+            "client_6": 0.5029565199868408,
+            "client_7": 0.2619069241385236,
+            "client_8": 1.5736627073603375,
+            "client_9": 0.7444850636670741
+          },
+          "server_mse": 0.8893731193527584,
+          "server_smape": 116.13313331922113
+        },
+        {
+          "round": 5,
+          "client_mae": {
+            "client_0": 0.48402541911082536,
+            "client_1": 0.17282190563245786,
+            "client_2": 0.27664021817928314,
+            "client_3": 0.9036731311639162,
+            "client_4": 2.2579639378813665,
+            "client_5": 0.4294205443584758,
+            "client_6": 0.4963072658817773,
+            "client_7": 0.26190820307645835,
+            "client_8": 1.5730985887890712,
+            "client_9": 0.744395294134952
+          },
+          "client_smape": {
+            "client_0": 105.3575221864428,
+            "client_1": 49.26835920065839,
+            "client_2": 114.38962323278079,
+            "client_3": 101.54660151282629,
+            "client_4": 130.49640448461614,
+            "client_5": 77.71951403923828,
+            "client_6": 113.59718221163833,
+            "client_7": 47.99987490624248,
+            "client_8": 129.9641433072295,
+            "client_9": 183.83207887935762
+          },
+          "network_mae": 0.8905878384122639,
+          "network_smape": 116.46997806208606,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0008160328336865452,
+          "sync_component_l2_max": 0.0008160328336865452,
+          "sync_component_centroid_l2_mean": 5.561946577567963e-17,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0008160328336865452
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9674419458300433
+            ],
+            "sigma2": [
+              0.4475255843865002
+            ],
+            "x1": [
+              -0.013255825190744697
+            ],
+            "x2": [
+              -0.012597169656418779
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48402541911082536,
+            "client_1": 0.17282190563245786,
+            "client_2": 0.27664021817928314,
+            "client_3": 0.9036731311639162,
+            "client_4": 2.2579639378813665,
+            "client_5": 0.4294205443584758,
+            "client_6": 0.4963072658817773,
+            "client_7": 0.26190820307645835,
+            "client_8": 1.5730985887890712,
+            "client_9": 0.744395294134952
+          },
+          "server_mse": 0.8905878384122639,
+          "server_smape": 116.46997806208606
+        },
+        {
+          "round": 6,
+          "client_mae": {
+            "client_0": 0.48399584517678074,
+            "client_1": 0.17281953386237045,
+            "client_2": 0.278994111500227,
+            "client_3": 0.9036108025300896,
+            "client_4": 2.2571468178297147,
+            "client_5": 0.4294354091761388,
+            "client_6": 0.5025985883671885,
+            "client_7": 0.2619070457291108,
+            "client_8": 1.5738694193249823,
+            "client_9": 0.7444800813045226
+          },
+          "client_smape": {
+            "client_0": 105.34857480718527,
+            "client_1": 49.26777315891986,
+            "client_2": 114.83163575974484,
+            "client_3": 101.54499043758594,
+            "client_4": 130.48157787336444,
+            "client_5": 77.72330101643779,
+            "client_6": 116.08382150246509,
+            "client_7": 47.999541784488045,
+            "client_8": 129.98399716022857,
+            "client_9": 183.8013446870405
+          },
+          "network_mae": 0.8894131260778838,
+          "network_smape": 116.14150597677755,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007637703134645721,
+          "sync_component_l2_max": 0.000763770313464572,
+          "sync_component_centroid_l2_mean": 5.561946577567963e-17,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007637703134645721
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9681211724916446
+            ],
+            "sigma2": [
+              0.4478739234796963
+            ],
+            "x1": [
+              -0.013232804978004505
+            ],
+            "x2": [
+              -0.012585936675676365
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48399584517678074,
+            "client_1": 0.17281953386237045,
+            "client_2": 0.278994111500227,
+            "client_3": 0.9036108025300896,
+            "client_4": 2.2571468178297147,
+            "client_5": 0.4294354091761388,
+            "client_6": 0.5025985883671885,
+            "client_7": 0.2619070457291108,
+            "client_8": 1.5738694193249823,
+            "client_9": 0.7444800813045226
+          },
+          "server_mse": 0.8894131260778838,
+          "server_smape": 116.14150597677755
+        },
+        {
+          "round": 7,
+          "client_mae": {
+            "client_0": 0.48402458799880244,
+            "client_1": 0.17282176925161466,
+            "client_2": 0.27664174609293496,
+            "client_3": 0.9036714167594019,
+            "client_4": 2.2579664278292,
+            "client_5": 0.42942101142311345,
+            "client_6": 0.4963749963376426,
+            "client_7": 0.2619082114400192,
+            "client_8": 1.5731681942430256,
+            "client_9": 0.7443956272860013
+          },
+          "client_smape": {
+            "client_0": 105.35727472786883,
+            "client_1": 49.26832558546598,
+            "client_2": 114.38994914636311,
+            "client_3": 101.54656037009045,
+            "client_4": 130.49644680009175,
+            "client_5": 77.71962758814179,
+            "client_6": 113.62380301245936,
+            "client_7": 47.99987621569197,
+            "client_8": 129.9658399881293,
+            "client_9": 183.83175313799535
+          },
+          "network_mae": 0.8905857707367563,
+          "network_smape": 116.46882152607324,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007690427090847887,
+          "sync_component_l2_max": 0.0007690427090847887,
+          "sync_component_centroid_l2_mean": 1.734723475976807e-18,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007690427090847887
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9674438154644596
+            ],
+            "sigma2": [
+              0.4475106347281911
+            ],
+            "x1": [
+              -0.013255208342069294
+            ],
+            "x2": [
+              -0.012597491693107464
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48402458799880244,
+            "client_1": 0.17282176925161466,
+            "client_2": 0.27664174609293496,
+            "client_3": 0.9036714167594019,
+            "client_4": 2.2579664278292,
+            "client_5": 0.42942101142311345,
+            "client_6": 0.4963749963376426,
+            "client_7": 0.2619082114400192,
+            "client_8": 1.5731681942430256,
+            "client_9": 0.7443956272860013
+          },
+          "server_mse": 0.8905857707367563,
+          "server_smape": 116.46882152607324
+        },
+        {
+          "round": 8,
+          "client_mae": {
+            "client_0": 0.4839959104197568,
+            "client_1": 0.17281952195893208,
+            "client_2": 0.2789128795471871,
+            "client_3": 0.9036109071560441,
+            "client_4": 2.2571459467568813,
+            "client_5": 0.42943535613201167,
+            "client_6": 0.5025522664025499,
+            "client_7": 0.26190705725989016,
+            "client_8": 1.5738801009995285,
+            "client_9": 0.7444792360776359
+          },
+          "client_smape": {
+            "client_0": 105.34859446221955,
+            "client_1": 49.26777025407697,
+            "client_2": 114.81600295845197,
+            "client_3": 101.54499288193348,
+            "client_4": 130.48156246338468,
+            "client_5": 77.72328349832411,
+            "client_6": 116.06538483986361,
+            "client_7": 47.99954498946416,
+            "client_8": 129.98424652014702,
+            "client_9": 183.8015777032077
+          },
+          "network_mae": 0.8894158319962757,
+          "network_smape": 116.14207232754418,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007654345408724349,
+          "sync_component_l2_max": 0.0007654345408724348,
+          "sync_component_centroid_l2_mean": 2.453269466693399e-18,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007654345408724349
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9681198970276774
+            ],
+            "sigma2": [
+              0.44786865476786
+            ],
+            "x1": [
+              -0.013232970079783196
+            ],
+            "x2": [
+              -0.012586051976175948
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4839959104197568,
+            "client_1": 0.17281952195893208,
+            "client_2": 0.2789128795471871,
+            "client_3": 0.9036109071560441,
+            "client_4": 2.2571459467568813,
+            "client_5": 0.42943535613201167,
+            "client_6": 0.5025522664025499,
+            "client_7": 0.26190705725989016,
+            "client_8": 1.5738801009995285,
+            "client_9": 0.7444792360776359
+          },
+          "server_mse": 0.8894158319962757,
+          "server_smape": 116.14207232754418
+        },
+        {
+          "round": 9,
+          "client_mae": {
+            "client_0": 0.4840245315352184,
+            "client_1": 0.17282176017647888,
+            "client_2": 0.2766418517597332,
+            "client_3": 0.9036712953413873,
+            "client_4": 2.2579665983283648,
+            "client_5": 0.4294210442064236,
+            "client_6": 0.4963795598530038,
+            "client_7": 0.26190821201497094,
+            "client_8": 1.5731731505647057,
+            "client_9": 0.7443956503962215
+          },
+          "client_smape": {
+            "client_0": 105.3572583033572,
+            "client_1": 49.268323348068485,
+            "client_2": 114.38997154431065,
+            "client_3": 101.54655746904989,
+            "client_4": 130.49644965747723,
+            "client_5": 77.7196354009122,
+            "client_6": 113.62560489927387,
+            "client_7": 47.999876308642655,
+            "client_8": 129.9659608501864,
+            "client_9": 183.83172940316706
+          },
+          "network_mae": 0.8905856394947136,
+          "network_smape": 116.46874402999488,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007658296116714974,
+          "sync_component_l2_max": 0.0007658296116714974,
+          "sync_component_centroid_l2_mean": 2.2889148743107297e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007658296116714974
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9674439377063648
+            ],
+            "sigma2": [
+              0.447509558675706
+            ],
+            "x1": [
+              -0.01325516387672006
+            ],
+            "x2": [
+              -0.012597515920559155
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4840245315352184,
+            "client_1": 0.17282176017647888,
+            "client_2": 0.2766418517597332,
+            "client_3": 0.9036712953413873,
+            "client_4": 2.2579665983283648,
+            "client_5": 0.4294210442064236,
+            "client_6": 0.4963795598530038,
+            "client_7": 0.26190821201497094,
+            "client_8": 1.5731731505647057,
+            "client_9": 0.7443956503962215
+          },
+          "server_mse": 0.8905856394947136,
+          "server_smape": 116.46874402999488
+        },
+        {
+          "round": 10,
+          "client_mae": {
+            "client_0": 0.48399591460581926,
+            "client_1": 0.17281952106835768,
+            "client_2": 0.27890764717885586,
+            "client_3": 0.9036109135787489,
+            "client_4": 2.2571458863075966,
+            "client_5": 0.4294353525164213,
+            "client_6": 0.5025490911557812,
+            "client_7": 0.26190705807615416,
+            "client_8": 1.5738808823948656,
+            "client_9": 0.7444791788236912
+          },
+          "client_smape": {
+            "client_0": 105.34859571788611,
+            "client_1": 49.26777003665648,
+            "client_2": 114.81499608141816,
+            "client_3": 101.54499302858211,
+            "client_4": 130.48156139452252,
+            "client_5": 77.72328228369787,
+            "client_6": 116.06412096183827,
+            "client_7": 47.99954521499952,
+            "client_8": 129.98426479625098,
+            "client_9": 183.80159348289442
+          },
+          "network_mae": 0.8894160257241877,
+          "network_smape": 116.14211292212312,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007655731411236098,
+          "sync_component_l2_max": 0.00076557314112361,
+          "sync_component_centroid_l2_mean": 1.241388288193343e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007655731411236098
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9681198057072377
+            ],
+            "sigma2": [
+              0.44786828053736266
+            ],
+            "x1": [
+              -0.01323298117289575
+            ],
+            "x2": [
+              -0.01258606020466371
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48399591460581926,
+            "client_1": 0.17281952106835768,
+            "client_2": 0.27890764717885586,
+            "client_3": 0.9036109135787489,
+            "client_4": 2.2571458863075966,
+            "client_5": 0.4294353525164213,
+            "client_6": 0.5025490911557812,
+            "client_7": 0.26190705807615416,
+            "client_8": 1.5738808823948656,
+            "client_9": 0.7444791788236912
+          },
+          "server_mse": 0.8894160257241877,
+          "server_smape": 116.14211292212312
+        }
+      ],
+      "attack_strategy": "label_flip",
+      "attack_scale": 2.5,
+      "malicious_frac": 0.0
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "defta",
+      "history": [
+        {
+          "round": 1,
+          "client_mae": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "client_smape": {
+            "client_0": 105.52323486558129,
+            "client_1": 49.27380510829137,
+            "client_2": 114.37831209189989,
+            "client_3": 101.54346454134928,
+            "client_4": 130.49058350463986,
+            "client_5": 77.66584006294674,
+            "client_6": 111.93875920740663,
+            "client_7": 47.996228460774304,
+            "client_8": 130.35916937786217,
+            "client_9": 183.8495882230589
+          },
+          "network_mae": 0.866598550334199,
+          "network_smape": 115.91818995252534,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.05567614904392641,
+          "sync_component_pairwise_l2_mean": 0.0932466409564468,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9661864511675613
+            ],
+            "sigma2": [
+              0.48518084507354864
+            ],
+            "x1": [
+              -0.018127400695935613
+            ],
+            "x2": [
+              -0.018694290973417012
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "server_mse": 0.866598550334199,
+          "server_smape": 115.91818995252534
+        },
+        {
+          "round": 2,
+          "client_mae": {
+            "client_0": 0.48406659978140115,
+            "client_1": 0.1728201641914038,
+            "client_2": 0.2764764811297158,
+            "client_3": 0.9036225506410627,
+            "client_4": 2.2573032158349666,
+            "client_5": 0.4293175925878273,
+            "client_6": 0.4995421217125612,
+            "client_7": 0.261948617327125,
+            "client_8": 1.5973870460378383,
+            "client_9": 0.7442330375861597
+          },
+          "client_smape": {
+            "client_0": 105.36282352375564,
+            "client_1": 49.26791876258419,
+            "client_2": 114.35526591371364,
+            "client_3": 101.54483506924004,
+            "client_4": 130.48430665989983,
+            "client_5": 77.68355166920745,
+            "client_6": 114.50194302769252,
+            "client_7": 48.00688135245255,
+            "client_8": 130.61599169420896,
+            "client_9": 183.8422405927713
+          },
+          "network_mae": 0.8649196938846659,
+          "network_smape": 115.86963126287488,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0014178361836532333,
+          "sync_component_l2_max": 0.003522430058602852,
+          "sync_component_centroid_l2_mean": 0.055896991297516595,
+          "sync_component_pairwise_l2_mean": 0.09365166205798599,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0014178361836532333
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9662384531647614
+            ],
+            "sigma2": [
+              0.48619510071341066
+            ],
+            "x1": [
+              -0.018265567178846764
+            ],
+            "x2": [
+              -0.018049377198310717
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48406659978140115,
+            "client_1": 0.1728201641914038,
+            "client_2": 0.2764764811297158,
+            "client_3": 0.9036225506410627,
+            "client_4": 2.2573032158349666,
+            "client_5": 0.4293175925878273,
+            "client_6": 0.4995421217125612,
+            "client_7": 0.261948617327125,
+            "client_8": 1.5973870460378383,
+            "client_9": 0.7442330375861597
+          },
+          "server_mse": 0.8649196938846659,
+          "server_smape": 115.86963126287488
+        },
+        {
+          "round": 3,
+          "client_mae": {
+            "client_0": 0.48405910726448387,
+            "client_1": 0.17282389030865825,
+            "client_2": 0.27647096071572796,
+            "client_3": 0.9036362890463412,
+            "client_4": 2.257315840005099,
+            "client_5": 0.4293146244946543,
+            "client_6": 0.4984854905825477,
+            "client_7": 0.2619479174014682,
+            "client_8": 1.5977175874810619,
+            "client_9": 0.744233054872636
+          },
+          "client_smape": {
+            "client_0": 105.3617439164303,
+            "client_1": 49.268839978334874,
+            "client_2": 114.35405174237239,
+            "client_3": 101.54519338096813,
+            "client_4": 130.48451773327469,
+            "client_5": 77.68282954078936,
+            "client_6": 114.10396725050016,
+            "client_7": 48.00679839180606,
+            "client_8": 130.62669569406506,
+            "client_9": 183.84175489317295
+          },
+          "network_mae": 0.8651602065855813,
+          "network_smape": 115.88626482232708,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 5.122627027311109e-05,
+          "sync_component_l2_max": 8.886112698830225e-05,
+          "sync_component_centroid_l2_mean": 0.05590130602608347,
+          "sync_component_pairwise_l2_mean": 0.09365928321176875,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            5.122627027311109e-05
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9662146507611544
+            ],
+            "sigma2": [
+              0.48618624257619447
+            ],
+            "x1": [
+              -0.01827245962288603
+            ],
+            "x2": [
+              -0.018024580463330733
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48405910726448387,
+            "client_1": 0.17282389030865825,
+            "client_2": 0.27647096071572796,
+            "client_3": 0.9036362890463412,
+            "client_4": 2.257315840005099,
+            "client_5": 0.4293146244946543,
+            "client_6": 0.4984854905825477,
+            "client_7": 0.2619479174014682,
+            "client_8": 1.5977175874810619,
+            "client_9": 0.744233054872636
+          },
+          "server_mse": 0.8651602065855813,
+          "server_smape": 115.88626482232708
+        },
+        {
+          "round": 4,
+          "client_mae": {
+            "client_0": 0.48405795753169006,
+            "client_1": 0.17282388773886337,
+            "client_2": 0.27647301433990823,
+            "client_3": 0.9036341559084716,
+            "client_4": 2.2573136485160394,
+            "client_5": 0.4293150224242616,
+            "client_6": 0.49872605071104353,
+            "client_7": 0.2619477872170711,
+            "client_8": 1.5977371954094417,
+            "client_9": 0.7442326459090227
+          },
+          "client_smape": {
+            "client_0": 105.36145472363138,
+            "client_1": 49.26883916778916,
+            "client_2": 114.35437786319591,
+            "client_3": 101.54513601899238,
+            "client_4": 130.484476311808,
+            "client_5": 77.68292773379798,
+            "client_6": 114.19432599379664,
+            "client_7": 48.00677343213402,
+            "client_8": 130.6272663678756,
+            "client_9": 183.8418556837795
+          },
+          "network_mae": 0.8651057277030322,
+          "network_smape": 115.88289478157076,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 8.851887194142791e-06,
+          "sync_component_l2_max": 1.506097072634829e-05,
+          "sync_component_centroid_l2_mean": 0.055900286879265,
+          "sync_component_pairwise_l2_mean": 0.09365760434539769,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            8.851887194142791e-06
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9662190890397496
+            ],
+            "sigma2": [
+              0.48618943693681443
+            ],
+            "x1": [
+              -0.01827313022304197
+            ],
+            "x2": [
+              -0.01802281674589617
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48405795753169006,
+            "client_1": 0.17282388773886337,
+            "client_2": 0.27647301433990823,
+            "client_3": 0.9036341559084716,
+            "client_4": 2.2573136485160394,
+            "client_5": 0.4293150224242616,
+            "client_6": 0.49872605071104353,
+            "client_7": 0.2619477872170711,
+            "client_8": 1.5977371954094417,
+            "client_9": 0.7442326459090227
+          },
+          "server_mse": 0.8651057277030322,
+          "server_smape": 115.88289478157076
+        },
+        {
+          "round": 5,
+          "client_mae": {
+            "client_0": 0.48405810435238894,
+            "client_1": 0.17282391482484194,
+            "client_2": 0.2764726917724442,
+            "client_3": 0.9036346554753573,
+            "client_4": 2.257314168071319,
+            "client_5": 0.42931493148237676,
+            "client_6": 0.4986747303908464,
+            "client_7": 0.26194781660390337,
+            "client_8": 1.5977371426882754,
+            "client_9": 0.744232722741325
+          },
+          "client_smape": {
+            "client_0": 105.36150238284279,
+            "client_1": 49.268845885804666,
+            "client_2": 114.35432355285269,
+            "client_3": 101.54514901900052,
+            "client_4": 130.484485865447,
+            "client_5": 77.68290523415969,
+            "client_6": 114.17503787864614,
+            "client_7": 48.0067793249954,
+            "client_8": 130.62727309999173,
+            "client_9": 183.8418320374073
+          },
+          "network_mae": 0.8651173816160662,
+          "network_smape": 115.88361882613978,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 1.8018430483341068e-06,
+          "sync_component_l2_max": 3.1655941225750035e-06,
+          "sync_component_centroid_l2_mean": 0.055900500087085615,
+          "sync_component_pairwise_l2_mean": 0.0936579601333749,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            1.8018430483341068e-06
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9662181169550916
+            ],
+            "sigma2": [
+              0.4861888121243315
+            ],
+            "x1": [
+              -0.01827305910910716
+            ],
+            "x2": [
+              -0.018022832167171966
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48405810435238894,
+            "client_1": 0.17282391482484194,
+            "client_2": 0.2764726917724442,
+            "client_3": 0.9036346554753573,
+            "client_4": 2.257314168071319,
+            "client_5": 0.42931493148237676,
+            "client_6": 0.4986747303908464,
+            "client_7": 0.26194781660390337,
+            "client_8": 1.5977371426882754,
+            "client_9": 0.744232722741325
+          },
+          "server_mse": 0.8651173816160662,
+          "server_smape": 115.88361882613978
+        },
+        {
+          "round": 6,
+          "client_mae": {
+            "client_0": 0.48405806782351196,
+            "client_1": 0.1728239102539507,
+            "client_2": 0.27647276614328703,
+            "client_3": 0.9036345517677283,
+            "client_4": 2.2573140592060716,
+            "client_5": 0.4293149503579482,
+            "client_6": 0.4986857826163712,
+            "client_7": 0.26194781046101834,
+            "client_8": 1.5977373853487844,
+            "client_9": 0.7442327056555404
+          },
+          "client_smape": {
+            "client_0": 105.36149138021287,
+            "client_1": 49.26884475075452,
+            "client_2": 114.35433588151906,
+            "client_3": 101.54514628824613,
+            "client_4": 130.4844838528289,
+            "client_5": 77.6829099107931,
+            "client_6": 114.17919113929558,
+            "client_7": 48.006778106551614,
+            "client_8": 130.62727849141922,
+            "client_9": 183.84183706588098
+          },
+          "network_mae": 0.8651148745366812,
+          "network_smape": 115.88346302998386,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 3.888954267689611e-07,
+          "sync_component_l2_max": 6.835256889481867e-07,
+          "sync_component_centroid_l2_mean": 0.05590045381067266,
+          "sync_component_pairwise_l2_mean": 0.09365788315178926,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            3.888954267689611e-07
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.96621832529643
+            ],
+            "sigma2": [
+              0.4861889489527522
+            ],
+            "x1": [
+              -0.018273076509807997
+            ],
+            "x2": [
+              -0.018022809788492543
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48405806782351196,
+            "client_1": 0.1728239102539507,
+            "client_2": 0.27647276614328703,
+            "client_3": 0.9036345517677283,
+            "client_4": 2.2573140592060716,
+            "client_5": 0.4293149503579482,
+            "client_6": 0.4986857826163712,
+            "client_7": 0.26194781046101834,
+            "client_8": 1.5977373853487844,
+            "client_9": 0.7442327056555404
+          },
+          "server_mse": 0.8651148745366812,
+          "server_smape": 115.88346302998386
+        },
+        {
+          "round": 7,
+          "client_mae": {
+            "client_0": 0.4840580754166103,
+            "client_1": 0.1728239112950038,
+            "client_2": 0.2764727504138773,
+            "client_3": 0.9036345742899592,
+            "client_4": 2.25731408279296,
+            "client_5": 0.42931494625339167,
+            "client_6": 0.49868340679538203,
+            "client_7": 0.2619478118000381,
+            "client_8": 1.5977373467489084,
+            "client_9": 0.7442327092992278
+          },
+          "client_smape": {
+            "client_0": 105.36149370311192,
+            "client_1": 49.268845009202735,
+            "client_2": 114.35433326600733,
+            "client_3": 101.54514687903453,
+            "client_4": 130.48448428836622,
+            "client_5": 77.68290889445224,
+            "client_6": 114.17829831056979,
+            "client_7": 48.00677837281846,
+            "client_8": 130.62727771388347,
+            "client_9": 183.8418359842286
+          },
+          "network_mae": 0.8651154137276871,
+          "network_smape": 115.88349655457598,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 8.352021259039603e-08,
+          "sync_component_l2_max": 1.4684632306868368e-07,
+          "sync_component_centroid_l2_mean": 0.05590046373589641,
+          "sync_component_pairwise_l2_mean": 0.09365789967510484,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            8.352021259039603e-08
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9662182804640614
+            ],
+            "sigma2": [
+              0.48618891963934846
+            ],
+            "x1": [
+              -0.018273072793113097
+            ],
+            "x2": [
+              -0.018022813582592286
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4840580754166103,
+            "client_1": 0.1728239112950038,
+            "client_2": 0.2764727504138773,
+            "client_3": 0.9036345742899592,
+            "client_4": 2.25731408279296,
+            "client_5": 0.42931494625339167,
+            "client_6": 0.49868340679538203,
+            "client_7": 0.2619478118000381,
+            "client_8": 1.5977373467489084,
+            "client_9": 0.7442327092992278
+          },
+          "server_mse": 0.8651154137276871,
+          "server_smape": 115.88349655457598
+        },
+        {
+          "round": 8,
+          "client_mae": {
+            "client_0": 0.4840580737583842,
+            "client_1": 0.17282391107397052,
+            "client_2": 0.27647275380452674,
+            "client_3": 0.9036345694761028,
+            "client_4": 2.257314077725601,
+            "client_5": 0.4293149471300599,
+            "client_6": 0.498683917718013,
+            "client_7": 0.26194781151107965,
+            "client_8": 1.5977373558654633,
+            "client_9": 0.7442327085077122
+          },
+          "client_smape": {
+            "client_0": 105.36149319822239,
+            "client_1": 49.26884495435779,
+            "client_2": 114.3543338290788,
+            "client_3": 101.54514675258748,
+            "client_4": 130.48448419477157,
+            "client_5": 77.68290911152016,
+            "client_6": 114.17849031265766,
+            "client_7": 48.0067783156852,
+            "client_8": 130.62727790289415,
+            "client_9": 183.841836218128
+          },
+          "network_mae": 0.8651152981369179,
+          "network_smape": 115.8834894712965,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 1.7963553080302285e-08,
+          "sync_component_l2_max": 3.158251015863554e-08,
+          "sync_component_centroid_l2_mean": 0.055900461600317086,
+          "sync_component_pairwise_l2_mean": 0.09365789612038093,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            1.7963553080302285e-08
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9662182901026442
+            ],
+            "sigma2": [
+              0.4861889259501683
+            ],
+            "x1": [
+              -0.018273073586963243
+            ],
+            "x2": [
+              -0.018022812707352655
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4840580737583842,
+            "client_1": 0.17282391107397052,
+            "client_2": 0.27647275380452674,
+            "client_3": 0.9036345694761028,
+            "client_4": 2.257314077725601,
+            "client_5": 0.4293149471300599,
+            "client_6": 0.498683917718013,
+            "client_7": 0.26194781151107965,
+            "client_8": 1.5977373558654633,
+            "client_9": 0.7442327085077122
+          },
+          "server_mse": 0.8651152981369179,
+          "server_smape": 115.8834894712965
+        },
+        {
+          "round": 9,
+          "client_mae": {
+            "client_0": 0.4840580741118049,
+            "client_1": 0.17282391112058407,
+            "client_2": 0.27647275307673896,
+            "client_3": 0.903634570506339,
+            "client_4": 2.257314078823381,
+            "client_5": 0.42931494692788696,
+            "client_6": 0.49868380785380095,
+            "client_7": 0.26194781156905017,
+            "client_8": 1.5977373539769295,
+            "client_9": 0.7442327086799507
+          },
+          "client_smape": {
+            "client_0": 105.36149330469118,
+            "client_1": 49.26884496586985,
+            "client_2": 114.35433370847807,
+            "client_3": 101.5451467795764,
+            "client_4": 130.4844842150801,
+            "client_5": 77.68290906179016,
+            "client_6": 114.17844902612329,
+            "client_7": 48.006778327510226,
+            "client_8": 130.62727786408652,
+            "client_9": 183.84183616769505
+          },
+          "network_mae": 0.8651153226820478,
+          "network_smape": 115.88349088442344,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 3.862711505037322e-09,
+          "sync_component_l2_max": 6.7907770198787344e-09,
+          "sync_component_centroid_l2_mean": 0.055900462058820655,
+          "sync_component_pairwise_l2_mean": 0.09365789688386075,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            3.862711505037322e-09
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9662182880300454
+            ],
+            "sigma2": [
+              0.4861889245930402
+            ],
+            "x1": [
+              -0.018273073410941462
+            ],
+            "x2": [
+              -0.01802281288988084
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4840580741118049,
+            "client_1": 0.17282391112058407,
+            "client_2": 0.27647275307673896,
+            "client_3": 0.903634570506339,
+            "client_4": 2.257314078823381,
+            "client_5": 0.42931494692788696,
+            "client_6": 0.49868380785380095,
+            "client_7": 0.26194781156905017,
+            "client_8": 1.5977373539769295,
+            "client_9": 0.7442327086799507
+          },
+          "server_mse": 0.8651153226820478,
+          "server_smape": 115.88349088442344
+        },
+        {
+          "round": 10,
+          "client_mae": {
+            "client_0": 0.48405807403613743,
+            "client_1": 0.17282391111154047,
+            "client_2": 0.2764727532327746,
+            "client_3": 0.9036345702906742,
+            "client_4": 2.2573140785879144,
+            "client_5": 0.4293149469816008,
+            "client_6": 0.49868383147296297,
+            "client_7": 0.2619478115581982,
+            "client_8": 1.5977373543715747,
+            "client_9": 0.7442327086476384
+          },
+          "client_smape": {
+            "client_0": 105.36149328240268,
+            "client_1": 49.2688449636769,
+            "client_2": 114.35433373430288,
+            "client_3": 101.54514677415295,
+            "client_4": 130.48448421070836,
+            "client_5": 77.68290907502346,
+            "client_6": 114.17845790215699,
+            "client_7": 48.00677832513504,
+            "client_8": 130.62727787215164,
+            "client_9": 183.84183617792672
+          },
+          "network_mae": 0.8651153173966659,
+          "network_smape": 115.88349057402687,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 8.3103917056717e-10,
+          "sync_component_l2_max": 1.4600742129936157e-09,
+          "sync_component_centroid_l2_mean": 0.055900461960755043,
+          "sync_component_pairwise_l2_mean": 0.09365789672062369,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            8.3103917056717e-10
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9662182884753516
+            ],
+            "sigma2": [
+              0.48618892488442456
+            ],
+            "x1": [
+              -0.018273073451863256
+            ],
+            "x2": [
+              -0.01802281285408825
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48405807403613743,
+            "client_1": 0.17282391111154047,
+            "client_2": 0.2764727532327746,
+            "client_3": 0.9036345702906742,
+            "client_4": 2.2573140785879144,
+            "client_5": 0.4293149469816008,
+            "client_6": 0.49868383147296297,
+            "client_7": 0.2619478115581982,
+            "client_8": 1.5977373543715747,
+            "client_9": 0.7442327086476384
+          },
+          "server_mse": 0.8651153173966659,
+          "server_smape": 115.88349057402687
+        }
+      ],
+      "attack_strategy": "label_flip",
+      "attack_scale": 2.5,
+      "malicious_frac": 0.0
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "balance",
+      "history": [
+        {
+          "round": 1,
+          "client_mae": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "client_smape": {
+            "client_0": 105.52323486558129,
+            "client_1": 49.27380510829137,
+            "client_2": 114.37831209189989,
+            "client_3": 101.54346454134928,
+            "client_4": 130.49058350463986,
+            "client_5": 77.66584006294674,
+            "client_6": 111.93875920740663,
+            "client_7": 47.996228460774304,
+            "client_8": 130.35916937786217,
+            "client_9": 183.8495882230589
+          },
+          "network_mae": 0.7962405089732612,
+          "network_smape": 105.7546370612575,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.16423091478293989,
+          "sync_component_pairwise_l2_mean": 0.23270492511175667,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9633258497943902
+            ],
+            "sigma2": [
+              0.5509738426242922
+            ],
+            "x1": [
+              -0.030229871970088345
+            ],
+            "x2": [
+              -0.032803535389606356
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "server_mse": 0.7962405089732612,
+          "server_smape": 105.7546370612575
+        },
+        {
+          "round": 2,
+          "client_mae": {
+            "client_0": 0.48418993147599354,
+            "client_1": 0.17280597165430403,
+            "client_2": 0.2766107666727062,
+            "client_3": 0.9037020075240353,
+            "client_4": 2.2574179979310722,
+            "client_5": 0.42925538572031724,
+            "client_6": 0.49276846859791784,
+            "client_7": 0.26193635130289505,
+            "client_8": 1.590440099605162,
+            "client_9": 0.7442327183881281
+          },
+          "client_smape": {
+            "client_0": 105.38997281177399,
+            "client_1": 49.264458966896925,
+            "client_2": 114.37314670612051,
+            "client_3": 101.5435449049806,
+            "client_4": 130.48639604895695,
+            "client_5": 77.6636097546929,
+            "client_6": 111.9388278303344,
+            "client_7": 48.0025534343819,
+            "client_8": 130.38519899491024,
+            "client_9": 183.83959631020468
+          },
+          "network_mae": 0.7962033423050953,
+          "network_smape": 105.75444570607226,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0001611853665589089,
+          "sync_component_l2_max": 0.0007814999688187535,
+          "sync_component_centroid_l2_mean": 0.16423322646377558,
+          "sync_component_pairwise_l2_mean": 0.2327065862372535,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0001611853665589089
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9633091351938305
+            ],
+            "sigma2": [
+              0.5510880955612505
+            ],
+            "x1": [
+              -0.030120696730367453
+            ],
+            "x2": [
+              -0.03250630245390929
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48418993147599354,
+            "client_1": 0.17280597165430403,
+            "client_2": 0.2766107666727062,
+            "client_3": 0.9037020075240353,
+            "client_4": 2.2574179979310722,
+            "client_5": 0.42925538572031724,
+            "client_6": 0.49276846859791784,
+            "client_7": 0.26193635130289505,
+            "client_8": 1.590440099605162,
+            "client_9": 0.7442327183881281
+          },
+          "server_mse": 0.7962033423050953,
+          "server_smape": 105.75444570607226
+        },
+        {
+          "round": 3,
+          "client_mae": {
+            "client_0": 0.48418441695234443,
+            "client_1": 0.17280574215631453,
+            "client_2": 0.2766110358417886,
+            "client_3": 0.9036997423527768,
+            "client_4": 2.2574181226144723,
+            "client_5": 0.42925520736273215,
+            "client_6": 0.49276818291657654,
+            "client_7": 0.2619363683947625,
+            "client_8": 1.5904695499476695,
+            "client_9": 0.7442326552723106
+          },
+          "client_smape": {
+            "client_0": 105.38855324159253,
+            "client_1": 49.264400683346906,
+            "client_2": 114.37319130880994,
+            "client_3": 101.54353008517411,
+            "client_4": 130.4863955270016,
+            "client_5": 77.66353605471238,
+            "client_6": 111.93875564620038,
+            "client_7": 48.00255913687587,
+            "client_8": 130.38647701755866,
+            "client_9": 183.83957002451132
+          },
+          "network_mae": 0.7962034436267489,
+          "network_smape": 105.75445433649483,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 5.499814616784054e-06,
+          "sync_component_l2_max": 3.3734583869917996e-05,
+          "sync_component_centroid_l2_mean": 0.16423374727452214,
+          "sync_component_pairwise_l2_mean": 0.2327073423812074,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            5.499814616784054e-06
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9633088980748118
+            ],
+            "sigma2": [
+              0.5510899658209089
+            ],
+            "x1": [
+              -0.030120339451386573
+            ],
+            "x2": [
+              -0.03250076055399523
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48418441695234443,
+            "client_1": 0.17280574215631453,
+            "client_2": 0.2766110358417886,
+            "client_3": 0.9036997423527768,
+            "client_4": 2.2574181226144723,
+            "client_5": 0.42925520736273215,
+            "client_6": 0.49276818291657654,
+            "client_7": 0.2619363683947625,
+            "client_8": 1.5904695499476695,
+            "client_9": 0.7442326552723106
+          },
+          "server_mse": 0.7962034436267489,
+          "server_smape": 105.75445433649483
+        },
+        {
+          "round": 4,
+          "client_mae": {
+            "client_0": 0.484184333879222,
+            "client_1": 0.17280574034451532,
+            "client_2": 0.27661104317735236,
+            "client_3": 0.9036997304364197,
+            "client_4": 2.2574181285275605,
+            "client_5": 0.42925520201907724,
+            "client_6": 0.49276817555577723,
+            "client_7": 0.26193636873105025,
+            "client_8": 1.5904713173458829,
+            "client_9": 0.7442326524278482
+          },
+          "client_smape": {
+            "client_0": 105.38853547566858,
+            "client_1": 49.26440037014154,
+            "client_2": 114.37319263776287,
+            "client_3": 101.54353000292579,
+            "client_4": 130.48639552794256,
+            "client_5": 77.6635346496564,
+            "client_6": 111.93875380385843,
+            "client_7": 48.00255920106509,
+            "client_8": 130.38654040144792,
+            "client_9": 183.8395696020243
+          },
+          "network_mae": 0.796203477817018,
+          "network_smape": 105.75445499322018,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 2.2998277590606819e-07,
+          "sync_component_l2_max": 1.452332289368258e-06,
+          "sync_component_centroid_l2_mean": 0.16423376287939564,
+          "sync_component_pairwise_l2_mean": 0.23270736689084429,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            2.2998277590606819e-07
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9633088939802558
+            ],
+            "sigma2": [
+              0.5510899977776222
+            ],
+            "x1": [
+              -0.03012035655429747
+            ],
+            "x2": [
+              -0.03250059494329574
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.484184333879222,
+            "client_1": 0.17280574034451532,
+            "client_2": 0.27661104317735236,
+            "client_3": 0.9036997304364197,
+            "client_4": 2.2574181285275605,
+            "client_5": 0.42925520201907724,
+            "client_6": 0.49276817555577723,
+            "client_7": 0.26193636873105025,
+            "client_8": 1.5904713173458829,
+            "client_9": 0.7442326524278482
+          },
+          "server_mse": 0.796203477817018,
+          "server_smape": 105.75445499322018
+        },
+        {
+          "round": 5,
+          "client_mae": {
+            "client_0": 0.4841843317368273,
+            "client_1": 0.17280574035655769,
+            "client_2": 0.276611043391149,
+            "client_3": 0.9036997310615235,
+            "client_4": 2.2574181286698605,
+            "client_5": 0.42925520181247306,
+            "client_6": 0.4927681753000844,
+            "client_7": 0.26193636873862,
+            "client_8": 1.590471418250723,
+            "client_9": 0.7442326523115821
+          },
+          "client_smape": {
+            "client_0": 105.3885350940909,
+            "client_1": 49.264400380846055,
+            "client_2": 114.37319267831954,
+            "client_3": 101.5435300049815,
+            "client_4": 130.4863955262494,
+            "client_5": 77.66353460138014,
+            "client_6": 111.9387537397254,
+            "client_7": 48.002559201762615,
+            "client_8": 130.38654357734364,
+            "client_9": 183.83956958988648
+          },
+          "network_mae": 0.7962034799549552,
+          "network_smape": 105.7544550307429,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 1.0102202915538406e-08,
+          "sync_component_l2_max": 6.415888742460785e-08,
+          "sync_component_centroid_l2_mean": 0.16423376341924195,
+          "sync_component_pairwise_l2_mean": 0.23270736776869008,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            1.0102202915538406e-08
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9633088938722025
+            ],
+            "sigma2": [
+              0.5510899986594857
+            ],
+            "x1": [
+              -0.030120357064248933
+            ],
+            "x2": [
+              -0.032500588339863766
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4841843317368273,
+            "client_1": 0.17280574035655769,
+            "client_2": 0.276611043391149,
+            "client_3": 0.9036997310615235,
+            "client_4": 2.2574181286698605,
+            "client_5": 0.42925520181247306,
+            "client_6": 0.4927681753000844,
+            "client_7": 0.26193636873862,
+            "client_8": 1.590471418250723,
+            "client_9": 0.7442326523115821
+          },
+          "server_mse": 0.7962034799549552,
+          "server_smape": 105.7544550307429
+        },
+        {
+          "round": 6,
+          "client_mae": {
+            "client_0": 0.4841843316568643,
+            "client_1": 0.17280574035887106,
+            "client_2": 0.2766110434014629,
+            "client_3": 0.903699731109629,
+            "client_4": 2.2574181286799266,
+            "client_5": 0.42925520180183574,
+            "client_6": 0.4927681752897236,
+            "client_7": 0.26193636873840614,
+            "client_8": 1.590471423770142,
+            "client_9": 0.7442326523062074
+          },
+          "client_smape": {
+            "client_0": 105.38853508003103,
+            "client_1": 49.264400381793685,
+            "client_2": 114.37319268036583,
+            "client_3": 101.54353000517669,
+            "client_4": 130.48639552628168,
+            "client_5": 77.66353459948473,
+            "client_6": 111.93875373708406,
+            "client_7": 48.00255920152227,
+            "client_8": 130.38654373663775,
+            "client_9": 183.83956958974278
+          },
+          "network_mae": 0.7962034800706996,
+          "network_smape": 105.75445503165056,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 4.5923035310101423e-10,
+          "sync_component_l2_max": 2.9347089872354374e-09,
+          "sync_component_centroid_l2_mean": 0.16423376344076562,
+          "sync_component_pairwise_l2_mean": 0.23270736780660617,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            4.5923035310101423e-10
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9633088938664119
+            ],
+            "sigma2": [
+              0.5510899986582315
+            ],
+            "x1": [
+              -0.030120357069158308
+            ],
+            "x2": [
+              -0.03250058805637422
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4841843316568643,
+            "client_1": 0.17280574035887106,
+            "client_2": 0.2766110434014629,
+            "client_3": 0.903699731109629,
+            "client_4": 2.2574181286799266,
+            "client_5": 0.42925520180183574,
+            "client_6": 0.4927681752897236,
+            "client_7": 0.26193636873840614,
+            "client_8": 1.590471423770142,
+            "client_9": 0.7442326523062074
+          },
+          "server_mse": 0.7962034800706996,
+          "server_smape": 105.75445503165056
+        },
+        {
+          "round": 7,
+          "client_mae": {
+            "client_0": 0.4841843316483006,
+            "client_1": 0.1728057403591173,
+            "client_2": 0.27661104340738213,
+            "client_3": 0.9036997311212411,
+            "client_4": 2.2574181286806967,
+            "client_5": 0.42925520180063026,
+            "client_6": 0.49276817529019806,
+            "client_7": 0.26193636873580006,
+            "client_8": 1.590471424059206,
+            "client_9": 0.7442326523036474
+          },
+          "client_smape": {
+            "client_0": 105.38853507813295,
+            "client_1": 49.264400381894575,
+            "client_2": 114.3731926814701,
+            "client_3": 101.5435300054775,
+            "client_4": 130.48639552629723,
+            "client_5": 77.66353459920904,
+            "client_6": 111.93875373732114,
+            "client_7": 48.00255920112055,
+            "client_8": 130.38654374407926,
+            "client_9": 183.83956959044804
+          },
+          "network_mae": 0.7962034800736492,
+          "network_smape": 105.75445503313327,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 2.322375114634848e-11,
+          "sync_component_l2_max": 1.2088121507793785e-10,
+          "sync_component_centroid_l2_mean": 0.16423376344632493,
+          "sync_component_pairwise_l2_mean": 0.2327073678128994,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            2.322375114634848e-11
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.963308893867118
+            ],
+            "sigma2": [
+              0.5510899986855752
+            ],
+            "x1": [
+              -0.030120357062004763
+            ],
+            "x2": [
+              -0.03250058803759759
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4841843316483006,
+            "client_1": 0.1728057403591173,
+            "client_2": 0.27661104340738213,
+            "client_3": 0.9036997311212411,
+            "client_4": 2.2574181286806967,
+            "client_5": 0.42925520180063026,
+            "client_6": 0.49276817529019806,
+            "client_7": 0.26193636873580006,
+            "client_8": 1.590471424059206,
+            "client_9": 0.7442326523036474
+          },
+          "server_mse": 0.7962034800736492,
+          "server_smape": 105.75445503313327
+        },
+        {
+          "round": 8,
+          "client_mae": {
+            "client_0": 0.48418433164930497,
+            "client_1": 0.17280574035850366,
+            "client_2": 0.27661104341844384,
+            "client_3": 0.9036997311168946,
+            "client_4": 2.2574181286763446,
+            "client_5": 0.4292552017996541,
+            "client_6": 0.4927681752902152,
+            "client_7": 0.2619363687422063,
+            "client_8": 1.5904714240517839,
+            "client_9": 0.7442326523029628
+          },
+          "client_smape": {
+            "client_0": 105.38853507836556,
+            "client_1": 49.264400381738334,
+            "client_2": 114.3731926835651,
+            "client_3": 101.54353000520307,
+            "client_4": 130.48639552619824,
+            "client_5": 77.66353459902354,
+            "client_6": 111.93875373733792,
+            "client_7": 48.002559202290115,
+            "client_8": 130.38654374396612,
+            "client_9": 183.83956959075476
+          },
+          "network_mae": 0.7962034800805612,
+          "network_smape": 105.75445503081701,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 5.332748081633977e-12,
+          "sync_component_l2_max": 2.2554957076538354e-11,
+          "sync_component_centroid_l2_mean": 0.16423376344159712,
+          "sync_component_pairwise_l2_mean": 0.2327073678069214,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            5.332748081633977e-12
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9633088938679091
+            ],
+            "sigma2": [
+              0.5510899986778885
+            ],
+            "x1": [
+              -0.030120357060267344
+            ],
+            "x2": [
+              -0.032500588036345424
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48418433164930497,
+            "client_1": 0.17280574035850366,
+            "client_2": 0.27661104341844384,
+            "client_3": 0.9036997311168946,
+            "client_4": 2.2574181286763446,
+            "client_5": 0.4292552017996541,
+            "client_6": 0.4927681752902152,
+            "client_7": 0.2619363687422063,
+            "client_8": 1.5904714240517839,
+            "client_9": 0.7442326523029628
+          },
+          "server_mse": 0.7962034800805612,
+          "server_smape": 105.75445503081701
+        },
+        {
+          "round": 9,
+          "client_mae": {
+            "client_0": 0.4841843316505373,
+            "client_1": 0.17280574035889534,
+            "client_2": 0.2766110434095076,
+            "client_3": 0.9036997311006904,
+            "client_4": 2.257418128679426,
+            "client_5": 0.429255201801781,
+            "client_6": 0.49276817528933564,
+            "client_7": 0.2619363687346437,
+            "client_8": 1.59047142404738,
+            "client_9": 0.7442326523053896
+          },
+          "client_smape": {
+            "client_0": 105.38853507824808,
+            "client_1": 49.264400381848716,
+            "client_2": 114.37319268187642,
+            "client_3": 101.5435300048799,
+            "client_4": 130.48639552626483,
+            "client_5": 77.66353459926607,
+            "client_6": 111.9387537370968,
+            "client_7": 48.002559200703736,
+            "client_8": 130.38654374392792,
+            "client_9": 183.8395695898121
+          },
+          "network_mae": 0.7962034800829922,
+          "network_smape": 105.75445503059788,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 5.057737444049189e-12,
+          "sync_component_l2_max": 2.7603795049450958e-11,
+          "sync_component_centroid_l2_mean": 0.16423376343807325,
+          "sync_component_pairwise_l2_mean": 0.23270736780175635,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            5.057737444049189e-12
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9633088938671797
+            ],
+            "sigma2": [
+              0.5510899986741299
+            ],
+            "x1": [
+              -0.030120357062054445
+            ],
+            "x2": [
+              -0.032500588040543434
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4841843316505373,
+            "client_1": 0.17280574035889534,
+            "client_2": 0.2766110434095076,
+            "client_3": 0.9036997311006904,
+            "client_4": 2.257418128679426,
+            "client_5": 0.429255201801781,
+            "client_6": 0.49276817528933564,
+            "client_7": 0.2619363687346437,
+            "client_8": 1.59047142404738,
+            "client_9": 0.7442326523053896
+          },
+          "server_mse": 0.7962034800829922,
+          "server_smape": 105.75445503059788
+        },
+        {
+          "round": 10,
+          "client_mae": {
+            "client_0": 0.48418433165156805,
+            "client_1": 0.1728057403591016,
+            "client_2": 0.27661104340609033,
+            "client_3": 0.9036997311002148,
+            "client_4": 2.2574181286804658,
+            "client_5": 0.4292552018030314,
+            "client_6": 0.4927681752899563,
+            "client_7": 0.2619363687330436,
+            "client_8": 1.5904714240800946,
+            "client_9": 0.7442326523035913
+          },
+          "client_smape": {
+            "client_0": 105.38853507794737,
+            "client_1": 49.26440038187954,
+            "client_2": 114.37319268122835,
+            "client_3": 101.54353000485679,
+            "client_4": 130.48639552628273,
+            "client_5": 77.663534599616,
+            "client_6": 111.93875373727002,
+            "client_7": 48.00255920031952,
+            "client_8": 130.3865437448005,
+            "client_9": 183.8395695901231
+          },
+          "network_mae": 0.7962034800813858,
+          "network_smape": 105.75445503207456,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 3.746255727059188e-12,
+          "sync_component_l2_max": 1.69548522204399e-11,
+          "sync_component_centroid_l2_mean": 0.16423376343593127,
+          "sync_component_pairwise_l2_mean": 0.23270736779936002,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            3.746255727059188e-12
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "ar.L1": [
+              0.9633088938660022
+            ],
+            "sigma2": [
+              0.5510899986683627
+            ],
+            "x1": [
+              -0.030120357064692616
+            ],
+            "x2": [
+              -0.03250058804546715
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48418433165156805,
+            "client_1": 0.1728057403591016,
+            "client_2": 0.27661104340609033,
+            "client_3": 0.9036997311002148,
+            "client_4": 2.2574181286804658,
+            "client_5": 0.4292552018030314,
+            "client_6": 0.4927681752899563,
+            "client_7": 0.2619363687330436,
+            "client_8": 1.5904714240800946,
+            "client_9": 0.7442326523035913
+          },
+          "server_mse": 0.7962034800813858,
+          "server_smape": 105.75445503207456
+        }
+      ],
+      "attack_strategy": "label_flip",
+      "attack_scale": 2.5,
+      "malicious_frac": 0.0
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "push_sum",
+      "history": [
+        {
+          "round": 1,
+          "client_mae": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "client_smape": {
+            "client_0": 105.52323486558129,
+            "client_1": 49.27380510829137,
+            "client_2": 114.37831209189989,
+            "client_3": 101.54346454134928,
+            "client_4": 130.49058350463986,
+            "client_5": 77.66584006294674,
+            "client_6": 111.93875920740663,
+            "client_7": 47.996228460774304,
+            "client_8": 130.35916937786217,
+            "client_9": 183.8495882230589
+          },
+          "network_mae": 0.8907067776173759,
+          "network_smape": 116.46927259484214,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 2.2888491377299405e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.013322077298803109
+            ],
+            "x2": [
+              -0.012832757408548475
+            ],
+            "ar.L1": [
+              0.9673619188779043
+            ],
+            "sigma2": [
+              0.44568595095663005
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "server_mse": 0.8907067776173759,
+          "server_smape": 116.46927259484214
+        },
+        {
+          "round": 2,
+          "client_mae": {
+            "client_0": 0.48399614594076146,
+            "client_1": 0.1728184582958044,
+            "client_2": 0.2764710093100976,
+            "client_3": 0.9035902927683896,
+            "client_4": 2.2570921747675174,
+            "client_5": 0.42943606027558073,
+            "client_6": 0.5008813282532043,
+            "client_7": 0.26190819624207096,
+            "client_8": 1.5763523448631036,
+            "client_9": 0.7444621510883209
+          },
+          "client_smape": {
+            "client_0": 105.34849041782614,
+            "client_1": 49.26751773440875,
+            "client_2": 114.34724407113337,
+            "client_3": 101.54446574181353,
+            "client_4": 130.48061419237885,
+            "client_5": 77.72268141214678,
+            "client_6": 115.41110790703296,
+            "client_7": 47.9998174992848,
+            "client_8": 130.04448249317446,
+            "client_9": 183.80543728111533
+          },
+          "network_mae": 0.8896073339019086,
+          "network_smape": 116.18543851221177,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0020586782570663426,
+          "sync_component_l2_max": 0.002058678257066343,
+          "sync_component_centroid_l2_mean": 2.289112072726527e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0020586782570663426
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.013231835262650253
+            ],
+            "x2": [
+              -0.012591777157393102
+            ],
+            "ar.L1": [
+              0.9680278821917621
+            ],
+            "sigma2": [
+              0.44761686626398495
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48399614594076146,
+            "client_1": 0.1728184582958044,
+            "client_2": 0.2764710093100976,
+            "client_3": 0.9035902927683896,
+            "client_4": 2.2570921747675174,
+            "client_5": 0.42943606027558073,
+            "client_6": 0.5008813282532043,
+            "client_7": 0.26190819624207096,
+            "client_8": 1.5763523448631036,
+            "client_9": 0.7444621510883209
+          },
+          "server_mse": 0.8896073339019086,
+          "server_smape": 116.18543851221177
+        },
+        {
+          "round": 3,
+          "client_mae": {
+            "client_0": 0.4840203811286667,
+            "client_1": 0.17282121516014787,
+            "client_2": 0.276649957534255,
+            "client_3": 0.9036629213099341,
+            "client_4": 2.257978554874967,
+            "client_5": 0.42942328786409634,
+            "client_6": 0.4968462868065958,
+            "client_7": 0.26190817203471833,
+            "client_8": 1.574233184166814,
+            "client_9": 0.7443985891610244
+          },
+          "client_smape": {
+            "client_0": 105.356014312777,
+            "client_1": 49.26818897712135,
+            "client_2": 114.39171666853653,
+            "client_3": 101.5463500133918,
+            "client_4": 130.49664887834737,
+            "client_5": 77.72020240967919,
+            "client_6": 113.8091363478065,
+            "client_7": 47.99986230199876,
+            "client_8": 129.99263173941944,
+            "client_9": 183.82978203609136
+          },
+          "network_mae": 0.890577884567171,
+          "network_smape": 116.47414409422535,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0006051197777925631,
+          "sync_component_l2_max": 0.0006051197777925631,
+          "sync_component_centroid_l2_mean": 1.241388288193343e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0006051197777925631
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.013252181601451685
+            ],
+            "x2": [
+              -0.0125972385565925
+            ],
+            "ar.L1": [
+              0.967445416123124
+            ],
+            "sigma2": [
+              0.44777952979393915
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4840203811286667,
+            "client_1": 0.17282121516014787,
+            "client_2": 0.276649957534255,
+            "client_3": 0.9036629213099341,
+            "client_4": 2.257978554874967,
+            "client_5": 0.42942328786409634,
+            "client_6": 0.4968462868065958,
+            "client_7": 0.26190817203471833,
+            "client_8": 1.574233184166814,
+            "client_9": 0.7443985891610244
+          },
+          "server_mse": 0.890577884567171,
+          "server_smape": 116.47414409422535
+        },
+        {
+          "round": 4,
+          "client_mae": {
+            "client_0": 0.4839961246988452,
+            "client_1": 0.17281978947810456,
+            "client_2": 0.27889936447012864,
+            "client_3": 0.9036122536419686,
+            "client_4": 2.257154982286519,
+            "client_5": 0.42943567793941223,
+            "client_6": 0.5029565199631991,
+            "client_7": 0.2619069241373994,
+            "client_8": 1.5736627073917764,
+            "client_9": 0.7444850636699791
+          },
+          "client_smape": {
+            "client_0": 105.34862811755717,
+            "client_1": 49.26783578590682,
+            "client_2": 114.81341647160541,
+            "client_3": 101.54503177646377,
+            "client_4": 130.48172434374084,
+            "client_5": 77.72346431276432,
+            "client_6": 116.2257164963908,
+            "client_7": 47.99950822450744,
+            "client_8": 129.97907264142765,
+            "client_9": 183.80011801092778
+          },
+          "network_mae": 0.8893731199505531,
+          "network_smape": 116.1331335288501,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007147350268619648,
+          "sync_component_l2_max": 0.0007147350268619647,
+          "sync_component_centroid_l2_mean": 2.220581570386223e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007147350268619648
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.01323244781448246
+            ],
+            "x2": [
+              -0.012583553249962137
+            ],
+            "ar.L1": [
+              0.9681395849238621
+            ],
+            "sigma2": [
+              0.4479480501925247
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4839961246988452,
+            "client_1": 0.17281978947810456,
+            "client_2": 0.27889936447012864,
+            "client_3": 0.9036122536419686,
+            "client_4": 2.257154982286519,
+            "client_5": 0.42943567793941223,
+            "client_6": 0.5029565199631991,
+            "client_7": 0.2619069241373994,
+            "client_8": 1.5736627073917764,
+            "client_9": 0.7444850636699791
+          },
+          "server_mse": 0.8893731199505531,
+          "server_smape": 116.1331335288501
+        },
+        {
+          "round": 5,
+          "client_mae": {
+            "client_0": 0.48402541911493424,
+            "client_1": 0.17282190563294386,
+            "client_2": 0.27664021816662665,
+            "client_3": 0.9036731311745368,
+            "client_4": 2.257963937862996,
+            "client_5": 0.4294205443202319,
+            "client_6": 0.49630726587986596,
+            "client_7": 0.2619082030793577,
+            "client_8": 1.5730985887988076,
+            "client_9": 0.7443952941329942
+          },
+          "client_smape": {
+            "client_0": 105.35752218862883,
+            "client_1": 49.268359200759804,
+            "client_2": 114.3896232304146,
+            "client_3": 101.54660151317228,
+            "client_4": 130.4964044842096,
+            "client_5": 77.71951402771377,
+            "client_6": 113.5971822113825,
+            "client_7": 47.99987490712937,
+            "client_8": 129.96414330765617,
+            "client_9": 183.83207887986964
+          },
+          "network_mae": 0.8905878385306811,
+          "network_smape": 116.4699781039778,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0008160328328704065,
+          "sync_component_l2_max": 0.0008160328328704066,
+          "sync_component_centroid_l2_mean": 1.1103585416259206e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0008160328328704065
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.013255825190564013
+            ],
+            "x2": [
+              -0.012597169651613001
+            ],
+            "ar.L1": [
+              0.9674419458288551
+            ],
+            "sigma2": [
+              0.44752558437221024
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48402541911493424,
+            "client_1": 0.17282190563294386,
+            "client_2": 0.27664021816662665,
+            "client_3": 0.9036731311745368,
+            "client_4": 2.257963937862996,
+            "client_5": 0.4294205443202319,
+            "client_6": 0.49630726587986596,
+            "client_7": 0.2619082030793577,
+            "client_8": 1.5730985887988076,
+            "client_9": 0.7443952941329942
+          },
+          "server_mse": 0.8905878385306811,
+          "server_smape": 116.4699781039778
+        },
+        {
+          "round": 6,
+          "client_mae": {
+            "client_0": 0.48399584517869637,
+            "client_1": 0.17281953386250318,
+            "client_2": 0.2789941117125308,
+            "client_3": 0.9036108025216188,
+            "client_4": 2.257146817825398,
+            "client_5": 0.42943540917048073,
+            "client_6": 0.5025985883313642,
+            "client_7": 0.2619070457299414,
+            "client_8": 1.5738694192600562,
+            "client_9": 0.7444800813047742
+          },
+          "client_smape": {
+            "client_0": 105.34857480709636,
+            "client_1": 49.26777315895399,
+            "client_2": 114.83163580052236,
+            "client_3": 101.54499043715654,
+            "client_4": 130.4815778732608,
+            "client_5": 77.72330101498855,
+            "client_6": 116.08382148783333,
+            "client_7": 47.99954178464142,
+            "client_8": 129.98399715829225,
+            "client_9": 183.80134468752135
+          },
+          "network_mae": 0.8894131260018909,
+          "network_smape": 116.14150594870709,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007637703255608116,
+          "sync_component_l2_max": 0.0007637703255608116,
+          "sync_component_centroid_l2_mean": 5.57275697956085e-17,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007637703255608116
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.013232804975166247
+            ],
+            "x2": [
+              -0.012585936674434063
+            ],
+            "ar.L1": [
+              0.9681211724908174
+            ],
+            "sigma2": [
+              0.4478739234911641
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48399584517869637,
+            "client_1": 0.17281953386250318,
+            "client_2": 0.2789941117125308,
+            "client_3": 0.9036108025216188,
+            "client_4": 2.257146817825398,
+            "client_5": 0.42943540917048073,
+            "client_6": 0.5025985883313642,
+            "client_7": 0.2619070457299414,
+            "client_8": 1.5738694192600562,
+            "client_9": 0.7444800813047742
+          },
+          "server_mse": 0.8894131260018909,
+          "server_smape": 116.14150594870709
+        },
+        {
+          "round": 7,
+          "client_mae": {
+            "client_0": 0.48402458799601406,
+            "client_1": 0.17282176925090406,
+            "client_2": 0.2766417461031456,
+            "client_3": 0.9036714167520264,
+            "client_4": 2.257966427797718,
+            "client_5": 0.42942101142671263,
+            "client_6": 0.4963749963516887,
+            "client_7": 0.2619082114374681,
+            "client_8": 1.5731681941227784,
+            "client_9": 0.7443956272829406
+          },
+          "client_smape": {
+            "client_0": 105.35727472682824,
+            "client_1": 49.26832558530306,
+            "client_2": 114.38994914822067,
+            "client_3": 101.54656037023426,
+            "client_4": 130.4964467994,
+            "client_5": 77.71962758941322,
+            "client_6": 113.62380301784727,
+            "client_7": 47.999876215568804,
+            "client_8": 129.96583998496612,
+            "client_9": 183.83175313870373
+          },
+          "network_mae": 0.8905857701868349,
+          "network_smape": 116.46882132813471,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007690427018805098,
+          "sync_component_l2_max": 0.0007690427018805099,
+          "sync_component_centroid_l2_mean": 1.1113066979184073e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007690427018805098
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.013255208344021198
+            ],
+            "x2": [
+              -0.012597491698029782
+            ],
+            "ar.L1": [
+              0.9674438154669841
+            ],
+            "sigma2": [
+              0.44751063474915165
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48402458799601406,
+            "client_1": 0.17282176925090406,
+            "client_2": 0.2766417461031456,
+            "client_3": 0.9036714167520264,
+            "client_4": 2.257966427797718,
+            "client_5": 0.42942101142671263,
+            "client_6": 0.4963749963516887,
+            "client_7": 0.2619082114374681,
+            "client_8": 1.5731681941227784,
+            "client_9": 0.7443956272829406
+          },
+          "server_mse": 0.8905857701868349,
+          "server_smape": 116.46882132813471
+        },
+        {
+          "round": 8,
+          "client_mae": {
+            "client_0": 0.4839959104144539,
+            "client_1": 0.17281952196010184,
+            "client_2": 0.27891287985872826,
+            "client_3": 0.9036109071401848,
+            "client_4": 2.2571459467586736,
+            "client_5": 0.42943535615991146,
+            "client_6": 0.5025522664308361,
+            "client_7": 0.2619070572623762,
+            "client_8": 1.5738801010346635,
+            "client_9": 0.7444792360777728
+          },
+          "client_smape": {
+            "client_0": 105.34859446095741,
+            "client_1": 49.2677702543664,
+            "client_2": 114.81600301828112,
+            "client_3": 101.54499288157778,
+            "client_4": 130.48156246338402,
+            "client_5": 77.7232835060365,
+            "client_6": 116.06538485117555,
+            "client_7": 47.999544990029406,
+            "client_8": 129.9842465209185,
+            "client_9": 183.80157770322074
+          },
+          "network_mae": 0.8894158315347251,
+          "network_smape": 116.142072162797,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007654345341509188,
+          "sync_component_l2_max": 0.0007654345341509189,
+          "sync_component_centroid_l2_mean": 1.1107649934270853e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007654345341509188
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.013232970082322458
+            ],
+            "x2": [
+              -0.012586051979347326
+            ],
+            "ar.L1": [
+              0.9681198970266618
+            ],
+            "sigma2": [
+              0.4478686547811159
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4839959104144539,
+            "client_1": 0.17281952196010184,
+            "client_2": 0.27891287985872826,
+            "client_3": 0.9036109071401848,
+            "client_4": 2.2571459467586736,
+            "client_5": 0.42943535615991146,
+            "client_6": 0.5025522664308361,
+            "client_7": 0.2619070572623762,
+            "client_8": 1.5738801010346635,
+            "client_9": 0.7444792360777728
+          },
+          "server_mse": 0.8894158315347251,
+          "server_smape": 116.142072162797
+        },
+        {
+          "round": 9,
+          "client_mae": {
+            "client_0": 0.4840245315383722,
+            "client_1": 0.1728217601785918,
+            "client_2": 0.2766418517621499,
+            "client_3": 0.903671295351727,
+            "client_4": 2.2579665983172394,
+            "client_5": 0.4294210442364771,
+            "client_6": 0.49637955986611326,
+            "client_7": 0.26190821201507114,
+            "client_8": 1.5731731504635627,
+            "client_9": 0.7443956503955699
+          },
+          "client_smape": {
+            "client_0": 105.357258304358,
+            "client_1": 49.2683233486512,
+            "client_2": 114.389971544942,
+            "client_3": 101.5465574694564,
+            "client_4": 130.49644965730874,
+            "client_5": 77.71963541025386,
+            "client_6": 113.6256049043356,
+            "client_7": 47.99987630908518,
+            "client_8": 129.96596084744135,
+            "client_9": 183.83172940261326
+          },
+          "network_mae": 0.8905856388897423,
+          "network_smape": 116.46874381344932,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007658296008106094,
+          "sync_component_l2_max": 0.0007658296008106094,
+          "sync_component_centroid_l2_mean": 1.2412670766236366e-16,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007658296008106094
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.013255163876989263
+            ],
+            "x2": [
+              -0.0125975159227848
+            ],
+            "ar.L1": [
+              0.9674439377119078
+            ],
+            "sigma2": [
+              0.4475095586996081
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4840245315383722,
+            "client_1": 0.1728217601785918,
+            "client_2": 0.2766418517621499,
+            "client_3": 0.903671295351727,
+            "client_4": 2.2579665983172394,
+            "client_5": 0.4294210442364771,
+            "client_6": 0.49637955986611326,
+            "client_7": 0.26190821201507114,
+            "client_8": 1.5731731504635627,
+            "client_9": 0.7443956503955699
+          },
+          "server_mse": 0.8905856388897423,
+          "server_smape": 116.46874381344932
+        },
+        {
+          "round": 10,
+          "client_mae": {
+            "client_0": 0.4839959146004289,
+            "client_1": 0.17281952106849968,
+            "client_2": 0.2789076467207555,
+            "client_3": 0.903610913563767,
+            "client_4": 2.2571458863117373,
+            "client_5": 0.4294353525444836,
+            "client_6": 0.5025490911395545,
+            "client_7": 0.2619070580792188,
+            "client_8": 1.5738808824049066,
+            "client_9": 0.7444791788218279
+          },
+          "client_smape": {
+            "client_0": 105.34859571654852,
+            "client_1": 49.26777003669855,
+            "client_2": 114.81499599343918,
+            "client_3": 101.54499302784915,
+            "client_4": 130.4815613946198,
+            "client_5": 77.72328229137922,
+            "client_6": 116.06412095583703,
+            "client_7": 47.99954521542825,
+            "client_8": 129.9842647969054,
+            "client_9": 183.80159348306532
+          },
+          "network_mae": 0.8894160259155826,
+          "network_smape": 116.14211298426571,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0007655731203485346,
+          "sync_component_l2_max": 0.0007655731203485347,
+          "sync_component_centroid_l2_mean": 1.734723475976807e-18,
+          "sync_component_pairwise_l2_mean": 0.0,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0007655731203485346
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.013232981178266347
+            ],
+            "x2": [
+              -0.012586060211335943
+            ],
+            "ar.L1": [
+              0.9681198057089547
+            ],
+            "sigma2": [
+              0.44786828052459315
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4839959146004289,
+            "client_1": 0.17281952106849968,
+            "client_2": 0.2789076467207555,
+            "client_3": 0.903610913563767,
+            "client_4": 2.2571458863117373,
+            "client_5": 0.4294353525444836,
+            "client_6": 0.5025490911395545,
+            "client_7": 0.2619070580792188,
+            "client_8": 1.5738808824049066,
+            "client_9": 0.7444791788218279
+          },
+          "server_mse": 0.8894160259155826,
+          "server_smape": 116.14211298426571
+        }
+      ],
+      "attack_strategy": "label_flip",
+      "attack_scale": 2.5,
+      "malicious_frac": 0.0
+    },
+    {
+      "model": "DynamicLinearModel",
+      "aggregator": "local",
+      "history": [
+        {
+          "round": 1,
+          "client_mae": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "client_smape": {
+            "client_0": 105.52323486558129,
+            "client_1": 49.27380510829137,
+            "client_2": 114.37831209189989,
+            "client_3": 101.54346454134928,
+            "client_4": 130.49058350463986,
+            "client_5": 77.66584006294674,
+            "client_6": 111.93875920740663,
+            "client_7": 47.996228460774304,
+            "client_8": 130.35916937786217,
+            "client_9": 183.8495882230589
+          },
+          "network_mae": 0.7613730580255301,
+          "network_smape": 105.30044124937368,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.27602810242421105,
+          "sync_component_pairwise_l2_mean": 0.3906551522805408,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046482001629716024
+            ],
+            "x2": [
+              -0.05282841735402114
+            ],
+            "ar.L1": [
+              0.9595985528147143
+            ],
+            "sigma2": [
+              0.6531264459574158
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.4846694554845121,
+            "client_1": 0.17284124019963415,
+            "client_2": 0.2766391203981856,
+            "client_3": 0.903864023812089,
+            "client_4": 2.257630548583573,
+            "client_5": 0.4292361534316519,
+            "client_6": 0.49276662096659096,
+            "client_7": 0.2618967859398123,
+            "client_8": 1.5899893581527191,
+            "client_9": 0.7442334372580698
+          },
+          "server_mse": 0.7613730580255301,
+          "server_smape": 105.30044124937368
+        },
+        {
+          "round": 2,
+          "client_mae": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.17281509474071563,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356481139,
+            "client_4": 2.257551290217781,
+            "client_5": 0.42926746094135704,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442449073504804
+          },
+          "client_smape": {
+            "client_0": 105.54750867982219,
+            "client_1": 49.26684777075898,
+            "client_2": 114.3757581247694,
+            "client_3": 101.54541205820667,
+            "client_4": 130.48889837611495,
+            "client_5": 77.67088431899423,
+            "client_6": 111.93875920774907,
+            "client_7": 48.00263551299138,
+            "client_8": 130.35654579113404,
+            "client_9": 183.83239861763604
+          },
+          "network_mae": 0.7613762819382156,
+          "network_smape": 105.30311370460524,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 4.703242533599548e-05,
+          "sync_component_l2_max": 0.000120564571303967,
+          "sync_component_centroid_l2_mean": 0.27603919139845795,
+          "sync_component_pairwise_l2_mean": 0.3906709316861108,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            4.703242533599548e-05
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046592079420564356
+            ],
+            "x2": [
+              -0.0528524967825875
+            ],
+            "ar.L1": [
+              0.9595934330452001
+            ],
+            "sigma2": [
+              0.6531690213598883
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.17281509474071563,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356481139,
+            "client_4": 2.257551290217781,
+            "client_5": 0.42926746094135704,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442449073504804
+          },
+          "server_mse": 0.7613762819382156,
+          "server_smape": 105.30311370460524
+        },
+        {
+          "round": 3,
+          "client_mae": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356464953,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442368470094445
+          },
+          "client_smape": {
+            "client_0": 105.54750867982219,
+            "client_1": 49.266556921392116,
+            "client_2": 114.3757581247694,
+            "client_3": 101.54541205831113,
+            "client_4": 130.48905167163156,
+            "client_5": 77.67150898248259,
+            "client_6": 111.93875920774907,
+            "client_7": 48.00263551299138,
+            "client_8": 130.35654579113404,
+            "client_9": 183.837400095769
+          },
+          "network_mae": 0.7613767636578346,
+          "network_smape": 105.3030224267095,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 1.3787921835448666e-06,
+          "sync_component_l2_max": 8.110472020487569e-06,
+          "sync_component_centroid_l2_mean": 0.27603945239274696,
+          "sync_component_pairwise_l2_mean": 0.39067124270563586,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            1.3787921835448666e-06
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046592079420564356
+            ],
+            "x2": [
+              -0.0528524967825875
+            ],
+            "ar.L1": [
+              0.9595934330452001
+            ],
+            "sigma2": [
+              0.6531690213598883
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356464953,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442368470094445
+          },
+          "server_mse": 0.7613767636578346,
+          "server_smape": 105.3030224267095
+        },
+        {
+          "round": 4,
+          "client_mae": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "client_smape": {
+            "client_0": 105.54750867982219,
+            "client_1": 49.266556921392116,
+            "client_2": 114.3757581247694,
+            "client_3": 101.54541205831835,
+            "client_4": 130.48905167163156,
+            "client_5": 77.67150898248259,
+            "client_6": 111.93875920774907,
+            "client_7": 48.00263551299138,
+            "client_8": 130.35654579113404,
+            "client_9": 183.83648731680424
+          },
+          "network_mae": 0.7613767636578346,
+          "network_smape": 105.3030224267095,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 1.1241216083504292e-07,
+          "sync_component_l2_max": 1.1241208089221676e-06,
+          "sync_component_centroid_l2_mean": 0.27603944484977017,
+          "sync_component_pairwise_l2_mean": 0.3906712104776212,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            1.1241216083504292e-07
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046592079420564356
+            ],
+            "x2": [
+              -0.0528524967825875
+            ],
+            "ar.L1": [
+              0.9595934330452001
+            ],
+            "sigma2": [
+              0.6531690213598883
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "server_mse": 0.7613767636578346,
+          "server_smape": 105.3030224267095
+        },
+        {
+          "round": 5,
+          "client_mae": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "client_smape": {
+            "client_0": 105.54750867982219,
+            "client_1": 49.266556921392116,
+            "client_2": 114.3757581247694,
+            "client_3": 101.54541205831835,
+            "client_4": 130.48905167163156,
+            "client_5": 77.67150898248259,
+            "client_6": 111.93875920774907,
+            "client_7": 48.00263551299138,
+            "client_8": 130.35654579113404,
+            "client_9": 183.83648731680424
+          },
+          "network_mae": 0.7613767636578346,
+          "network_smape": 105.3030224267095,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.27603944484977017,
+          "sync_component_pairwise_l2_mean": 0.3906712104776212,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046592079420564356
+            ],
+            "x2": [
+              -0.0528524967825875
+            ],
+            "ar.L1": [
+              0.9595934330452001
+            ],
+            "sigma2": [
+              0.6531690213598883
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "server_mse": 0.7613767636578346,
+          "server_smape": 105.3030224267095
+        },
+        {
+          "round": 6,
+          "client_mae": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "client_smape": {
+            "client_0": 105.54750867982219,
+            "client_1": 49.266556921392116,
+            "client_2": 114.3757581247694,
+            "client_3": 101.54541205831835,
+            "client_4": 130.48905167163156,
+            "client_5": 77.67150898248259,
+            "client_6": 111.93875920774907,
+            "client_7": 48.00263551299138,
+            "client_8": 130.35654579113404,
+            "client_9": 183.83648731680424
+          },
+          "network_mae": 0.7613767636578346,
+          "network_smape": 105.3030224267095,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.27603944484977017,
+          "sync_component_pairwise_l2_mean": 0.3906712104776212,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046592079420564356
+            ],
+            "x2": [
+              -0.0528524967825875
+            ],
+            "ar.L1": [
+              0.9595934330452001
+            ],
+            "sigma2": [
+              0.6531690213598883
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "server_mse": 0.7613767636578346,
+          "server_smape": 105.3030224267095
+        },
+        {
+          "round": 7,
+          "client_mae": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "client_smape": {
+            "client_0": 105.54750867982219,
+            "client_1": 49.266556921392116,
+            "client_2": 114.3757581247694,
+            "client_3": 101.54541205831835,
+            "client_4": 130.48905167163156,
+            "client_5": 77.67150898248259,
+            "client_6": 111.93875920774907,
+            "client_7": 48.00263551299138,
+            "client_8": 130.35654579113404,
+            "client_9": 183.83648731680424
+          },
+          "network_mae": 0.7613767636578346,
+          "network_smape": 105.3030224267095,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.27603944484977017,
+          "sync_component_pairwise_l2_mean": 0.3906712104776212,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046592079420564356
+            ],
+            "x2": [
+              -0.0528524967825875
+            ],
+            "ar.L1": [
+              0.9595934330452001
+            ],
+            "sigma2": [
+              0.6531690213598883
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "server_mse": 0.7613767636578346,
+          "server_smape": 105.3030224267095
+        },
+        {
+          "round": 8,
+          "client_mae": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "client_smape": {
+            "client_0": 105.54750867982219,
+            "client_1": 49.266556921392116,
+            "client_2": 114.3757581247694,
+            "client_3": 101.54541205831835,
+            "client_4": 130.48905167163156,
+            "client_5": 77.67150898248259,
+            "client_6": 111.93875920774907,
+            "client_7": 48.00263551299138,
+            "client_8": 130.35654579113404,
+            "client_9": 183.83648731680424
+          },
+          "network_mae": 0.7613767636578346,
+          "network_smape": 105.3030224267095,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.27603944484977017,
+          "sync_component_pairwise_l2_mean": 0.3906712104776212,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046592079420564356
+            ],
+            "x2": [
+              -0.0528524967825875
+            ],
+            "ar.L1": [
+              0.9595934330452001
+            ],
+            "sigma2": [
+              0.6531690213598883
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "server_mse": 0.7613767636578346,
+          "server_smape": 105.3030224267095
+        },
+        {
+          "round": 9,
+          "client_mae": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "client_smape": {
+            "client_0": 105.54750867982219,
+            "client_1": 49.266556921392116,
+            "client_2": 114.3757581247694,
+            "client_3": 101.54541205831835,
+            "client_4": 130.48905167163156,
+            "client_5": 77.67150898248259,
+            "client_6": 111.93875920774907,
+            "client_7": 48.00263551299138,
+            "client_8": 130.35654579113404,
+            "client_9": 183.83648731680424
+          },
+          "network_mae": 0.7613767636578346,
+          "network_smape": 105.3030224267095,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.27603944484977017,
+          "sync_component_pairwise_l2_mean": 0.3906712104776212,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046592079420564356
+            ],
+            "x2": [
+              -0.0528524967825875
+            ],
+            "ar.L1": [
+              0.9595934330452001
+            ],
+            "sigma2": [
+              0.6531690213598883
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "server_mse": 0.7613767636578346,
+          "server_smape": 105.3030224267095
+        },
+        {
+          "round": 10,
+          "client_mae": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "client_smape": {
+            "client_0": 105.54750867982219,
+            "client_1": 49.266556921392116,
+            "client_2": 114.3757581247694,
+            "client_3": 101.54541205831835,
+            "client_4": 130.48905167163156,
+            "client_5": 77.67150898248259,
+            "client_6": 111.93875920774907,
+            "client_7": 48.00263551299138,
+            "client_8": 130.35654579113404,
+            "client_9": 183.83648731680424
+          },
+          "network_mae": 0.7613767636578346,
+          "network_smape": 105.3030224267095,
+          "lvp_alpha": null,
+          "lvp_self_weight": null,
+          "krum_f": null,
+          "similarity_tau": 0.3,
+          "similarity_mode": "jaccard_cosine_hybrid",
+          "lambda_jaccard": null,
+          "tau_cos_min": null,
+          "topology_mode": "similarity",
+          "network_eval_mode": "refit",
+          "sync_component_count": 1,
+          "sync_component_l2_mean": 0.0,
+          "sync_component_l2_max": 0.0,
+          "sync_component_centroid_l2_mean": 0.27603944484977017,
+          "sync_component_pairwise_l2_mean": 0.3906712104776212,
+          "sync_component_sizes": [
+            10
+          ],
+          "sync_component_l2_by_component": [
+            0.0
+          ],
+          "sync_components": [
+            [
+              0,
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "used_param_keys": [
+            "ar.L1",
+            "sigma2",
+            "x1",
+            "x2"
+          ],
+          "aggregated": {
+            "x1": [
+              -0.046592079420564356
+            ],
+            "x2": [
+              -0.0528524967825875
+            ],
+            "ar.L1": [
+              0.9595934330452001
+            ],
+            "sigma2": [
+              0.6531690213598883
+            ]
+          },
+          "malicious_ids": [],
+          "async_stale_ids": [],
+          "client_mse": {
+            "client_0": 0.48472112687721436,
+            "client_1": 0.1728139978804585,
+            "client_2": 0.2766271279099546,
+            "client_3": 0.9039648356463831,
+            "client_4": 2.2575581202416926,
+            "client_5": 0.4292690537860665,
+            "client_6": 0.49276662096819585,
+            "client_7": 0.2619371545584004,
+            "client_8": 1.5898679345042344,
+            "client_9": 0.7442416642057461
+          },
+          "server_mse": 0.7613767636578346,
+          "server_smape": 105.3030224267095
+        }
+      ],
+      "attack_strategy": "label_flip",
+      "attack_scale": 2.5,
+      "malicious_frac": 0.0
+    }
+  ],
+  "final_network_mae_by_aggregator": {
+    "lvp": 0.7756294671551671,
+    "decentralized_fedavg": 0.8894160257241877,
+    "defta": 0.8651153173966659,
+    "balance": 0.7962034800813858,
+    "push_sum": 0.8894160259155826,
+    "local": 0.7613767636578346
+  }
+}

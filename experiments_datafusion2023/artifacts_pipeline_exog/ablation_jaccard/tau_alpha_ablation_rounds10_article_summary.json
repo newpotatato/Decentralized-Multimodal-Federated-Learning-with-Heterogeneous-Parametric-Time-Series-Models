@@ -1,0 +1,109 @@
+{
+  "config": {
+    "rounds": 10,
+    "local_epochs": 1,
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "column_partition": "random",
+    "attack_strategy": "label_flip",
+    "attack_scale": 2.5,
+    "malicious_frac": 0.4,
+    "network_eval_mode": "refit",
+    "similarity_mode": "jaccard",
+    "lambda_jaccard": 0.5,
+    "tau_cos_min": -1.0,
+    "fixed_alpha_for_tau": 0.4,
+    "fixed_tau_for_alpha": 0.35,
+    "num_workers": 1,
+    "grid_workers": 1
+  },
+  "tau_rows": [
+    {
+      "tau": 0.2,
+      "mean": 0.6511185103881452,
+      "std": 0.029697937481362176,
+      "n": 3
+    },
+    {
+      "tau": 0.3,
+      "mean": 0.6983845981934902,
+      "std": 0.020797780236554566,
+      "n": 3
+    },
+    {
+      "tau": 0.4,
+      "mean": 0.6809915582948571,
+      "std": 0.13922657151197265,
+      "n": 3
+    },
+    {
+      "tau": 0.5,
+      "mean": 0.5785273005293124,
+      "std": 0.06613066073569118,
+      "n": 3
+    },
+    {
+      "tau": 0.6,
+      "mean": 1.1164499393729133,
+      "std": 0.03101477176213924,
+      "n": 3
+    },
+    {
+      "tau": 0.7,
+      "mean": 0.5963430787068175,
+      "std": 0.04838033849554979,
+      "n": 3
+    }
+  ],
+  "alpha_rows": [
+    {
+      "alpha": 0.2,
+      "mean": 0.6024202485096508,
+      "std": 0.009924687316972845,
+      "n": 3
+    },
+    {
+      "alpha": 0.3,
+      "mean": 0.5960181532790257,
+      "std": 0.009193675220752661,
+      "n": 3
+    },
+    {
+      "alpha": 0.4,
+      "mean": 0.5621572648347345,
+      "std": 0.07921721435846271,
+      "n": 3
+    },
+    {
+      "alpha": 0.53,
+      "mean": 0.8218485281547702,
+      "std": 0.04694470616776976,
+      "n": 3
+    },
+    {
+      "alpha": 0.6,
+      "mean": 1.2778800250007507,
+      "std": 0.5233714918650796,
+      "n": 3
+    }
+  ],
+  "best_tau": {
+    "tau": 0.5,
+    "mean": 0.5785273005293124,
+    "std": 0.06613066073569118,
+    "n": 3
+  },
+  "best_alpha": {
+    "alpha": 0.4,
+    "mean": 0.5621572648347345,
+    "std": 0.07921721435846271,
+    "n": 3
+  },
+  "figures": {
+    "tau": "c:\\tarasova\\RNF\\experiments_datafusion2023\\artifacts_pipeline_exog\\ablation_jaccard\\tau_ablation_rounds10_article.png",
+    "alpha": "c:\\tarasova\\RNF\\experiments_datafusion2023\\artifacts_pipeline_exog\\ablation_jaccard\\alpha_ablation_rounds10_article.png"
+  }
+}

@@ -80,10 +80,12 @@ def load_mcc_series(base_path: Path) -> pd.DataFrame:
 
 def load_news_exogenous(base_path: Path) -> pd.Series:
     """Load Fontanka news; returns daily sentiment or counts as a Series."""
+    # Per-article sentiment (data_prep/score_fontanka_sentiment.py) is preferred over raw news.
     candidates = [
-        Path(__file__).parent / "data" / "news_clustered_final.csv",
+        base_path / "02_data_fontanka" / "fontanka_news_sentiment.csv",
         base_path / "02_data_fontanka" / "news_clustered_final.csv",
         base_path / "02_data_fontanka" / "fontanka_news_result.csv",
+        Path(__file__).parent / "data" / "news_clustered_final.csv",
     ]
 
     df_news = None
@@ -91,13 +93,19 @@ def load_news_exogenous(base_path: Path) -> pd.Series:
     for path in candidates:
         if not path.exists():
             continue
-        for sep in [";", ","]:
-            try:
-                df_news = pd.read_csv(path, encoding="cp1251", sep=sep)
-                used_path = path
+        # The Fontanka export is UTF-8; cp1251 is kept for older copies.
+        for encoding in ("utf-8", "cp1251"):
+            for sep in [",", ";"]:
+                try:
+                    df = pd.read_csv(path, encoding=encoding, sep=sep)
+                except Exception:
+                    continue
+                if "date" in df.columns or "Date" in df.columns:
+                    df_news = df
+                    used_path = path
+                    break
+            if df_news is not None:
                 break
-            except Exception:
-                df_news = None
         if df_news is not None:
             break
 
@@ -239,7 +247,15 @@ def build_clients_from_mcc(
     for idx, cols in enumerate(chunks):
         client = pd.DataFrame()
         client["date"] = mcc_df["date"].copy()
-        client["amt"] = mcc_df[cols].sum(axis=1)
+        raw_amt = mcc_df[cols].sum(axis=1)
+        amt_mean = raw_amt.mean()
+        amt_std = raw_amt.std()
+        if amt_std > 0:
+            client["amt"] = (raw_amt - amt_mean) / amt_std
+        else:
+            client["amt"] = raw_amt - amt_mean
+        client.attrs["amt_mean"] = float(amt_mean)
+        client.attrs["amt_std"] = float(amt_std) if amt_std > 0 else 1.0
         if exog_frame is not None:
             for col in exog_frame.columns:
                 client[col] = exog_frame[col].values

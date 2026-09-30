@@ -49,6 +49,9 @@ def _parse_int_csv(text: str) -> List[int]:
 
 def _topic_profiles(clients: List, n_groups: int = 4) -> List:
     profiles = build_client_information_profiles(clients, "mcc")
+    if n_groups <= 0:
+        # Profiles exactly as described in the manuscript (no synthetic group tag).
+        return profiles
     return [frozenset(p) | {f"sync_topic_{idx % n_groups}"} for idx, p in enumerate(profiles)]
 
 
@@ -97,16 +100,23 @@ def _parse_topology_map(text: str) -> Dict[str, str]:
     return mapping
 
 
-def _resolve_policy(method: str, topology_name: str, lvp_tau: float) -> Dict[str, Any]:
+def _resolve_policy(
+    method: str,
+    topology_name: str,
+    lvp_tau: float,
+    lambda_jaccard: float = 0.6,
+    lvp_alpha: float = 0.6,
+    tau_cos_min: float = 0.15,
+) -> Dict[str, Any]:
     topo = (topology_name or "").strip().lower()
-    if topo == "hybrid":
+    if topo in ("hybrid", "hybrid_param"):
         return {
-            "similarity_mode": "jaccard_cosine_hybrid",
+            "similarity_mode": "jaccard_paramcos_hybrid" if topo == "hybrid_param" else "jaccard_cosine_hybrid",
             "similarity_tau": float(lvp_tau),
             "topology_mode": "similarity",
-            "lambda_jaccard": 0.6,
-            "tau_cos_min": 0.15,
-            "lvp_alpha": 0.6 if method == "lvp" else None,
+            "lambda_jaccard": float(lambda_jaccard),
+            "tau_cos_min": float(tau_cos_min),
+            "lvp_alpha": float(lvp_alpha) if method == "lvp" else None,
             "lvp_self_weight": 0.0,
         }
     if topo == "jaccard":
@@ -114,7 +124,7 @@ def _resolve_policy(method: str, topology_name: str, lvp_tau: float) -> Dict[str
             "similarity_mode": "jaccard",
             "similarity_tau": float(lvp_tau),
             "topology_mode": "similarity",
-            "lambda_jaccard": 0.5,
+            "lambda_jaccard": float(lambda_jaccard),
             "tau_cos_min": -1.0,
             "lvp_alpha": None,
             "lvp_self_weight": 0.0,
@@ -124,9 +134,9 @@ def _resolve_policy(method: str, topology_name: str, lvp_tau: float) -> Dict[str
             "similarity_mode": "jaccard",
             "similarity_tau": float(lvp_tau),
             "topology_mode": topo,
-            "lambda_jaccard": 0.5,
+            "lambda_jaccard": float(lambda_jaccard),
             "tau_cos_min": -1.0,
-            "lvp_alpha": None if method != "lvp" else 0.6,
+            "lvp_alpha": None if method != "lvp" else float(lvp_alpha),
             "lvp_self_weight": 0.0,
         }
     raise ValueError(f"Unknown topology policy for {method}: {topology_name!r}")
@@ -144,14 +154,21 @@ def main() -> None:
     p.add_argument("--local-fit-maxiter", type=int, default=10)
     p.add_argument("--eval-fit-maxiter", type=int, default=0)
     p.add_argument("--n-clients", type=int, default=20)
-    p.add_argument("--column-partition", type=str, default="contiguous", choices=["contiguous", "strided"])
+    p.add_argument("--column-partition", type=str, default="contiguous", choices=["contiguous", "strided", "random", "random_strided"])
     p.add_argument("--malicious-frac", type=float, default=0.25)
     p.add_argument("--attack-strategy", type=str, default="noise_colluded", choices=["label_flip", "noise", "noise_colluded", "random"])
     p.add_argument("--attack-scale", type=float, default=5.0)
     p.add_argument("--network-eval-mode", type=str, default="proxy", choices=["proxy", "refit"])
     p.add_argument("--lvp-tau", type=float, default=0.79)
+    p.add_argument("--lambda-jaccard", type=float, default=0.6)
+    p.add_argument("--lvp-alpha", type=float, default=0.6)
     p.add_argument("--topology-map", type=str, default="")
     p.add_argument("--sync-topic-groups", type=int, default=4)
+    p.add_argument("--no-reuters", action="store_true", default=False)
+    p.add_argument("--no-exog", action="store_true", default=False,
+                   help="Drop all exogenous news regressors (target series only)")
+    p.add_argument("--tau-cos-min", type=float, default=0.15,
+                   help="Extra hard cut on the update-direction cosine in the hybrid graph (-1 disables it)")
     args = p.parse_args()
 
     if args.model not in MODEL_REGISTRY:
@@ -166,7 +183,7 @@ def main() -> None:
     topo_map = _parse_topology_map(args.topology_map)
 
     mcc_df = load_mcc_series(base)
-    exog = _build_exogenous(base, mcc_df, use_reuters=True)
+    exog = None if args.no_exog else _build_exogenous(base, mcc_df, use_reuters=not args.no_reuters)
     ModelClass = MODEL_REGISTRY[args.model]
 
     print(f"[setup] out_dir={out_dir}", flush=True)
@@ -198,6 +215,7 @@ def main() -> None:
             exog,
             n_clients=args.n_clients,
             column_partition=args.column_partition,
+            partition_seed=seed,
         )
         profiles = _topic_profiles(clients, n_groups=args.sync_topic_groups)
 
@@ -205,7 +223,12 @@ def main() -> None:
         for method in methods:
             if method not in topo_map:
                 raise ValueError(f"Missing topology policy for method {method!r}")
-            policy = _resolve_policy(method, topo_map[method], float(args.lvp_tau))
+            policy = _resolve_policy(
+                method, topo_map[method], float(args.lvp_tau),
+                lambda_jaccard=args.lambda_jaccard,
+                lvp_alpha=args.lvp_alpha,
+                tau_cos_min=args.tau_cos_min,
+            )
             print(
                 f"  [run] method={method} topology={topo_map[method]} mode={policy['similarity_mode']} tau={policy['similarity_tau']:.4f}",
                 flush=True,
