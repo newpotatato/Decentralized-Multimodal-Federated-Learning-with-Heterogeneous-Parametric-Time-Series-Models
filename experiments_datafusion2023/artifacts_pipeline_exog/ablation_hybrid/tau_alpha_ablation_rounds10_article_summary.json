@@ -1,0 +1,109 @@
+{
+  "config": {
+    "rounds": 10,
+    "local_epochs": 1,
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "column_partition": "random",
+    "attack_strategy": "label_flip",
+    "attack_scale": 2.5,
+    "malicious_frac": 0.4,
+    "network_eval_mode": "refit",
+    "similarity_mode": "jaccard_cosine_hybrid",
+    "lambda_jaccard": 0.2,
+    "tau_cos_min": -1.0,
+    "fixed_alpha_for_tau": 0.4,
+    "fixed_tau_for_alpha": 0.35,
+    "num_workers": 1,
+    "grid_workers": 1
+  },
+  "tau_rows": [
+    {
+      "tau": 0.2,
+      "mean": 0.9239699824737132,
+      "std": 0.11425556014713052,
+      "n": 3
+    },
+    {
+      "tau": 0.3,
+      "mean": 0.8092103184635805,
+      "std": 0.04957471836182384,
+      "n": 3
+    },
+    {
+      "tau": 0.4,
+      "mean": 0.9988923483092894,
+      "std": 0.21605837018632532,
+      "n": 3
+    },
+    {
+      "tau": 0.5,
+      "mean": 0.7863961700053235,
+      "std": 0.11084309718100761,
+      "n": 3
+    },
+    {
+      "tau": 0.6,
+      "mean": 0.9466675419480155,
+      "std": 0.08222566845329052,
+      "n": 3
+    },
+    {
+      "tau": 0.7,
+      "mean": 0.7618331988042569,
+      "std": 0.03479371552761525,
+      "n": 3
+    }
+  ],
+  "alpha_rows": [
+    {
+      "alpha": 0.2,
+      "mean": 0.6872686793693861,
+      "std": 0.09152519564449971,
+      "n": 3
+    },
+    {
+      "alpha": 0.3,
+      "mean": 0.882532979046658,
+      "std": 0.15589127285620236,
+      "n": 3
+    },
+    {
+      "alpha": 0.4,
+      "mean": 0.7331540094608197,
+      "std": 0.03693795380757921,
+      "n": 3
+    },
+    {
+      "alpha": 0.53,
+      "mean": 0.9383473509578861,
+      "std": 0.22050419070449806,
+      "n": 3
+    },
+    {
+      "alpha": 0.6,
+      "mean": 1.118050719693121,
+      "std": 0.2244451639158901,
+      "n": 3
+    }
+  ],
+  "best_tau": {
+    "tau": 0.7,
+    "mean": 0.7618331988042569,
+    "std": 0.03479371552761525,
+    "n": 3
+  },
+  "best_alpha": {
+    "alpha": 0.2,
+    "mean": 0.6872686793693861,
+    "std": 0.09152519564449971,
+    "n": 3
+  },
+  "figures": {
+    "tau": "c:\\tarasova\\RNF\\experiments_datafusion2023\\artifacts_pipeline_exog\\ablation_hybrid\\tau_ablation_rounds10_article.png",
+    "alpha": "c:\\tarasova\\RNF\\experiments_datafusion2023\\artifacts_pipeline_exog\\ablation_hybrid\\alpha_ablation_rounds10_article.png"
+  }
+}

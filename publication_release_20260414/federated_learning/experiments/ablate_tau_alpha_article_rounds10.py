@@ -23,6 +23,9 @@ from run_real_experiments import MODEL_REGISTRY, _build_exogenous, run_one_model
 
 def _topic_profiles(clients: List, n_groups: int = 4) -> List:
     profiles = build_client_information_profiles(clients, "mcc")
+    if n_groups <= 0:
+        # Profiles exactly as described in the manuscript (no synthetic group tag).
+        return profiles
     return [frozenset(p) | {f"sync_topic_{idx % n_groups}"} for idx, p in enumerate(profiles)]
 
 
@@ -47,14 +50,23 @@ def _evaluate_grid_point(task: Dict) -> Dict[str, float]:
     base = Path(task["base_path"]).resolve()
     mcc_df = load_mcc_series(base)
     exog = _build_exogenous(base, mcc_df, use_reuters=True)
-    clients = build_clients_from_mcc(
-        mcc_df,
-        exog,
-        n_clients=int(task["n_clients"]),
-        column_partition=str(task["column_partition"]),
-    )
-    profiles = _topic_profiles(clients)
-    ModelClass = MODEL_REGISTRY["DynamicLinearModel"]
+    per_seed_partition = bool(task.get("partition_per_seed", False))
+    topic_groups = int(task.get("sync_topic_groups", 4))
+
+    def _clients_and_profiles(partition_seed=None):
+        kwargs = {} if partition_seed is None else {"partition_seed": int(partition_seed)}
+        cl = build_clients_from_mcc(
+            mcc_df,
+            exog,
+            n_clients=int(task["n_clients"]),
+            column_partition=str(task["column_partition"]),
+            **kwargs,
+        )
+        return cl, _topic_profiles(cl, topic_groups)
+
+    clients, profiles = _clients_and_profiles()
+    model_name = str(task.get("model_name", "DynamicLinearModel"))
+    ModelClass = MODEL_REGISTRY[model_name]
 
     kind = str(task["kind"])
     value = float(task["value"])
@@ -64,8 +76,11 @@ def _evaluate_grid_point(task: Dict) -> Dict[str, float]:
 
     vals: List[float] = []
     for seed in seeds:
+        if per_seed_partition:
+            # Same client partition per seed as in the scenario comparison.
+            clients, profiles = _clients_and_profiles(seed)
         exp = run_one_model(
-            "DynamicLinearModel",
+            model_name,
             ModelClass,
             clients,
             profiles,
@@ -84,6 +99,7 @@ def _evaluate_grid_point(task: Dict) -> Dict[str, float]:
             strict_errors=True,
             network_eval_mode=str(task["network_eval_mode"]),
             num_workers=int(task["num_workers"]),
+            local_fit_maxiter=int(task.get("local_fit_maxiter", 10)),
         )
         vals.append(_final_mae(exp))
 
@@ -103,8 +119,10 @@ def main() -> None:
     p.add_argument("--seed-list", type=str, default="42,52,62")
     p.add_argument("--rounds", type=int, default=10)
     p.add_argument("--local-epochs", type=int, default=1)
+    p.add_argument("--local-fit-maxiter", type=int, default=10)
     p.add_argument("--n-clients", type=int, default=20)
-    p.add_argument("--column-partition", type=str, default="contiguous", choices=["contiguous", "strided"])
+    p.add_argument("--model", type=str, default="DynamicLinearModel", choices=sorted(MODEL_REGISTRY.keys()))
+    p.add_argument("--column-partition", type=str, default="contiguous", choices=["contiguous", "strided", "random", "random_strided"])
     p.add_argument("--attack-strategy", type=str, default="noise_colluded")
     p.add_argument("--attack-scale", type=float, default=5.0)
     p.add_argument("--malicious-frac", type=float, default=0.25)
@@ -118,6 +136,11 @@ def main() -> None:
     p.add_argument("--alpha-grid", type=str, default="0.15,0.20,0.25,0.30,0.35,0.40,0.45,0.50,0.53,0.60")
     p.add_argument("--num-workers", type=int, default=1)
     p.add_argument("--grid-workers", type=int, default=1)
+    p.add_argument("--sync-topic-groups", type=int, default=4)
+    p.add_argument("--partition-per-seed", action="store_true",
+                   help="Re-partition the MCC columns for every seed (as the scenario scripts do)")
+    p.add_argument("--alpha-at-best-tau", action="store_true",
+                   help="Sweep alpha at the best kappa_0 found by the first sweep instead of --fixed-tau")
     args = p.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -130,8 +153,10 @@ def main() -> None:
 
     base_task = {
         "base_path": str(base),
+        "model_name": str(args.model),
         "rounds": int(args.rounds),
         "local_epochs": int(args.local_epochs),
+        "local_fit_maxiter": int(args.local_fit_maxiter),
         "n_clients": int(args.n_clients),
         "column_partition": str(args.column_partition),
         "attack_strategy": str(args.attack_strategy),
@@ -145,21 +170,31 @@ def main() -> None:
         "fixed_tau": float(args.fixed_tau),
         "seeds": seeds,
         "num_workers": int(args.num_workers),
+        "sync_topic_groups": int(args.sync_topic_groups),
+        "partition_per_seed": bool(args.partition_per_seed),
     }
 
     tau_tasks = [{**base_task, "kind": "tau", "value": float(tau)} for tau in tau_grid]
-    alpha_tasks = [{**base_task, "kind": "alpha", "value": float(alpha)} for alpha in alpha_grid]
+
+    def _alpha_tasks(done_tau_rows):
+        task = dict(base_task)
+        if args.alpha_at_best_tau:
+            task["fixed_tau"] = float(min(done_tau_rows, key=lambda r: r["mean"])["tau"])
+        return [{**task, "kind": "alpha", "value": float(alpha)} for alpha in alpha_grid]
 
     grid_workers = max(1, int(args.grid_workers))
     if grid_workers == 1:
         tau_rows = [_evaluate_grid_point(task) for task in tau_tasks]
+        alpha_tasks = _alpha_tasks(tau_rows)
         alpha_rows = [_evaluate_grid_point(task) for task in alpha_tasks]
     else:
         # Process-level parallel grid search gives the largest CPU speedup on independent points.
         ctx = mp.get_context("spawn")
         with ProcessPoolExecutor(max_workers=grid_workers, mp_context=ctx) as ex:
             tau_rows = list(ex.map(_evaluate_grid_point, tau_tasks))
+            alpha_tasks = _alpha_tasks(tau_rows)
             alpha_rows = list(ex.map(_evaluate_grid_point, alpha_tasks))
+    fixed_tau_used = float(alpha_tasks[0]["fixed_tau"]) if alpha_tasks else float(args.fixed_tau)
 
     tau_rows.sort(key=lambda r: r["tau"])
     alpha_rows.sort(key=lambda r: r["alpha"])
@@ -167,40 +202,60 @@ def main() -> None:
     best_tau_row = min(tau_rows, key=lambda r: r["mean"])
     best_alpha_row = min(alpha_rows, key=lambda r: r["mean"])
 
-    # Plot tau ablation
-    fig1, ax1 = plt.subplots(figsize=(8.5, 5.0))
-    xs = [r["tau"] for r in tau_rows]
-    ys = [r["mean"] for r in tau_rows]
-    sd = [r["std"] for r in tau_rows]
-    ax1.plot(xs, ys, "o-", linewidth=2.2, markersize=5, label="mean final MAE")
-    ax1.fill_between(xs, np.asarray(ys) - np.asarray(sd), np.asarray(ys) + np.asarray(sd), alpha=0.15, label="+-1 std")
-    ax1.scatter([best_tau_row["tau"]], [best_tau_row["mean"]], s=100, marker="*", color="red", zorder=5, label=f"best kappa_0={best_tau_row['tau']:.2f}")
-    ax1.set_xlabel("kappa_0")
-    ax1.set_ylabel("Final network MAE")
-    ax1.set_title("Ablation for rounds=10 scenario: kappa_0 sweep")
-    ax1.grid(True, alpha=0.3)
-    ax1.legend(loc="best", fontsize=8)
-    plt.tight_layout()
+    _FONT = 12
+    _FONT_SM = 10
+    _COLOR_LINE = "#2171b5"
+    _COLOR_BAND = "#9ecae1"
+    _COLOR_BEST = "#d62728"
+
+    # Plot kappa_0 (tau) ablation
+    fig1, ax1 = plt.subplots(figsize=(7.5, 4.8))
+    xs = np.asarray([r["tau"] for r in tau_rows])
+    ys = np.asarray([r["mean"] for r in tau_rows])
+    sd = np.asarray([r["std"] for r in tau_rows])
+    ax1.fill_between(xs, ys - sd, ys + sd, color=_COLOR_BAND, alpha=0.40, label=r"$\pm 1\,\sigma$ (across seeds)")
+    ax1.plot(xs, ys, "o-", color=_COLOR_LINE, linewidth=2.0, markersize=5, label="Mean final MAE")
+    ax1.axvline(best_tau_row["tau"], color=_COLOR_BEST, linewidth=1.4, linestyle="--", alpha=0.8)
+    ax1.scatter(
+        [best_tau_row["tau"]], [best_tau_row["mean"]],
+        s=110, marker="*", color=_COLOR_BEST, zorder=5,
+        label=fr"Best $\kappa_0 = {best_tau_row['tau']:.2f}$",
+    )
+    ax1.set_xlabel(r"$\kappa_0$  (similarity threshold)", fontsize=_FONT)
+    ax1.set_ylabel("Final network MAE", fontsize=_FONT)
+    ax1.set_title(r"Ablation study: $\kappa_0$ sweep (10 rounds)", fontsize=_FONT)
+    ax1.tick_params(labelsize=_FONT_SM)
+    ax1.grid(True, axis="y", alpha=0.35, linestyle=":")
+    ax1.grid(True, axis="x", alpha=0.20, linestyle=":")
+    ax1.legend(loc="best", fontsize=_FONT_SM, framealpha=0.85)
+    fig1.tight_layout()
     tau_png = out_dir / "tau_ablation_rounds10_article.png"
-    fig1.savefig(tau_png, dpi=170, bbox_inches="tight")
+    fig1.savefig(tau_png, dpi=200, bbox_inches="tight")
     plt.close(fig1)
 
     # Plot alpha ablation
-    fig2, ax2 = plt.subplots(figsize=(8.5, 5.0))
-    xs = [r["alpha"] for r in alpha_rows]
-    ys = [r["mean"] for r in alpha_rows]
-    sd = [r["std"] for r in alpha_rows]
-    ax2.plot(xs, ys, "o-", linewidth=2.2, markersize=5, label="mean final MAE")
-    ax2.fill_between(xs, np.asarray(ys) - np.asarray(sd), np.asarray(ys) + np.asarray(sd), alpha=0.15, label="+-1 std")
-    ax2.scatter([best_alpha_row["alpha"]], [best_alpha_row["mean"]], s=100, marker="*", color="red", zorder=5, label=f"best alpha={best_alpha_row['alpha']:.2f}")
-    ax2.set_xlabel("lvp_alpha")
-    ax2.set_ylabel("Final network MAE")
-    ax2.set_title("Ablation for rounds=10 scenario: alpha sweep")
-    ax2.grid(True, alpha=0.3)
-    ax2.legend(loc="best", fontsize=8)
-    plt.tight_layout()
+    fig2, ax2 = plt.subplots(figsize=(7.5, 4.8))
+    xs = np.asarray([r["alpha"] for r in alpha_rows])
+    ys = np.asarray([r["mean"] for r in alpha_rows])
+    sd = np.asarray([r["std"] for r in alpha_rows])
+    ax2.fill_between(xs, ys - sd, ys + sd, color=_COLOR_BAND, alpha=0.40, label=r"$\pm 1\,\sigma$ (across seeds)")
+    ax2.plot(xs, ys, "o-", color=_COLOR_LINE, linewidth=2.0, markersize=5, label="Mean final MAE")
+    ax2.axvline(best_alpha_row["alpha"], color=_COLOR_BEST, linewidth=1.4, linestyle="--", alpha=0.8)
+    ax2.scatter(
+        [best_alpha_row["alpha"]], [best_alpha_row["mean"]],
+        s=110, marker="*", color=_COLOR_BEST, zorder=5,
+        label=fr"Best $\alpha = {best_alpha_row['alpha']:.2f}$",
+    )
+    ax2.set_xlabel(r"$\alpha$  (LVP synchronization step)", fontsize=_FONT)
+    ax2.set_ylabel("Final network MAE", fontsize=_FONT)
+    ax2.set_title(r"Ablation study: $\alpha$ sweep (10 rounds)", fontsize=_FONT)
+    ax2.tick_params(labelsize=_FONT_SM)
+    ax2.grid(True, axis="y", alpha=0.35, linestyle=":")
+    ax2.grid(True, axis="x", alpha=0.20, linestyle=":")
+    ax2.legend(loc="best", fontsize=_FONT_SM, framealpha=0.85)
+    fig2.tight_layout()
     alpha_png = out_dir / "alpha_ablation_rounds10_article.png"
-    fig2.savefig(alpha_png, dpi=170, bbox_inches="tight")
+    fig2.savefig(alpha_png, dpi=200, bbox_inches="tight")
     plt.close(fig2)
 
     summary = {
@@ -217,7 +272,10 @@ def main() -> None:
             "lambda_jaccard": args.lambda_jaccard,
             "tau_cos_min": args.tau_cos_min,
             "fixed_alpha_for_tau": args.fixed_alpha,
-            "fixed_tau_for_alpha": args.fixed_tau,
+            "fixed_tau_for_alpha": fixed_tau_used,
+            "sync_topic_groups": args.sync_topic_groups,
+            "partition_per_seed": bool(args.partition_per_seed),
+            "local_fit_maxiter": args.local_fit_maxiter,
             "num_workers": args.num_workers,
             "grid_workers": args.grid_workers,
         },
